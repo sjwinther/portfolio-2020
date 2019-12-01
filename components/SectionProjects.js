@@ -15,7 +15,7 @@ export default () => {
             <h2 className="font-black text-4xl">My projects</h2>
             <CornerRightDown
               strokeWidth="3"
-              className="text-2xl text-gray-800 ml-6"
+              className="text-2xl text-gray-700 ml-6"
             />
           </div>
           <ul className="-mx-4">
@@ -71,8 +71,8 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           <ArrowRight
             className={
               (isActive
-                ? " opacity-25 md:opacity-100"
-                : " opacity-25 md:opacity-0") + " text-lg transition"
+                ? " opacity-50 md:opacity-100"
+                : " opacity-50 md:opacity-0") + " text-lg transition"
             }
           />
         </a>

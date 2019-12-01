@@ -5,8 +5,11 @@ import SkillBadge from "../components/SkillBadge";
 export default () => (
   <section className="px-4 py-8 md:py-16">
     <div className="max-w-5xl mx-auto">
-      <h1 className="font-black text-3xl md:text-5xl mb-8">
-        Hi, I'm Sebastian. 👋 I'm a digital designer and frontend developer.
+      <h1 className="font-black text-3xl md:text-4xl mb-8">
+        Hi, I'm Sebastian. 👋
+        <span className="block">
+          I'm a digital designer and frontend developer.
+        </span>
       </h1>
       <p className="max-w-4xl text-lg md:text-2xl mb-4">
         I think products, sketch products, design products, prototype products,
