@@ -33,6 +33,7 @@ export default () => {
           <Image strokeWidth="1.5" className="text-6xl text-white opacity-50" />
         </div>
       </div>
+      <div className="hidden bg-indigo-800 bg-orange-800 bg-green-800 bg-teal-800 bg-purple-800" />
     </section>
   );
 };
