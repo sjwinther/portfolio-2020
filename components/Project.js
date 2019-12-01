@@ -1,4 +1,4 @@
-import { Image } from "react-feather";
+import { Image, ExternalLink } from "react-feather";
 import projects from "../content/projects";
 
 import Head from "./Head";
@@ -18,7 +18,7 @@ export default ({ id, children }) => {
           <h1 className="font-black text-3xl md:text-4xl mb-4">{title}</h1>
           <dl className="-mx-2 mb-4">
             <Data content={year} />
-            <Data content={publicUrl} />
+            <Data content={publicUrl} href={publicUrl} />
           </dl>
           <dl className="flex flex-wrap items-center -mx-2 mb-8">
             {skills.map(skill => (
@@ -66,12 +66,27 @@ export default ({ id, children }) => {
   );
 };
 
-const Data = ({ content }) => (
+const Data = ({ content, href }) => (
   <dd
     style={{ "font-feature-settings": '"smcp" 1' }}
-    className="inline-block lowercase text-lg m-2"
+    className="inline-block font-bold uppercase m-2"
   >
-    {content}
+    {href ? (
+      <a
+        href={"https://" + href}
+        target="_blank"
+        rel="noopener"
+        className="inline-flex items-center"
+      >
+        {content}
+        <ExternalLink
+          style={{ transform: "translateY(-2px)" }}
+          className="text-xl text-gray-600 ml-2"
+        />
+      </a>
+    ) : (
+      content
+    )}
   </dd>
 );
 
