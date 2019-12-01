@@ -67,25 +67,24 @@ export default ({ id, children }) => {
 };
 
 const Data = ({ content, href }) => (
-  <dd
-    style={{ "font-feature-settings": '"smcp" 1' }}
-    className="inline-block font-bold uppercase m-2"
-  >
+  <dd className="inline-block font-bold uppercase m-2">
     {href ? (
       <a
         href={"https://" + href}
         target="_blank"
         rel="noopener"
-        className="inline-flex items-center"
+        className="inline-flex items-center hover:bg-black py-1"
       >
-        {content}
+        <div style={{ transform: "translateY(1px)" }}>{content}</div>
         <ExternalLink
-          style={{ transform: "translateY(-2px)" }}
+          style={{ transform: "translateY(-1px)" }}
           className="text-xl text-gray-600 ml-2"
         />
       </a>
     ) : (
-      content
+      <div style={{ transform: "translateY(1px)" }} className="py-1">
+        {content}
+      </div>
     )}
   </dd>
 );
