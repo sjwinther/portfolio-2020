@@ -1,34 +1,10 @@
 import { useState } from "react";
 import Link from "next/link";
-import SkillBage from "../components/SkillBadge";
+import { Image } from "react-feather";
 
-const projects = {
-  1: {
-    title: "Pelion",
-    href: "/project/pelion",
-    skills: ["ux", "ui", "code"]
-  },
-  2: {
-    title: "Tales from Odysïa",
-    href: "/project/odysia",
-    skills: ["ui", "code"]
-  },
-  3: {
-    title: "Initiativet",
-    href: "/project/initiativet",
-    skills: ["ux", "ui", "code"]
-  },
-  4: {
-    title: "NORD.investments",
-    href: "/project/nord",
-    skills: ["ui", "app"]
-  },
-  5: {
-    title: "Klaus Riskær Pedersen",
-    href: "/project/krp",
-    skills: ["ui", "code"]
-  }
-};
+import projects from "../content/projects";
+
+import SkillBage from "../components/SkillBadge";
 
 export default () => {
   const [project, setProject] = useState("1");
@@ -50,8 +26,8 @@ export default () => {
               ))}
             </ul>
           </div>
-          <div className="hidden sm:block w-1/2 md:w-3/5">
-            <div className="h-full bg-gray-800 rounded" />
+          <div className="hidden sm:flex items-center justify-center w-1/2 md:w-3/5 bg-gray-800 rounded">
+            <Image strokeWidth="1.5" className="text-6xl text-gray-700" />
           </div>
         </div>
       </div>

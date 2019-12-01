@@ -1,3 +1,3 @@
 import Project from "../../components/Project";
 
-export default () => <Project title="Initiativet"></Project>;
+export default () => <Project id="initiativet"></Project>;

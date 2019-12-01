@@ -5,7 +5,7 @@ export default () => (
     <div className="max-w-5xl flex items-center border-b-2 border-gray-800 py-8 mx-auto">
       <div className="flex-auto">
         <Link href="/">
-          <a className="inline-flex items-center justify-center font-black text-xl bg-indigo-500 hover:bg-indigo-600 rounded px-2 py-3">
+          <a className="inline-flex items-center justify-center font-black text-xl bg-pink-600 hover:bg-pink-700 rounded px-2 py-3">
             SW
           </a>
         </Link>

@@ -27,10 +27,11 @@ a,
 button {
   @apply rounded-sm transition;
 }
-/* a:focus,
-button:focus {
+a:focus,
+button:focus,
+.input:focus {
   @apply outline-none shadow-outline;
-} */
+}
 p {
   @apply leading-normal;
 }
@@ -40,19 +41,27 @@ p {
 /* Custom components */
 
 .btn {
-  @apply font-medium leading-none text-center text-gray-300 border-2 rounded px-3 py-2;
+  @apply font-medium text-center text-gray-300 rounded p-3;
 }
 .btn-primary {
-  @apply text-gray-900 bg-gray-300 border-gray-300;
+  @apply text-gray-900 bg-gray-300;
 }
 .btn-primary:hover {
-  @apply bg-gray-400 border-gray-400;
+  @apply bg-gray-400;
 }
 .btn-tertiary {
-  @apply border-transparent px-2;
+  @apply border-transparent;
 }
 .btn-tertiary:hover {
-  @apply bg-gray-800 border-gray-800;
+  @apply bg-gray-800;
+}
+
+.input {
+  @apply text-gray-900 bg-gray-300 rounded transition p-3;
+}
+.input::placeholder {
+  color: inherit;
+  opacity: 0.5;
 }
 
 @tailwind utilities;

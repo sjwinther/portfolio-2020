@@ -23,7 +23,7 @@ export default ({ skill, size }) => {
     ) : null;
   const color =
     skill === "ux"
-      ? "text-pink-500"
+      ? "text-indigo-500"
       : skill === "ui"
       ? "text-blue-500"
       : skill === "app"
