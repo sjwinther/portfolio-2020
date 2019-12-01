@@ -7,7 +7,7 @@ export default () => (
         Hi, I'm Sebastian. 👋 I'm a digital designer and frontend developer.
       </h1>
       <p className="max-w-4xl text-lg md:text-2xl mb-4">
-        I sketch products, think products, design products, prototype products,
+        I think products, sketch products, design products, prototype products,
         and build products – mostly in React. I'm available for freelance work
         from January.
       </p>
