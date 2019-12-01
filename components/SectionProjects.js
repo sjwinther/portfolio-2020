@@ -6,7 +6,7 @@ import projects from "../content/projects";
 import SkillBadge from "../components/SkillBadge";
 
 export default () => {
-  const [project, setProject] = useState("pelion");
+  const [project, setProject] = useState(Object.keys(projects)[0]);
   return (
     <section className="px-4 py-8 pb-16 md:py-16 md:pb-24">
       <div className="max-w-5xl flex mx-auto">
