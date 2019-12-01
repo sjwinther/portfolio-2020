@@ -10,8 +10,7 @@ export default () => (
       </h1>
       <p className="max-w-4xl text-lg md:text-2xl mb-4">
         I think products, sketch products, design products, prototype products,
-        and build products – mostly in React. I'm available for freelance work
-        from January.
+        and build products – mostly in React. I'm available for freelance work.
       </p>
       <p className="max-w-4xl text-lg md:text-2xl mb-8 md:mb-12">
         Do you want to work together?{" "}
