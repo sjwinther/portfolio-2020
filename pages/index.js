@@ -1,14 +1,10 @@
-import React from "react";
-
 import Head from "../components/Head";
+import Nav from "../components/Nav";
 import LoadingSpinner from "../components/LoadingSpinner";
 
-const Home = () => (
+export default () => (
   <>
     <Head />
-    <div class="h-screen flex items-center text-5xl text-gray-300 bg-gray-900">
-      <LoadingSpinner />
-    </div>
+    <Nav />
   </>
 );
-export default Home;
