@@ -14,7 +14,7 @@ export default () => {
           <input
             type="email"
             placeholder="tim@apple.com"
-            className="input w-64 m-2"
+            className="input w-80 m-2"
           />
           <button
             onClick={() => setLoading(true)}

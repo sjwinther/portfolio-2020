@@ -3,6 +3,12 @@ module.exports = {
     extend: {
       boxShadow: {
         outline: "0 0 0 2px hsla(331, 79%, 66%, 0.5)"
+      },
+      colors: {
+        black: "#12161E"
+      },
+      width: {
+        "80": "20rem"
       }
     }
   },

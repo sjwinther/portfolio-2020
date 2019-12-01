@@ -17,8 +17,8 @@ export default ({ id, children }) => {
         <article className="max-w-5xl mx-auto">
           <h1 className="font-black text-3xl md:text-4xl mb-4">{title}</h1>
           <dl className="-mx-2 mb-4">
-            <Data title={year} />
-            <Data title={publicUrl} />
+            <Data content={year} />
+            <Data content={publicUrl} />
           </dl>
           <dl className="flex flex-wrap items-center -mx-2 mb-8">
             {skills.map(skill => (
@@ -66,12 +66,12 @@ export default ({ id, children }) => {
   );
 };
 
-const Data = ({ title }) => (
+const Data = ({ content }) => (
   <dd
     style={{ "font-feature-settings": '"smcp" 1' }}
     className="inline-block lowercase text-lg m-2"
   >
-    {title}
+    {content}
   </dd>
 );
 

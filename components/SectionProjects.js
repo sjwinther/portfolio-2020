@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Image, ArrowRight } from "react-feather";
+import { Image, CornerRightDown, ArrowRight } from "react-feather";
 import Link from "next/link";
 import projects from "../content/projects";
 
@@ -11,7 +11,13 @@ export default () => {
     <section className="px-4 py-8 pb-16 md:py-16 md:pb-24">
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
-          <h2 className="font-black text-4xl mb-8">My projects</h2>
+          <div className="flex items-end mb-8">
+            <h2 className="font-black text-4xl">My projects</h2>
+            <CornerRightDown
+              strokeWidth="3"
+              className="text-2xl text-gray-800 ml-6"
+            />
+          </div>
           <ul className="-mx-4">
             {Object.keys(projects).map(id => (
               <ListItem
@@ -45,8 +51,9 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
       <Link href={url}>
         <a
           onMouseOver={() => setProject(id)}
+          onFocus={() => setProject(id)}
           className={
-            (isActive ? "md:bg-gray-800 " : "") +
+            (isActive ? " opacity-100 " : " opacity-100 md:opacity-50 ") +
             "flex items-center rounded p-3"
           }
         >
@@ -54,13 +61,7 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
             {title}
             {skills.map(skill => {
               return (
-                <div
-                  key={skill}
-                  className={
-                    (isActive ? " opacity-100" : " opacity-100 md:opacity-25") +
-                    " ml-4"
-                  }
-                >
+                <div key={skill} className="ml-4">
                   <SkillBadge skill={skill} size="sm" />
                 </div>
               );
@@ -68,8 +69,9 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           </div>
           <ArrowRight
             className={
-              (isActive ? " opacity-100" : " opacity-25 md:opacity-0") +
-              " flex-shrink-0 text-lg"
+              (isActive
+                ? " opacity-25 md:opacity-100"
+                : " opacity-25 md:opacity-0") + " text-lg transition"
             }
           />
         </a>

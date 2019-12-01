@@ -3,9 +3,9 @@ import { BookOpen, Layout, Code, Smartphone } from "react-feather";
 export default ({ skill, size }) => {
   const title =
     skill === "ux"
-      ? "UX research"
-      : skill === "ui"
-      ? "UI design"
+      ? "User research"
+      : skill === "web"
+      ? "Web design"
       : skill === "app"
       ? "App design"
       : skill === "code"
@@ -14,7 +14,7 @@ export default ({ skill, size }) => {
   const icon =
     skill === "ux" ? (
       <BookOpen />
-    ) : skill === "ui" ? (
+    ) : skill === "web" ? (
       <Layout />
     ) : skill === "app" ? (
       <Smartphone />
@@ -24,7 +24,7 @@ export default ({ skill, size }) => {
   const color =
     skill === "ux"
       ? "text-indigo-500"
-      : skill === "ui"
+      : skill === "web"
       ? "text-blue-500"
       : skill === "app"
       ? "text-green-500"
@@ -33,9 +33,9 @@ export default ({ skill, size }) => {
       : null;
   if (size === "lg")
     return (
-      <div className="inline-flex items-center bg-gray-800 rounded px-3 sm:px-4 py-2 sm:py-3">
-        <div className={color + " text-xl mr-3 sm:mr-4"}>{icon}</div>
-        <div className="font-bold">{title}</div>
+      <div className="inline-flex items-center bg-gray-800 rounded px-3 md:px-4 py-2 md:py-3">
+        <div className={color + " md:text-xl mr-3 md:mr-4"}>{icon}</div>
+        <div className="font-bold text-sm md:text-base">{title}</div>
       </div>
     );
   if (size === "sm") return <div className={color}>{icon}</div>;

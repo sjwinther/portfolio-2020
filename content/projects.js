@@ -4,7 +4,7 @@ const projects = {
     url: "/project/pelion",
     year: "2018-2019",
     publicUrl: "www.pelion.app",
-    skills: ["ux", "ui", "code"],
+    skills: ["ux", "web", "code"],
     bgColor: "bg-indigo-700"
   },
   odysia: {
@@ -12,7 +12,7 @@ const projects = {
     url: "/project/odysia",
     year: "2019",
     publicUrl: "www.odysia.dk",
-    skills: ["ui", "code"],
+    skills: ["web", "code"],
     bgColor: "bg-orange-700"
   },
   klaus: {
@@ -20,7 +20,7 @@ const projects = {
     url: "/project/klaus",
     year: "2019",
     publicUrl: "www.klausriskaerpedersen.dk",
-    skills: ["ui", "code"],
+    skills: ["web", "code"],
     bgColor: "bg-green-700"
   },
   initiativet: {
@@ -28,7 +28,7 @@ const projects = {
     url: "/project/initiativet",
     year: "2017",
     publicUrl: "www.initiativet.dk",
-    skills: ["ux", "ui", "code"],
+    skills: ["ux", "web", "code"],
     bgColor: "bg-teal-700"
   },
   nord: {
@@ -36,7 +36,7 @@ const projects = {
     url: "/project/nord",
     year: "2017",
     publicUrl: "www.nord.investments",
-    skills: ["ui", "app"],
+    skills: ["web", "app"],
     bgColor: "bg-purple-700"
   }
 };
