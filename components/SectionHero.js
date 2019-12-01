@@ -1,3 +1,5 @@
+import { ExternalLink } from "react-feather";
+
 import SkillBadge from "../components/SkillBadge";
 
 export default () => (
@@ -15,9 +17,12 @@ export default () => (
         Do you want to work together?{" "}
         <a
           href="mailto:sebastianwinther@gmail.com?subject=Let's get coffee"
-          className="inline-block hover:bg-gray-800"
+          target="_email"
+          rel="noopener"
+          className="inline-flex items-center hover:bg-black"
         >
           Write me an email
+          <ExternalLink className="text-gray-600 ml-2" />
         </a>
         .
       </p>

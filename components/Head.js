@@ -8,6 +8,10 @@ const CustomHead = () => {
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.png" />
+      <link
+        href="https://fonts.googleapis.com/css?family=Public+Sans:400,700,900&display=swap"
+        rel="stylesheet"
+      />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="og:title" content={title} />

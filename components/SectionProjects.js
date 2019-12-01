@@ -33,7 +33,7 @@ export default () => {
         <div
           className={
             projects[project].bgColor +
-            " hidden sm:flex items-center justify-center w-1/2 md:w-3/5 rounded transition"
+            " hidden md:flex items-center justify-center w-1/2 lg:w-3/5 rounded transition"
           }
         >
           <Image strokeWidth="1.5" className="text-6xl text-white opacity-50" />
@@ -53,8 +53,9 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           onMouseOver={() => setProject(id)}
           onFocus={() => setProject(id)}
           className={
-            (isActive ? " opacity-100 " : " opacity-100 md:opacity-50 ") +
-            "flex items-center rounded p-3"
+            (isActive
+              ? " md:bg-black opacity-100 "
+              : " opacity-100 md:opacity-50 ") + "flex items-center rounded p-3"
           }
         >
           <div className="flex-auto flex items-center text-lg">
