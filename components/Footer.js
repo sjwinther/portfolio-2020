@@ -6,9 +6,9 @@ export default () => {
   const [loading, setLoading] = useState(false);
   return (
     <footer className="px-4">
-      <div className="max-w-5xl border-t-2 border-gray-800 py-8 mx-auto">
+      <div className="max-w-5xl border-t-2 border-gray-800 py-16 mx-auto">
         <p className="font-medium text-xl text-center mb-4">
-          I'm available for work. Write me ✉️, call me ☎️, or leave your email:
+          I'm available for work. Leave your email:
         </p>
         <div className="max-w-md flex items-center mx-auto">
           <input

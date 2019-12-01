@@ -3,7 +3,7 @@
 /* Boilerplate */
 
 html {
-  @apply antialiased font-sans leading-tight text-gray-900 smooth-scroll;
+  @apply antialiased font-sans leading-tight text-gray-900;
   font-feature-settings: "liga" 1;
 }
 body {
@@ -57,7 +57,7 @@ p {
 }
 
 .input {
-  @apply text-gray-900 bg-gray-300 rounded transition p-3;
+  @apply text-gray-300 bg-gray-800 rounded transition p-3;
 }
 .input::placeholder {
   color: inherit;
