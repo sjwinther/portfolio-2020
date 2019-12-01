@@ -4,7 +4,6 @@
 
 html {
   @apply antialiased font-sans leading-tight text-gray-900;
-  font-family: "Kontrapunkt Miki";
   font-feature-settings: "liga" 1;
 }
 body {
