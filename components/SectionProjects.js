@@ -1,49 +1,32 @@
 import { useState } from "react";
-import { BookOpen, Layout, Code, Smartphone } from "react-feather";
 import Link from "next/link";
+import SkillBage from "../components/SkillBadge";
 
 const projects = {
   1: {
     title: "Pelion",
     href: "/project/pelion",
-    skills: [
-      { color: "text-pink-500", icon: <BookOpen /> },
-      { color: "text-blue-500", icon: <Layout /> },
-      { color: "text-yellow-500", icon: <Code /> }
-    ]
+    skills: ["ux", "ui", "code"]
   },
   2: {
     title: "Tales from Odysïa",
     href: "/project/odysia",
-    skills: [
-      { color: "text-blue-500", icon: <Layout /> },
-      { color: "text-yellow-500", icon: <Code /> }
-    ]
+    skills: ["ui", "code"]
   },
   3: {
     title: "Initiativet",
     href: "/project/initiativet",
-    skills: [
-      { color: "text-pink-500", icon: <BookOpen /> },
-      { color: "text-blue-500", icon: <Layout /> },
-      { color: "text-yellow-500", icon: <Code /> }
-    ]
+    skills: ["ux", "ui", "code"]
   },
   4: {
     title: "NORD.investments",
     href: "/project/nord",
-    skills: [
-      { color: "text-blue-500", icon: <Layout /> },
-      { color: "text-green-500", icon: <Smartphone /> }
-    ]
+    skills: ["ui", "app"]
   },
   5: {
     title: "Klaus Riskær Pedersen",
     href: "/project/krp",
-    skills: [
-      { color: "text-blue-500", icon: <Layout /> },
-      { color: "text-yellow-500", icon: <Code /> }
-    ]
+    skills: ["ui", "code"]
   }
 };
 
@@ -90,15 +73,14 @@ const ListItem = ({ id, title, href, skills, project, setProject }) => {
         >
           <div>{title}</div>
           {skills.map(skill => {
-            const { color, icon } = skill;
             return (
               <div
                 key={skill}
                 className={
-                  color + (isActive ? " opacity-100" : " opacity-25") + " ml-4"
+                  (isActive ? " opacity-100" : " opacity-25") + " ml-4"
                 }
               >
-                {icon}
+                <SkillBage skill={skill} size="sm" />
               </div>
             );
           })}
