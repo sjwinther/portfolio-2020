@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Check } from "react-feather";
 
 import LoadingSpinner from "../components/LoadingSpinner";
@@ -39,11 +40,27 @@ export default () => {
             </span>
             {(submitted || loading) && (
               <div className="absolute inset-0 flex items-center justify-center">
-                {submitted ? (
-                  <Check strokeWidth="2.5" className="text-xl" />
-                ) : loading ? (
-                  <LoadingSpinner />
-                ) : null}
+                <AnimatePresence exitBeforeEnter>
+                  {submitted ? (
+                    <motion.div
+                      key="check"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <Check strokeWidth="2.5" className="text-xl" />
+                    </motion.div>
+                  ) : loading ? (
+                    <motion.div
+                      key="loading"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      <LoadingSpinner />
+                    </motion.div>
+                  ) : null}
+                </AnimatePresence>
               </div>
             )}
           </button>
