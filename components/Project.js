@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 export default ({ id, children }) => {
   const project = projects[id];
-  const { title, year, publicUrl, skills } = project;
+  const { title, year, publicUrl, skills, bgColor } = project;
   return (
     <>
       <Head />
@@ -35,8 +35,16 @@ export default ({ id, children }) => {
             consequat.
           </p>
           <div style={{ paddingBottom: "56.25%" }} className="relative mb-16">
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-800 rounded">
-              <Image strokeWidth="1.5" className="text-6xl text-gray-700" />
+            <div
+              className={
+                bgColor +
+                " absolute inset-0 flex items-center justify-center rounded"
+              }
+            >
+              <Image
+                strokeWidth="1.5"
+                className="text-6xl text-white opacity-50"
+              />
             </div>
           </div>
           <Section

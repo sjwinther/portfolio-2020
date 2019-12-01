@@ -10,7 +10,7 @@ export default () => {
   return (
     <section className="px-4 py-8 pb-16 md:py-16 md:pb-24">
       <div className="max-w-5xl flex mx-auto">
-        <div className="flex-auto sm:pr-8">
+        <div className="flex-auto sm:pr-8 sm:pb-4">
           <h2 className="font-black text-4xl mb-8">My projects</h2>
           <ul className="-mx-4">
             {Object.keys(projects).map(id => (
@@ -24,8 +24,13 @@ export default () => {
             ))}
           </ul>
         </div>
-        <div className="hidden sm:flex items-center justify-center w-1/2 md:w-3/5 bg-gray-800 rounded">
-          <Image strokeWidth="1.5" className="text-6xl text-gray-700" />
+        <div
+          className={
+            projects[project].bgColor +
+            " hidden sm:flex items-center justify-center w-1/2 md:w-3/5 rounded transition"
+          }
+        >
+          <Image strokeWidth="1.5" className="text-6xl text-white opacity-50" />
         </div>
       </div>
     </section>
