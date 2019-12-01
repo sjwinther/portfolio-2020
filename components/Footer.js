@@ -14,14 +14,14 @@ export default () => {
           <input
             type="email"
             placeholder="tim@apple.com"
-            className="input w-80 m-2"
+            className="input w-80 min-w-0 m-2"
           />
           <button
             onClick={() => setLoading(true)}
             className="flex-shrink-0 btn btn-primary relative m-2"
           >
-            <span className={loading ? "text-transparent" : ""}>
-              Send it along
+            <span className={loading ? "text-transparent " : ""}>
+              Send along
             </span>
             {loading && (
               <div className="absolute inset-0 flex items-center justify-center">
