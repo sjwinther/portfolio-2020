@@ -1,8 +1,8 @@
 import Link from "next/link";
 
 export default () => (
-  <nav className="px-4 py-8">
-    <div className="max-w-5xl flex items-center mx-auto">
+  <nav className="px-4">
+    <div className="max-w-5xl flex items-center border-b-2 border-gray-800 py-8 mx-auto">
       <div className="flex-auto">
         <div className="h-10 w-10 bg-gray-300 rounded-full" />
       </div>

@@ -1,5 +1,5 @@
 export default () => (
-  <section className="px-4 py-16">
+  <section className="px-4 py-8 md:py-16">
     <div className="max-w-5xl mx-auto">
       <h1 className="font-black text-5xl mb-8">
         Hi, I'm Sebastian. 👋 I'm a freelance UX designer and frontend
@@ -8,7 +8,7 @@ export default () => (
       <p className="text-2xl mb-12">
         I sketch products, think products, design products, prototype products,
         and build products – mostly in React. I'm available for freelance work
-        from January. Do you want to work together? → Write me an email.
+        from January. Do you want to work together? Write me an email.
       </p>
       <dl className="flex flex-wrap items-center -m-2">
         <dt className="font-medium m-2">I do:</dt>

@@ -25,9 +25,9 @@ const projects = {
 };
 
 export default () => {
-  const [project, setProject] = useState(1);
+  const [project, setProject] = useState("1");
   return (
-    <section className="px-4 py-16">
+    <section className="px-4 py-8 md:py-16">
       <div className="max-w-5xl mx-auto">
         <div className="flex">
           <div className="flex-auto sm:pr-8">
@@ -56,16 +56,16 @@ export default () => {
 const ListItem = ({ id, title, skills, project, setProject }) => {
   const isActive = project === id;
   return (
-    <li>
+    <li className="m-2 last:mb-0">
       <Link href="/">
         <a
           onMouseOver={() => setProject(id)}
           className={
-            (isActive ? "bg-gray-800 " : "") +
-            "flex items-center rounded p-2 m-2"
+            (isActive ? "md:bg-gray-800 " : "") +
+            "flex items-center rounded p-3"
           }
         >
-          {title}
+          <div className="mr-2">{title}</div>
           {skills.map(skill => (
             <div
               key={skill}
