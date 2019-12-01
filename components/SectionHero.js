@@ -13,7 +13,7 @@ export default () => (
         from January. Do you want to work together? Write me an email.
       </p>
       <dl className="flex flex-wrap items-center -m-2">
-        <dt className="font-medium text-lg m-2">I do:</dt>
+        <dt className="font-medium text-lg m-2">I do</dt>
         <DescriptionData
           icon={<BookOpen />}
           color="text-pink-500"
@@ -40,8 +40,8 @@ export default () => (
 );
 
 const DescriptionData = ({ icon, color, title }) => (
-  <dd className="inline-flex items-center font-medium bg-gray-800 rounded px-4 py-3 m-2">
+  <dd className="inline-flex items-center bg-gray-800 rounded px-4 py-3 m-2">
     <div className={color + " text-xl mr-4"}>{icon}</div>
-    <div>{title}</div>
+    <div className="font-medium">{title}</div>
   </dd>
 );

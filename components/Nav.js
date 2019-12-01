@@ -4,14 +4,24 @@ export default () => (
   <nav className="px-4">
     <div className="max-w-5xl flex items-center border-b-2 border-gray-800 py-8 mx-auto">
       <div className="flex-auto">
-        <div className="h-10 w-10 bg-indigo-500 rounded-full" />
+        <Link href="/">
+          <a className="inline-flex items-center justify-center font-black text-xl bg-indigo-500 hover:bg-indigo-600 rounded px-2 py-3">
+            SW
+          </a>
+        </Link>
       </div>
       <div className="-m-2">
         <Link href="/">
-          <a className="btn btn-tertiary m-2">Download my resume</a>
+          <a className="btn btn-tertiary inline-flex items-center m-2">
+            <span className="hidden sm:inline">Download my resume</span>
+            <span className="inline sm:hidden">Resume</span>
+          </a>
         </Link>
         <Link href="/">
-          <a className="btn btn-primary m-2">Copy my email</a>
+          <a className="btn btn-primary inline-flex items-center m-2">
+            <span className="hidden sm:inline">Copy my email</span>
+            <span className="inline sm:hidden">Email</span>
+          </a>
         </Link>
       </div>
     </div>

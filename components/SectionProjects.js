@@ -5,6 +5,7 @@ import Link from "next/link";
 const projects = {
   1: {
     title: "Pelion",
+    href: "/project/pelion",
     skills: [
       { color: "text-pink-500", icon: <BookOpen /> },
       { color: "text-blue-500", icon: <Layout /> },
@@ -13,6 +14,7 @@ const projects = {
   },
   2: {
     title: "Tales from Odysïa",
+    href: "/project/odysia",
     skills: [
       { color: "text-blue-500", icon: <Layout /> },
       { color: "text-yellow-500", icon: <Code /> }
@@ -20,6 +22,7 @@ const projects = {
   },
   3: {
     title: "Initiativet",
+    href: "/project/initiativet",
     skills: [
       { color: "text-pink-500", icon: <BookOpen /> },
       { color: "text-blue-500", icon: <Layout /> },
@@ -28,6 +31,7 @@ const projects = {
   },
   4: {
     title: "NORD.investments",
+    href: "/project/nord",
     skills: [
       { color: "text-blue-500", icon: <Layout /> },
       { color: "text-green-500", icon: <Smartphone /> }
@@ -35,6 +39,7 @@ const projects = {
   },
   5: {
     title: "Klaus Riskær Pedersen",
+    href: "/project/krp",
     skills: [
       { color: "text-blue-500", icon: <Layout /> },
       { color: "text-yellow-500", icon: <Code /> }
@@ -49,7 +54,7 @@ export default () => {
       <div className="max-w-5xl mx-auto">
         <div className="flex">
           <div className="flex-auto sm:pr-8">
-            <h2 className="font-black text-4xl mb-8">My projects ☟</h2>
+            <h2 className="font-black text-4xl mb-8">My projects</h2>
             <ul className="-mx-4">
               {Object.keys(projects).map(id => (
                 <ListItem
@@ -71,11 +76,11 @@ export default () => {
   );
 };
 
-const ListItem = ({ id, title, skills, project, setProject }) => {
+const ListItem = ({ id, title, href, skills, project, setProject }) => {
   const isActive = project === id;
   return (
     <li className="m-2 last:mb-0">
-      <Link href="/">
+      <Link href={href}>
         <a
           onMouseOver={() => setProject(id)}
           className={
