@@ -69,7 +69,7 @@ export default ({ id, children }) => {
 const Data = ({ title }) => (
   <dd
     style={{ "font-feature-settings": '"smcp" 1' }}
-    className="inline-block font-medium lowercase text-xl m-2"
+    className="inline-block lowercase text-lg m-2"
   >
     {title}
   </dd>

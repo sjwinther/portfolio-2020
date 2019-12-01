@@ -19,7 +19,7 @@ const projects = {
     title: "Klaus Riskær Pedersen",
     url: "/project/klaus",
     year: "2019",
-    publicUrl: "",
+    publicUrl: "www.klausriskaerpedersen.dk",
     skills: ["ui", "code"],
     bgColor: "bg-green-700"
   },

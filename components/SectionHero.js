@@ -13,7 +13,7 @@ export default () => (
         from January. Do you want to work together? Write me an email.
       </p>
       <dl className="flex flex-wrap items-center -m-2">
-        <dt className="font-medium text-lg m-2">I do</dt>
+        <dt className="text-lg m-2">I do</dt>
         <dd className="m-2">
           <SkillBadge skill="ux" size="lg" />
         </dd>

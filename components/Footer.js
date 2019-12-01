@@ -7,7 +7,7 @@ export default () => {
   return (
     <footer className="px-4">
       <div className="max-w-5xl border-t-2 border-gray-800 py-8 md:py-16 mx-auto">
-        <p className="font-medium text-xl md:text-center mb-4">
+        <p className="text-xl md:text-center mb-4">
           I'm available for work. Leave your email:
         </p>
         <div className="flex items-center md:justify-center -m-2">
