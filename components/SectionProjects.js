@@ -1,26 +1,44 @@
 import { useState } from "react";
+import { BookOpen, Layout, Code, Smartphone } from "react-feather";
 import Link from "next/link";
 
 const projects = {
   1: {
     title: "Pelion",
-    skills: ["bg-pink-500", "bg-green-500"]
+    skills: [
+      { color: "text-pink-500", icon: <BookOpen /> },
+      { color: "text-blue-500", icon: <Layout /> },
+      { color: "text-yellow-500", icon: <Code /> }
+    ]
   },
   2: {
     title: "Tales from Odysïa",
-    skills: ["bg-blue-500", "bg-pink-500", "bg-yellow-500"]
+    skills: [
+      { color: "text-blue-500", icon: <Layout /> },
+      { color: "text-yellow-500", icon: <Code /> }
+    ]
   },
   3: {
     title: "Initiativet",
-    skills: ["bg-green-500", "bg-yellow-500"]
+    skills: [
+      { color: "text-pink-500", icon: <BookOpen /> },
+      { color: "text-blue-500", icon: <Layout /> },
+      { color: "text-yellow-500", icon: <Code /> }
+    ]
   },
   4: {
     title: "NORD.investments",
-    skills: ["bg-blue-500", "bg-pink-500", "bg-green-500"]
+    skills: [
+      { color: "text-blue-500", icon: <Layout /> },
+      { color: "text-green-500", icon: <Smartphone /> }
+    ]
   },
   5: {
     title: "Klaus Riskær Pedersen",
-    skills: ["bg-blue-500", "bg-pink-500"]
+    skills: [
+      { color: "text-blue-500", icon: <Layout /> },
+      { color: "text-yellow-500", icon: <Code /> }
+    ]
   }
 };
 
@@ -65,18 +83,20 @@ const ListItem = ({ id, title, skills, project, setProject }) => {
             "flex items-center rounded p-3"
           }
         >
-          <div className="mr-2">{title}</div>
-          {skills.map(skill => (
-            <div
-              key={skill}
-              style={{ transform: "translateY(1px)" }}
-              className={
-                skill +
-                (isActive ? " opacity-100" : " opacity-25") +
-                " h-2 w-2 rounded-full ml-2"
-              }
-            />
-          ))}
+          <div>{title}</div>
+          {skills.map(skill => {
+            const { color, icon } = skill;
+            return (
+              <div
+                key={skill}
+                className={
+                  color + (isActive ? " opacity-100" : " opacity-25") + " ml-4"
+                }
+              >
+                {icon}
+              </div>
+            );
+          })}
         </a>
       </Link>
     </li>
