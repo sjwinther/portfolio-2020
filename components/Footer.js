@@ -21,11 +21,16 @@ export default () => {
             setLoading(true);
             setTimeout(() => {
               setSubmitted(true);
+              setTimeout(() => {
+                setEmail("");
+              }, 1000);
             }, 2000);
           }}
           className="flex items-center md:justify-center -m-2"
         >
           <input
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             type="email"
             placeholder="tim@apple.com"
             required
