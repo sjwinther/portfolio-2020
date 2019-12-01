@@ -1,4 +1,4 @@
-import SkillBage from "../components/SkillBadge";
+import SkillBadge from "../components/SkillBadge";
 
 export default () => (
   <section className="px-4 py-8 md:py-16">
@@ -15,16 +15,16 @@ export default () => (
       <dl className="flex flex-wrap items-center -m-2">
         <dt className="font-medium text-lg m-2">I do</dt>
         <dd className="m-2">
-          <SkillBage skill="ux" size="lg" />
+          <SkillBadge skill="ux" size="lg" />
         </dd>
         <dd className="m-2">
-          <SkillBage skill="ui" size="lg" />
+          <SkillBadge skill="ui" size="lg" />
         </dd>
         <dd className="m-2">
-          <SkillBage skill="app" size="lg" />
+          <SkillBadge skill="app" size="lg" />
         </dd>
         <dd className="m-2">
-          <SkillBage skill="code" size="lg" />
+          <SkillBadge skill="code" size="lg" />
         </dd>
       </dl>
     </div>

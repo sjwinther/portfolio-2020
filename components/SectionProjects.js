@@ -1,13 +1,13 @@
 import { useState } from "react";
 import Link from "next/link";
-import { Image } from "react-feather";
+import { Image, ArrowRight } from "react-feather";
 
 import projects from "../content/projects";
 
-import SkillBage from "../components/SkillBadge";
+import SkillBadge from "../components/SkillBadge";
 
 export default () => {
-  const [project, setProject] = useState("1");
+  const [project, setProject] = useState("pelion");
   return (
     <section className="px-4 py-8 md:py-16">
       <div className="max-w-5xl mx-auto">
@@ -47,19 +47,27 @@ const ListItem = ({ id, title, href, skills, project, setProject }) => {
             "flex items-center rounded p-3"
           }
         >
-          <div>{title}</div>
-          {skills.map(skill => {
-            return (
-              <div
-                key={skill}
-                className={
-                  (isActive ? " opacity-100" : " opacity-25") + " ml-4"
-                }
-              >
-                <SkillBage skill={skill} size="sm" />
-              </div>
-            );
-          })}
+          <div className="flex-auto flex items-center">
+            {title}
+            {skills.map(skill => {
+              return (
+                <div
+                  key={skill}
+                  className={
+                    (isActive ? " opacity-100" : " opacity-25") + " ml-4"
+                  }
+                >
+                  <SkillBadge skill={skill} size="sm" />
+                </div>
+              );
+            })}
+          </div>
+          <ArrowRight
+            className={
+              (isActive ? " opacity-0 md:opacity-100" : " opacity-0") +
+              " flex-shrink-0 text-lg"
+            }
+          />
         </a>
       </Link>
     </li>
