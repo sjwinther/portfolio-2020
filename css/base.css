@@ -36,6 +36,11 @@ p {
   @apply leading-normal;
 }
 
+h1,
+h2 {
+  font-family: "PP Woodland";
+}
+
 @tailwind components;
 
 /* Custom components */

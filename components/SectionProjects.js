@@ -33,7 +33,7 @@ export default () => {
           <Image strokeWidth="1.5" className="text-6xl text-white opacity-50" />
         </div>
       </div>
-      <div className="hidden bg-indigo-800 bg-orange-800 bg-green-800 bg-teal-800 bg-purple-800" />
+      <div className="hidden bg-indigo-700 bg-orange-700 bg-green-700 bg-teal-700 bg-purple-700" />
     </section>
   );
 };
@@ -50,14 +50,15 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
             "flex items-center rounded p-3"
           }
         >
-          <div className="flex-auto flex items-center">
+          <div className="flex-auto flex items-center text-lg">
             {title}
             {skills.map(skill => {
               return (
                 <div
                   key={skill}
                   className={
-                    (isActive ? " opacity-100" : " opacity-25") + " ml-4"
+                    (isActive ? " opacity-100" : " opacity-100 md:opacity-25") +
+                    " ml-4"
                   }
                 >
                   <SkillBadge skill={skill} size="sm" />
@@ -67,7 +68,7 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           </div>
           <ArrowRight
             className={
-              (isActive ? " opacity-0 md:opacity-100" : " opacity-0") +
+              (isActive ? " opacity-100" : " opacity-25 md:opacity-0") +
               " flex-shrink-0 text-lg"
             }
           />

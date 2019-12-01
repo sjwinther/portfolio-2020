@@ -34,7 +34,10 @@ export default ({ id, children }) => {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
-          <div style={{ paddingBottom: "56.25%" }} className="relative mb-16">
+          <div
+            style={{ paddingBottom: "56.25%" }}
+            className="relative mb-16 md:mb-24"
+          >
             <div
               className={
                 bgColor +

@@ -6,19 +6,19 @@ export default () => {
   const [loading, setLoading] = useState(false);
   return (
     <footer className="px-4">
-      <div className="max-w-5xl border-t-2 border-gray-800 py-16 mx-auto">
-        <p className="font-medium text-xl text-center mb-4">
+      <div className="max-w-5xl border-t-2 border-gray-800 py-8 md:py-16 mx-auto">
+        <p className="font-medium text-xl md:text-center mb-4">
           I'm available for work. Leave your email:
         </p>
-        <div className="max-w-md flex items-center mx-auto">
+        <div className="flex items-center md:justify-center -m-2">
           <input
             type="email"
             placeholder="tim@apple.com"
-            className="input flex-auto m-2"
+            className="input w-64 m-2"
           />
           <button
             onClick={() => setLoading(true)}
-            className="btn btn-primary relative m-2"
+            className="flex-shrink-0 btn btn-primary relative m-2"
           >
             <span className={loading ? "text-transparent" : ""}>
               Send it along
