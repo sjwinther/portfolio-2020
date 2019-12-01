@@ -12,10 +12,10 @@ export default () => (
       </p>
       <dl className="flex flex-wrap items-center -m-2">
         <dt className="font-medium m-2">I do:</dt>
-        <DescriptionData bgColor="bg-pink-500" title="Agurker" />
-        <DescriptionData bgColor="bg-blue-500" title="Gulerødder" />
-        <DescriptionData bgColor="bg-green-500" title="Pastinakker" />
-        <DescriptionData bgColor="bg-yellow-500" title="Æbler" />
+        <DescriptionData bgColor="bg-pink-500" title="UX research" />
+        <DescriptionData bgColor="bg-blue-500" title="UI design" />
+        <DescriptionData bgColor="bg-green-500" title="App design" />
+        <DescriptionData bgColor="bg-yellow-500" title="Frontend development" />
       </dl>
     </div>
   </section>

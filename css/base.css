@@ -48,6 +48,12 @@ p {
 .btn-primary:hover {
   @apply bg-gray-400 border-gray-400;
 }
+.btn-tertiary {
+  @apply border-transparent px-2;
+}
+.btn-tertiary:hover {
+  @apply bg-gray-800 border-gray-800;
+}
 
 @tailwind utilities;
 
