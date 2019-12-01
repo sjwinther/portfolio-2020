@@ -31,6 +31,9 @@ button {
 button:focus {
   @apply outline-none shadow-outline;
 } */
+p {
+  @apply leading-normal;
+}
 
 @tailwind components;
 
