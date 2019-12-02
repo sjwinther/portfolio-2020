@@ -10,10 +10,9 @@ export default () => {
     <footer className="px-4">
       <div className="max-w-5xl flex flex-wrap md:flex-no-wrap border-t-2 border-gray-200 dark:border-gray-800 py-8 md:py-16 mx-auto">
         <div className="flex-auto flex flex-col md:pr-8">
-          <div className="flex-auto max-w-lg text-lg mb-8">
+          <div className="flex-auto max-w-md text-lg mb-8">
             <p className="mb-8">
-              I design and code. I currently work freelance, and have previously
-              worked with companies like{" "}
+              I design and code. I have previously worked with companies like{" "}
               <InlineLink href="https://www.pelion.app" size="sm">
                 Pelion
               </InlineLink>
