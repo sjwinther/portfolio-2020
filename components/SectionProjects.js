@@ -4,7 +4,7 @@ import Link from "next/link";
 import useBreakpoint from "../hooks/useBreakpoint";
 import projects from "../content/projects";
 
-import SkillBadge from "../components/SkillBadge";
+import SkillBadge from "./SkillBadge";
 
 export default () => {
   const [project, setProject] = useState(Object.keys(projects)[0]);
@@ -16,7 +16,7 @@ export default () => {
             <h2 className="font-black text-4xl">My projects</h2>
             <CornerRightDown
               strokeWidth="3"
-              className="text-2xl text-gray-700 ml-6"
+              className="text-2xl text-gray-500 dark:text-gray-700 ml-6"
             />
           </div>
           <ul className="-mx-4">
@@ -31,14 +31,19 @@ export default () => {
             ))}
           </ul>
         </div>
-        <div
-          className={
-            projects[project].bgColor +
-            " hidden md:flex items-center justify-center w-1/2 lg:w-3/5 rounded transition"
-          }
-        >
-          <Image strokeWidth="1.5" className="text-6xl text-white opacity-50" />
-        </div>
+        <Link href={projects[project].url}>
+          <a
+            className={
+              projects[project].bgColor +
+              " hidden md:flex items-center justify-center w-1/2 lg:w-3/5 rounded transition"
+            }
+          >
+            <Image
+              strokeWidth="1.5"
+              className="text-6xl text-white opacity-50"
+            />
+          </a>
+        </Link>
       </div>
       <div className="hidden bg-indigo-700 bg-orange-700 bg-green-700 bg-teal-700 bg-purple-700" />
     </section>
@@ -73,6 +78,7 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
             })}
           </div>
           <ArrowRight
+            strokeWidth="2.5"
             className={
               (isActive
                 ? " opacity-50 md:opacity-100"

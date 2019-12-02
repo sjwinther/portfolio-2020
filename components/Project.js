@@ -9,20 +9,18 @@ export default ({ id, children }) => {
   const { title, year, publicUrl, skills, bgColor } = project;
   return (
     <Layout>
-      <main className="px-4 py-8 md:py-16">
+      <main className="px-4 py-16 md:pb-24">
         <article className="max-w-5xl mx-auto">
           <h1 className="font-black text-3xl md:text-4xl mb-4">{title}</h1>
           <dl className="-mx-2 mb-4">
             <Data content={year} />
             <Data content={publicUrl} href={publicUrl} />
           </dl>
-          <dl className="flex flex-wrap items-center -mx-2 mb-8">
+          <div className="flex flex-wrap items-center -mx-2 mb-8">
             {skills.map(skill => (
-              <dd className="m-2">
-                <SkillBadge skill={skill} size="lg" />
-              </dd>
+              <SkillBadge skill={skill} size="lg" />
             ))}
-          </dl>
+          </div>
           <p className="max-w-4xl text-lg md:text-xl mb-12">
             Here's a project TL;DR. Lorem ipsum dolor sit amet, consectetur
             adipiscing elit, sed do eiusmod tempor incididunt ut labore et
@@ -85,7 +83,7 @@ const Data = ({ content, href }) => (
 );
 
 const Section = ({ title, content }) => (
-  <section className="flex flex-wrap items-baseline mb-16">
+  <section className="flex flex-wrap items-baseline mb-16 last:mb-0">
     <h3 className="w-full md:w-1/4 font-bold text-lg md:text-xl mb-4">
       {title}
     </h3>

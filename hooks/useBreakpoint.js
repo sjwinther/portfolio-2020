@@ -26,4 +26,3 @@ export default () => {
   }
   return breakpoint;
 };
-export default useBreakpoint;
