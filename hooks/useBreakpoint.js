@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useBreakpoint = () => {
+export default () => {
   const [width, setWidth] = useState();
   const getWidth = () => {
     setWidth(window.innerWidth);

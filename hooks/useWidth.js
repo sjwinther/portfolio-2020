@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useWidth = ref => {
+export default ref => {
   const [width, setWidth] = useState();
   const getWidth = () => {
     setWidth(ref.current.getBoundingClientRect().width);
@@ -13,4 +13,3 @@ const useWidth = ref => {
   });
   return width;
 };
-export default useWidth;
