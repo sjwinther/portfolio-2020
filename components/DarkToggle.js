@@ -8,7 +8,7 @@ export default class ToggleWrapper extends React.Component {
   };
   componentDidMount() {
     this.setState({
-      localDark: JSON.parse(localStorage.getItem("dark")),
+      localDark: JSON.parse(sessionStorage.getItem("dark")),
       prefersDark:
         window.matchMedia &&
         window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -29,11 +29,11 @@ const Toggle = ({ localDark, prefersDark }) => {
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("mode-dark");
-      localStorage.setItem("dark", true);
+      sessionStorage.setItem("dark", true);
     }
     if (!dark) {
       document.documentElement.classList.remove("mode-dark");
-      localStorage.setItem("dark", false);
+      sessionStorage.setItem("dark", false);
     }
   }, [dark]);
   return (
