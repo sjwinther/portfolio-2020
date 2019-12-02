@@ -3,11 +3,14 @@
 /* Boilerplate */
 
 html {
-  @apply antialiased font-sans leading-tight text-gray-900;
+  @apply antialiased font-sans leading-tight;
   font-feature-settings: "liga" 1;
 }
 body {
-  @apply text-gray-300 bg-gray-900 m-0;
+  @apply text-gray-900 bg-white m-0;
+}
+.mode-dark body {
+  @apply text-gray-300 bg-gray-900;
 }
 svg {
   height: 1em;
@@ -41,27 +44,44 @@ p {
 /* Custom components */
 
 .btn {
-  @apply font-bold text-center text-gray-300 rounded p-3;
+  @apply font-bold text-center text-gray-900 rounded p-3;
 }
+.mode-dark .btn {
+  @apply text-gray-300;
+}
+
 .btn-primary {
-  @apply text-gray-900 bg-gray-300;
+  @apply text-white bg-gray-800;
 }
 .btn-primary:hover {
+  @apply bg-gray-900;
+}
+.mode-dark .btn-primary {
+  @apply text-gray-900 bg-gray-300;
+}
+.mode-dark .btn-primary:hover {
   @apply bg-gray-400;
 }
+
 .btn-tertiary {
   @apply border-transparent;
 }
 .btn-tertiary:hover {
+  @apply bg-gray-100;
+}
+.mode-dark .btn-tertiary:hover {
   @apply bg-black;
 }
 
 .input {
-  @apply font-bold text-gray-300 bg-black rounded transition px-4 py-3;
+  @apply font-bold text-gray-900 bg-gray-200 rounded transition px-4 py-3;
 }
 .input::placeholder {
   color: inherit;
   opacity: 0.5;
+}
+.mode-dark .input {
+  @apply text-gray-300 bg-black;
 }
 
 @tailwind utilities;

@@ -73,7 +73,7 @@ const Data = ({ content, href }) => (
         href={"https://" + href}
         target="_blank"
         rel="noopener"
-        className="inline-flex items-center hover:bg-black py-1"
+        className="inline-flex items-center hover:bg-gray-100 dark-hover:bg-black py-1"
       >
         <div style={{ transform: "translateY(1px)" }}>{content}</div>
         <ExternalLink

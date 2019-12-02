@@ -54,7 +54,7 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           onFocus={() => setProject(id)}
           className={
             (isActive
-              ? " md:bg-black opacity-100 "
+              ? " bg-gray-100 dark:bg-black opacity-100 "
               : " opacity-100 md:opacity-50 ") + "flex items-center rounded p-3"
           }
         >

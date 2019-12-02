@@ -21,7 +21,7 @@ export default () => (
           href="mailto:sebastianwinther@gmail.com?subject=Let's get coffee"
           target="_email"
           rel="noopener"
-          className="inline-flex items-center hover:bg-black"
+          className="inline-flex items-center hover:bg-gray-100 dark-hover:bg-black"
         >
           Write me an email
           <ExternalLink className="text-gray-600 ml-2" />

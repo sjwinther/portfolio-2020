@@ -2,10 +2,12 @@ import Link from "next/link";
 
 export default () => (
   <nav className="px-4">
-    <div className="max-w-5xl flex items-center border-b-2 border-gray-800 py-8 mx-auto">
+    <div className="max-w-5xl flex items-center border-b-2 border-gray-100 dark:border-gray-800 py-8 mx-auto">
       <div className="flex-auto">
         <Link href="/">
-          <a className="font-black text-2xl hover:bg-black py-1">SW</a>
+          <a className="font-black text-2xl hover:bg-gray-100 dark-hover:bg-black py-1">
+            SW
+          </a>
         </Link>
       </div>
       <div className="-m-2">

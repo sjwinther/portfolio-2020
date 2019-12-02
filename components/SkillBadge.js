@@ -33,7 +33,7 @@ export default ({ skill, size }) => {
       : null;
   if (size === "lg")
     return (
-      <div className="inline-flex items-center bg-gray-800 rounded px-3 md:px-4 py-2 md:py-3">
+      <div className="inline-flex items-center bg-gray-200 dark:bg-gray-800 rounded px-3 md:px-4 py-2 md:py-3">
         <div className={color + " md:text-xl mr-3 md:mr-4"}>{icon}</div>
         <div className="font-bold text-sm md:text-base">{title}</div>
       </div>

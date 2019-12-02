@@ -1,7 +1,11 @@
+import { useEffect } from "react";
 import Head from "next/head";
 import "../css/base.css";
 
 const CustomHead = () => {
+  useEffect(() => {
+    document.documentElement.classList.add("mode-dark");
+  });
   const title = "Sebastian Winther";
   const description = "Portfolio site of Sebastian Winther";
   return (
