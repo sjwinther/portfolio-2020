@@ -10,7 +10,7 @@ export default () => {
   const [submitted, setSubmitted] = useState(false);
   return (
     <footer className="px-4">
-      <div className="max-w-5xl border-t-2 border-gray-100 dark:border-gray-800 py-8 md:py-16 mx-auto">
+      <div className="max-w-5xl border-t-2 border-gray-200 dark:border-gray-800 py-8 md:py-16 mx-auto">
         <p className="text-xl md:text-center mb-4">
           I'm available for work.{" "}
           <span className="inline-block">Leave your email:</span>

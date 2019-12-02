@@ -22,7 +22,7 @@
     "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
     "tailwindcss": "^1.1.4",
-    "tailwindcss-dark-mode": "^1.1.0"
+    "tailwindcss-dark-mode": "ChanceArthur/tailwindcss-dark-mode#26d925d074ba11899ec7d91c1f55a274c7425968"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

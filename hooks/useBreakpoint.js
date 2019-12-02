@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 const useBreakpoint = () => {
   const [width, setWidth] = useState();
@@ -6,9 +6,9 @@ const useBreakpoint = () => {
     setWidth(window.innerWidth);
   };
   useEffect(() => {
-    window.addEventListener('resize', getWidth());
+    window.addEventListener("resize", getWidth());
     return () => {
-      window.removeEventListener('resize', getWidth());
+      window.removeEventListener("resize", getWidth());
     };
   });
   let breakpoint = {};
@@ -23,9 +23,6 @@ const useBreakpoint = () => {
   }
   if (width >= 640) {
     breakpoint.sm = true;
-  }
-  if (width >= 480) {
-    breakpoint.xs = true;
   }
   return breakpoint;
 };

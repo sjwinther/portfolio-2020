@@ -21,7 +21,7 @@ export default () => (
           href="mailto:sebastianwinther@gmail.com?subject=Let's get coffee"
           target="_email"
           rel="noopener"
-          className="inline-flex items-center hover:bg-gray-100 dark-hover:bg-black"
+          className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black"
         >
           Write me an email
           <ExternalLink className="text-gray-600 ml-2" />
@@ -29,19 +29,11 @@ export default () => (
         .
       </p>
       <dl className="flex flex-wrap items-center -m-2">
-        <dt className="text-lg m-2">I work with</dt>
-        <dd className="m-2">
-          <SkillBadge skill="ux" size="lg" />
-        </dd>
-        <dd className="m-2">
-          <SkillBadge skill="web" size="lg" />
-        </dd>
-        <dd className="m-2">
-          <SkillBadge skill="app" size="lg" />
-        </dd>
-        <dd className="m-2">
-          <SkillBadge skill="code" size="lg" />
-        </dd>
+        <div className="text-lg sm:text-xl m-2">I work with</div>
+        <SkillBadge skill="ux" size="lg" />
+        <SkillBadge skill="web" size="lg" />
+        <SkillBadge skill="app" size="lg" />
+        <SkillBadge skill="code" size="lg" />
       </dl>
     </div>
   </section>

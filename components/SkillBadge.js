@@ -33,9 +33,9 @@ export default ({ skill, size }) => {
       : null;
   if (size === "lg")
     return (
-      <div className="inline-flex items-center bg-gray-200 dark:bg-gray-800 rounded px-3 md:px-4 py-2 md:py-3">
-        <div className={color + " md:text-xl mr-3 md:mr-4"}>{icon}</div>
-        <div className="font-bold text-sm md:text-base">{title}</div>
+      <div className="inline-flex items-center text-lg sm:text-xl m-2">
+        <div className={color + " mr-2 sm:mr-3"}>{icon}</div>
+        <div className="font-bold">{title}</div>
       </div>
     );
   if (size === "sm") return <div className={color}>{icon}</div>;

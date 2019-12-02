@@ -1,17 +1,12 @@
-import Head from "../components/Head";
-import Nav from "../components/Nav";
+import Layout from "../components/Layout";
 import SectionHero from "../components/SectionHero";
 import SectionProjects from "../components/SectionProjects";
-import Footer from "../components/Footer";
 
 export default () => (
-  <>
-    <Head />
-    <Nav />
+  <Layout>
     <main className="py-8">
       <SectionHero />
       <SectionProjects />
     </main>
-    <Footer />
-  </>
+  </Layout>
 );

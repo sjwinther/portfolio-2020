@@ -1,18 +1,14 @@
 import { Image, ExternalLink } from "react-feather";
 import projects from "../content/projects";
 
-import Head from "./Head";
-import Nav from "./Nav";
+import Layout from "./Layout";
 import SkillBadge from "./SkillBadge";
-import Footer from "./Footer";
 
 export default ({ id, children }) => {
   const project = projects[id];
   const { title, year, publicUrl, skills, bgColor } = project;
   return (
-    <>
-      <Head />
-      <Nav />
+    <Layout>
       <main className="px-4 py-8 md:py-16">
         <article className="max-w-5xl mx-auto">
           <h1 className="font-black text-3xl md:text-4xl mb-4">{title}</h1>
@@ -61,8 +57,7 @@ export default ({ id, children }) => {
           {children}
         </article>
       </main>
-      <Footer />
-    </>
+    </Layout>
   );
 };
 
@@ -73,7 +68,7 @@ const Data = ({ content, href }) => (
         href={"https://" + href}
         target="_blank"
         rel="noopener"
-        className="inline-flex items-center hover:bg-gray-100 dark-hover:bg-black py-1"
+        className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black py-1"
       >
         <div style={{ transform: "translateY(1px)" }}>{content}</div>
         <ExternalLink

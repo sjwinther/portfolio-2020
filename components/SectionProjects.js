@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Image, CornerRightDown, ArrowRight } from "react-feather";
 import Link from "next/link";
+import useBreakpoint from "../hooks/useBreakpoint";
 import projects from "../content/projects";
 
 import SkillBadge from "../components/SkillBadge";
@@ -45,6 +46,7 @@ export default () => {
 };
 
 const ListItem = ({ id, title, url, skills, project, setProject }) => {
+  const { md } = useBreakpoint();
   const isActive = project === id;
   return (
     <li className="m-2 last:mb-0">
@@ -53,9 +55,11 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
           onMouseOver={() => setProject(id)}
           onFocus={() => setProject(id)}
           className={
-            (isActive
-              ? " bg-gray-100 dark:bg-black opacity-100 "
-              : " opacity-100 md:opacity-50 ") + "flex items-center rounded p-3"
+            (isActive && md
+              ? "bg-gray-200 dark:bg-black "
+              : isActive
+              ? "opacity-100 "
+              : "opacity-100 md:opacity-50 ") + "flex items-center rounded p-3"
           }
         >
           <div className="flex-auto flex items-center text-lg">
