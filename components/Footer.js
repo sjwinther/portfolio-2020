@@ -43,8 +43,6 @@ export default () => {
             <dd className="mb-3">
               <a
                 href="mailto:sebastianwinther@gmail.com"
-                target="_email"
-                rel="noopener"
                 className="hover:bg-gray-200 dark-hover:bg-black"
               >
                 sebastianwinther@gmail.com
@@ -59,7 +57,7 @@ export default () => {
                   rel="noopener"
                   className="text-lg hover:bg-gray-200 dark-hover:bg-black p-1"
                 >
-                  <GitHub className="" />
+                  <GitHub className="fill-current" />
                 </a>
               </dd>
               <dd className="inline-block m-1">
@@ -69,7 +67,7 @@ export default () => {
                   rel="noopener"
                   className="text-lg hover:bg-gray-200 dark-hover:bg-black p-1"
                 >
-                  <Twitter className="" />
+                  <Twitter className="fill-current" />
                 </a>
               </dd>
             </div>

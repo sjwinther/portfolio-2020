@@ -82,7 +82,8 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
             className={
               (isActive
                 ? " opacity-50 md:opacity-100"
-                : " opacity-50 md:opacity-0") + " text-lg transition"
+                : " opacity-50 md:opacity-0") +
+              " text-lg text-gray-800 dark:text-gray-400 transition"
             }
           />
         </a>
