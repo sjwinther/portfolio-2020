@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useForm } from "@statickit/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, CornerRightDown } from "react-feather";
 
@@ -73,22 +74,16 @@ export default () => {
 
 const Form = () => {
   const [email, setEmail] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [state, submit] = useForm({
+    site: "2b52df695624",
+    form: "contact-form"
+  });
+  const { submitting, succeeded, errors } = state;
+  useEffect(() => {
+    succeeded && setEmail("");
+  }, [succeeded]);
   return (
-    <form
-      onSubmit={e => {
-        e.preventDefault();
-        setLoading(true);
-        setTimeout(() => {
-          setSubmitted(true);
-          setTimeout(() => {
-            setEmail("");
-          }, 1000);
-        }, 2000);
-      }}
-      className="flex -m-2"
-    >
+    <form onSubmit={submit} className="flex -m-2">
       <input
         value={email}
         onChange={e => setEmail(e.target.value)}
@@ -99,24 +94,26 @@ const Form = () => {
       />
       <button
         type="submit"
-        className="flex-shrink-0 btn btn-primary relative m-2"
+        className="flex-shrink-0 btn btn-primary relative w-32 m-2"
       >
-        <span className={loading ? "text-transparent " : ""}>Send along</span>
-        {(submitted || loading) && (
+        <span className={succeeded || submitting ? "text-transparent" : ""}>
+          {errors && !!errors.length ? "Try again" : "Send along"}
+        </span>
+        {(succeeded || submitting) && (
           <div className="absolute inset-0 flex items-center justify-center">
             <AnimatePresence exitBeforeEnter>
-              {submitted ? (
+              {succeeded ? (
                 <motion.div
-                  key="check"
+                  key="succeeded"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
                   <Check strokeWidth="2.5" className="text-xl" />
                 </motion.div>
-              ) : loading ? (
+              ) : submitting ? (
                 <motion.div
-                  key="loading"
+                  key="submitting"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
