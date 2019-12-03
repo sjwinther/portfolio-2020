@@ -11,18 +11,22 @@ export default () => (
         </Link>
       </div>
       <div className="-m-2">
-        <Link href="/">
-          <a className="btn btn-tertiary inline-flex items-center m-2">
-            <span className="hidden sm:inline">Download my resume</span>
-            <span className="inline sm:hidden">Resume</span>
-          </a>
-        </Link>
-        <Link href="/">
-          <a className="btn btn-primary inline-flex items-center m-2">
-            <span className="hidden sm:inline">Copy my email</span>
-            <span className="inline sm:hidden">Email</span>
-          </a>
-        </Link>
+        <a
+          href="/resume.pdf"
+          target="_resume"
+          download="Sebastian Winther Resume"
+          className="btn btn-tertiary inline-flex items-center m-2"
+        >
+          <span className="hidden sm:inline">Download my resume</span>
+          <span className="inline sm:hidden">Resume</span>
+        </a>
+        <a
+          href="mailto:sebastianwinther@gmail.com?subject=Hey there!"
+          className="btn btn-primary inline-flex items-center m-2"
+        >
+          <span className="hidden sm:inline">Get in touch</span>
+          <span className="inline sm:hidden">Email</span>
+        </a>
       </div>
     </div>
   </nav>

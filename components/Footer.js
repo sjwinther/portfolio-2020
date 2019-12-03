@@ -10,7 +10,7 @@ export default () => {
   return (
     <footer className="px-4">
       <div className="max-w-5xl flex flex-wrap md:flex-no-wrap border-t-2 border-gray-200 dark:border-gray-800 py-8 md:py-16 mx-auto">
-        <div className="flex-auto flex flex-col md:pr-8">
+        <div className="w-full flex flex-col md:pr-8">
           <div className="flex-auto max-w-md text-lg mb-8">
             <p className="mb-8">
               I design and code. I have previously worked with companies like{" "}
@@ -53,7 +53,7 @@ export default () => {
             </dd>
           </dl>
         </div>
-        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-2">
+        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-1">
           <div className="flex items-end mb-4">
             <h3 className="font-black text-2xl">That's me!</h3>
             <CornerRightDown
@@ -64,7 +64,7 @@ export default () => {
           <img
             src="/sebastian.jpg"
             alt="That's me!"
-            className="h-64 w-64 rounded"
+            className="w-40 md:w-64 h-40 md:h-64 rounded"
           />
         </div>
       </div>
