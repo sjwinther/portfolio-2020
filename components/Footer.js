@@ -88,6 +88,7 @@ const Form = () => {
         value={email}
         onChange={e => setEmail(e.target.value)}
         type="email"
+        name="email"
         placeholder="tim@apple.com"
         required
         className="input w-full max-w-xs m-2"
