@@ -71,7 +71,10 @@ const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
             {title}
             {type && type === "case" && (
               <span
-                style={{ padding: "4px 5px 2px 5px" }}
+                style={{
+                  padding: "4px 5px 2px 5px",
+                  transform: "translateY(-1px)"
+                }}
                 className="font-bold uppercase text-xs bg-pink-400 dark:bg-pink-800 rounded-sm ml-2"
               >
                 Case study
