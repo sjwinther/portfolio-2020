@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "@statickit/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, CornerRightDown } from "react-feather";
+import { Check, CornerRightDown, GitHub, Twitter } from "react-feather";
 
 import LoadingSpinner from "./LoadingSpinner";
 import InlineLink from "./InlineLink";
@@ -11,7 +11,7 @@ export default () => {
     <footer className="px-4">
       <div className="max-w-5xl flex flex-wrap md:flex-no-wrap border-t-2 border-gray-200 dark:border-gray-800 py-8 md:py-16 mx-auto">
         <div className="w-full flex flex-col md:pr-8">
-          <div className="flex-auto max-w-md text-lg mb-8">
+          <div className="flex-auto max-w-md text-lg mb-10">
             <p className="mb-8">
               I design and code. I have previously worked with companies like{" "}
               <InlineLink href="https://www.pelion.app" size="sm">
@@ -40,7 +40,7 @@ export default () => {
           <dl>
             <dd className="mb-1">Sebastian Winther</dd>
             <dd className="mb-1">Copenhagen, Denmark</dd>
-            <dd>
+            <dd className="mb-3">
               <a
                 href="mailto:sebastianwinther@gmail.com"
                 target="_email"
@@ -51,9 +51,31 @@ export default () => {
               </a>{" "}
               — Say hi!
             </dd>
+            <div className="-m-1">
+              <dd className="inline-block m-1">
+                <a
+                  href="https://github.com/sjwinther"
+                  target="_github"
+                  rel="noopener"
+                  className="text-lg hover:bg-gray-200 dark-hover:bg-black p-1"
+                >
+                  <GitHub className="" />
+                </a>
+              </dd>
+              <dd className="inline-block m-1">
+                <a
+                  href="https://twitter.com/sebjwinther"
+                  target="_twitter"
+                  rel="noopener"
+                  className="text-lg hover:bg-gray-200 dark-hover:bg-black p-1"
+                >
+                  <Twitter className="" />
+                </a>
+              </dd>
+            </div>
           </dl>
         </div>
-        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-1">
+        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-2">
           <div className="flex items-end mb-4">
             <h3 className="font-black text-2xl">That's me!</h3>
             <CornerRightDown

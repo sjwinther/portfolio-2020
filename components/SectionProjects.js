@@ -64,7 +64,7 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
               ? "bg-gray-200 dark:bg-black "
               : isActive
               ? "opacity-100 "
-              : "opacity-100 md:opacity-50 ") + "flex items-center rounded p-3"
+              : "opacity-100 md:opacity-75 ") + "flex items-center rounded p-3"
           }
         >
           <div className="flex-auto flex items-center text-lg">

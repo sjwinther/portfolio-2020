@@ -74,7 +74,7 @@ p {
 }
 
 .input {
-  @apply font-bold text-gray-900 bg-gray-200 rounded transition px-4 py-3;
+  @apply font-bold text-gray-900 bg-gray-300 rounded transition px-4 py-3;
 }
 .input::placeholder {
   color: inherit;
