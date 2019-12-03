@@ -14,19 +14,35 @@ export default () => {
           <div className="flex-auto max-w-md text-lg mb-10">
             <p className="mb-8">
               I design and code. I have previously worked with companies like{" "}
-              <InlineLink href="https://www.pelion.app" size="sm">
+              <InlineLink
+                href="https://www.pelion.app"
+                target="_pelion"
+                size="sm"
+              >
                 Pelion
               </InlineLink>
               ,{" "}
-              <InlineLink href="https://www.initiativet.dk" size="sm">
+              <InlineLink
+                href="https://www.initiativet.dk"
+                target="_initiativet"
+                size="sm"
+              >
                 Initiativet
               </InlineLink>
               ,{" "}
-              <InlineLink href="https://www.readwise.io" size="sm">
+              <InlineLink
+                href="https://www.readwise.io"
+                target="_readwise"
+                size="sm"
+              >
                 Readwise
               </InlineLink>
               , &{" "}
-              <InlineLink href="https://www.nord.investments" size="sm">
+              <InlineLink
+                href="https://www.nord.investments"
+                target="_nord"
+                size="sm"
+              >
                 NORD.investments
               </InlineLink>
               .
