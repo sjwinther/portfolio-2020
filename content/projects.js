@@ -1,6 +1,7 @@
 const projects = {
   pelion: {
     title: "Pelion",
+    type: "case",
     url: "/project/pelion",
     year: "2018-2019",
     publicUrl: "www.pelion.app",
@@ -23,8 +24,17 @@ const projects = {
     skills: ["web", "code"],
     bgColor: "bg-green-700"
   },
+  readwise: {
+    title: "Readwise",
+    url: "/project/readwise",
+    year: "2019",
+    publicUrl: "www.readwise.io",
+    skills: ["web"],
+    bgColor: "bg-green-700"
+  },
   initiativet: {
     title: "Initiativet",
+    type: "case",
     url: "/project/initiativet",
     year: "2017",
     publicUrl: "www.initiativet.dk",

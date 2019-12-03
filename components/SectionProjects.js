@@ -50,7 +50,7 @@ export default () => {
   );
 };
 
-const ListItem = ({ id, title, url, skills, project, setProject }) => {
+const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
   const { md } = useBreakpoint();
   const isActive = project === id;
   return (
@@ -69,6 +69,14 @@ const ListItem = ({ id, title, url, skills, project, setProject }) => {
         >
           <div className="flex-auto flex items-center text-lg">
             {title}
+            {type && type === "case" && (
+              <span
+                style={{ padding: "4px 5px 2px 5px" }}
+                className="font-bold uppercase text-xs bg-pink-400 dark:bg-pink-800 rounded-sm ml-2"
+              >
+                Case study
+              </span>
+            )}
             {skills.map(skill => {
               return (
                 <div key={skill} className="ml-4">
