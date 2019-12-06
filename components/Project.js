@@ -60,7 +60,7 @@ export default ({ id, children }) => {
 };
 
 const Data = ({ content, href }) => (
-  <dd className="inline-block font-bold uppercase m-2">
+  <dd className="inline-block font-medium uppercase m-2">
     {href ? (
       <a
         href={"https://" + href}
@@ -84,7 +84,7 @@ const Data = ({ content, href }) => (
 
 const Section = ({ title, content }) => (
   <section className="flex flex-wrap items-baseline mb-16 last:mb-0">
-    <h3 className="w-full md:w-1/4 font-bold text-lg md:text-xl mb-4">
+    <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-4">
       {title}
     </h3>
     <p className="w-full md:w-3/4 text-lg md:text-xl">{content}</p>

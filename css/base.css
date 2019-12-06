@@ -1,10 +1,17 @@
+@import url("https://rsms.me/inter/inter.css");
+
 @tailwind base;
 
 /* Boilerplate */
 
 html {
-  @apply antialiased font-sans leading-tight;
+  @apply font-sans antialiased leading-tight;
   font-feature-settings: "liga" 1;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    @apply font-sans-var;
+  }
 }
 body {
   @apply text-gray-900 bg-white m-0;
@@ -44,7 +51,7 @@ p {
 /* Custom components */
 
 .btn {
-  @apply font-bold text-center text-gray-900 rounded p-3;
+  @apply font-medium text-center text-gray-900 rounded p-3;
 }
 .mode-dark .btn {
   @apply text-gray-300;
@@ -74,7 +81,7 @@ p {
 }
 
 .input {
-  @apply font-bold text-gray-900 bg-gray-300 rounded transition px-4 py-3;
+  @apply font-medium text-gray-900 bg-gray-300 rounded transition px-4 py-3;
 }
 .input::placeholder {
   color: inherit;
