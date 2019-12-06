@@ -1,7 +1,6 @@
 const projects = {
   pelion: {
     title: "Pelion",
-    type: "case",
     url: "/project/pelion",
     year: "2018-2019",
     publicUrl: "www.pelion.app",
@@ -34,7 +33,6 @@ const projects = {
   },
   initiativet: {
     title: "Initiativet",
-    type: "case",
     url: "/project/initiativet",
     year: "2017",
     publicUrl: "www.initiativet.dk",

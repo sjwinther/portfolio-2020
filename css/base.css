@@ -6,7 +6,7 @@
 
 html {
   @apply font-sans antialiased leading-tight;
-  font-feature-settings: "liga" 1;
+  font-feature-settings: "liga" 1, "ss01" 1, "ss03" 1;
 }
 @supports (font-variation-settings: normal) {
   html {
