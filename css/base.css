@@ -38,7 +38,7 @@ a {
 }
 a,
 button {
-  @apply rounded-sm transition;
+  @apply rounded transition;
 }
 a:focus,
 button:focus,
