@@ -56,14 +56,11 @@ const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
           onMouseOver={() => setProject(id)}
           onFocus={() => setProject(id)}
           className={
-            (isActive && md
-              ? "bg-gray-200 dark:bg-black "
-              : isActive
-              ? "opacity-100 "
-              : "opacity-100 md:opacity-75 ") + "flex items-center rounded p-3"
+            (isActive ? "opacity-100 " : "opacity-100 md:opacity-50 ") +
+            "flex items-center p-3"
           }
         >
-          <div className="flex-auto flex items-center text-lg">
+          <div className="flex-auto flex items-center font-medium text-lg">
             {title}
             {skills.map(skill => {
               return (
@@ -77,8 +74,8 @@ const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
             style={{ strokeWidth: "4" }}
             className={
               (isActive
-                ? " opacity-50 md:opacity-100"
-                : " opacity-50 md:opacity-0") +
+                ? " opacity-25 md:opacity-100"
+                : " opacity-25 md:opacity-0") +
               " icon text-2xl text-gray-800 dark:text-gray-400 transition"
             }
           />
