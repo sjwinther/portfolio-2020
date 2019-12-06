@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Image, CornerRightDown, ArrowRight } from "react-feather";
+import ArrowBig from "../icons/arrow-big.svg";
+import ArrowRight from "../icons/arrow-right.svg";
 import Link from "next/link";
 import useBreakpoint from "../hooks/useBreakpoint";
 import projects from "../content/projects";
@@ -14,9 +15,9 @@ export default () => {
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
             <h2 className="font-black text-4xl">My projects</h2>
-            <CornerRightDown
-              strokeWidth="3"
-              className="text-2xl text-gray-500 dark:text-gray-700 ml-6"
+            <ArrowBig
+              style={{ strokeWidth: "2" }}
+              className="icon text-6xl text-pink-600 ml-4"
             />
           </div>
           <ul className="-mx-4">
@@ -35,14 +36,9 @@ export default () => {
           <a
             className={
               projects[project].bgColor +
-              " hidden md:flex items-center justify-center w-1/2 lg:w-3/5 rounded transition"
+              " hidden md:block w-1/2 lg:w-3/5 rounded transition"
             }
-          >
-            <Image
-              strokeWidth="1.5"
-              className="text-6xl text-white opacity-50"
-            />
-          </a>
+          />
         </Link>
       </div>
       <div className="hidden bg-indigo-700 bg-orange-700 bg-green-700 bg-teal-700 bg-purple-700" />
@@ -78,12 +74,12 @@ const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
             })}
           </div>
           <ArrowRight
-            strokeWidth="2.5"
+            style={{ strokeWidth: "4" }}
             className={
               (isActive
                 ? " opacity-50 md:opacity-100"
                 : " opacity-50 md:opacity-0") +
-              " text-lg text-gray-800 dark:text-gray-400 transition"
+              " icon text-2xl text-gray-800 dark:text-gray-400 transition"
             }
           />
         </a>

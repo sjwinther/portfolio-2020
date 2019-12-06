@@ -1,6 +1,23 @@
-import { Edit, Layout, Code, Smartphone } from "react-feather";
+import Edit from "../icons/edit.svg";
+import Layout from "../icons/layout.svg";
+import Code from "../icons/code.svg";
+import Phone from "../icons/phone.svg";
 
 export default ({ skill, size }) => {
+  const color =
+    skill === "ux"
+      ? "text-indigo-600"
+      : skill === "web"
+      ? "text-blue-600"
+      : skill === "app"
+      ? "text-green-600"
+      : skill === "code"
+      ? "text-yellow-600"
+      : null;
+  const iconProps = {
+    style: { strokeWidth: "2.5" },
+    className: color + " icon text-2xl sm:text-3xl"
+  };
   const title =
     skill === "ux"
       ? "User research"
@@ -13,41 +30,21 @@ export default ({ skill, size }) => {
       : null;
   const icon =
     skill === "ux" ? (
-      <Edit />
+      <Edit {...iconProps} />
     ) : skill === "web" ? (
-      <Layout />
+      <Layout {...iconProps} />
     ) : skill === "app" ? (
-      <Smartphone />
+      <Phone {...iconProps} />
     ) : skill === "code" ? (
-      <Code />
+      <Code {...iconProps} />
     ) : null;
-  const color =
-    skill === "ux"
-      ? "text-indigo-500"
-      : skill === "web"
-      ? "text-blue-500"
-      : skill === "app"
-      ? "text-green-500"
-      : skill === "code"
-      ? "text-yellow-500"
-      : null;
   if (size === "lg")
     return (
       <div className="inline-flex items-center text-lg sm:text-xl m-2">
-        <div
-          style={{ transform: "translateY(-2px)" }}
-          className={color + " mr-2 sm:mr-3"}
-        >
-          {icon}
-        </div>
+        <div className="mr-1 sm:mr-2">{icon}</div>
         <div className="font-medium">{title}</div>
       </div>
     );
-  if (size === "sm")
-    return (
-      <div style={{ transform: "translateY(-0.5px)" }} className={color}>
-        {icon}
-      </div>
-    );
+  if (size === "sm") return icon;
   return null;
 };

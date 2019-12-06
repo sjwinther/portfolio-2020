@@ -20,7 +20,6 @@
     "raw-loader": "^4.0.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-feather": "^2.0.3",
     "react-markdown": "^4.2.2",
     "tailwindcss": "^1.1.4",
     "tailwindcss-dark-mode": "ChanceArthur/tailwindcss-dark-mode#26d925d074ba11899ec7d91c1f55a274c7425968"

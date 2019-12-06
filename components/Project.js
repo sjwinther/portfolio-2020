@@ -1,4 +1,4 @@
-import { Image, ExternalLink } from "react-feather";
+import ExternalLink from "../icons/external-link.svg";
 import projects from "../content/projects";
 
 import Layout from "./Layout";
@@ -32,17 +32,7 @@ export default ({ id, children }) => {
             style={{ paddingBottom: "56.25%" }}
             className="relative mb-16 md:mb-24"
           >
-            <div
-              className={
-                bgColor +
-                " absolute inset-0 flex items-center justify-center rounded"
-              }
-            >
-              <Image
-                strokeWidth="1.5"
-                className="text-6xl text-white opacity-50"
-              />
-            </div>
+            <div className={bgColor + " absolute inset-0 rounded"} />
           </div>
           <Section
             title="Here's a heading"
@@ -68,16 +58,14 @@ const Data = ({ content, href }) => (
         rel="noopener"
         className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black py-1"
       >
-        <div style={{ transform: "translateY(1px)" }}>{content}</div>
+        {content}
         <ExternalLink
-          style={{ transform: "translateY(-1px)" }}
-          className="text-xl text-gray-600 ml-2"
+          style={{ strokeWidth: "3" }}
+          className="icon text-2xl text-gray-600 ml-1"
         />
       </a>
     ) : (
-      <div style={{ transform: "translateY(1px)" }} className="py-1">
-        {content}
-      </div>
+      <div className="py-1">{content}</div>
     )}
   </dd>
 );

@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useForm } from "@statickit/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Check, CornerRightDown, GitHub, Twitter } from "react-feather";
+import Check from "../icons/check.svg";
+import ArrowSmall from "../icons/arrow-small.svg";
+import SayHi from "../icons/say-hi.svg";
 
 import LoadingSpinner from "./LoadingSpinner";
 import InlineLink from "./InlineLink";
@@ -9,7 +11,7 @@ import InlineLink from "./InlineLink";
 export default () => {
   return (
     <footer className="px-4">
-      <div className="max-w-5xl flex flex-wrap md:flex-no-wrap border-t-2 border-gray-200 dark:border-gray-800 py-8 md:py-16 mx-auto">
+      <div className="max-w-5xl flex flex-wrap md:flex-no-wrap py-8 md:py-16 mx-auto">
         <div className="w-full flex flex-col md:pr-8">
           <div className="flex-auto max-w-md text-lg mb-10">
             <p className="mb-8">
@@ -56,16 +58,21 @@ export default () => {
           <dl>
             <dd className="mb-1">Sebastian Winther</dd>
             <dd className="mb-1">Copenhagen, Denmark</dd>
-            <dd className="mb-3">
+            <dd className="relative inline-block">
               <a
                 href="mailto:sebastianwinther@gmail.com"
                 className="hover:bg-gray-200 dark-hover:bg-black"
               >
                 sebastianwinther@gmail.com
-              </a>{" "}
-              — Say hi!
+              </a>
+              <div className="absolute inset-y-0 right-0 flex items-end justify-start">
+                <SayHi
+                  style={{ strokeWidth: "2" }}
+                  className="absolute left-0 icon text-5xl text-blue-600 ml-2"
+                />
+              </div>
             </dd>
-            <div className="-m-1">
+            {/* <div className="-m-1">
               <dd className="inline-block m-1">
                 <a
                   href="https://github.com/sjwinther"
@@ -86,15 +93,15 @@ export default () => {
                   <Twitter className="fill-current" />
                 </a>
               </dd>
-            </div>
+            </div> */}
           </dl>
         </div>
-        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-2">
-          <div className="flex items-end mb-4">
+        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
+          <div className="flex items-center mb-4">
             <h3 className="font-black text-2xl">That's me!</h3>
-            <CornerRightDown
-              strokeWidth="3"
-              className="text-xl text-gray-500 dark:text-gray-700 ml-2"
+            <ArrowSmall
+              style={{ strokeWidth: "2.5" }}
+              className="icon text-5xl text-green-600 ml-2"
             />
           </div>
           <img
@@ -146,7 +153,10 @@ const Form = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <Check strokeWidth="2.5" className="text-xl" />
+                  <Check
+                    style={{ strokeWidth: "4" }}
+                    className="icon text-2xl"
+                  />
                 </motion.div>
               ) : submitting ? (
                 <motion.div
@@ -155,7 +165,10 @@ const Form = () => {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                 >
-                  <LoadingSpinner />
+                  <LoadingSpinner
+                    style={{ strokeWidth: "3" }}
+                    className="icon text-3xl"
+                  />
                 </motion.div>
               ) : null}
             </AnimatePresence>

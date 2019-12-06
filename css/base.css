@@ -23,12 +23,15 @@ svg {
   height: 1em;
   width: auto;
 }
-svg * {
-  @apply stroke-current;
+svg.icon {
+  @apply overflow-visible;
+  stroke-width: 2;
 }
-svg.fill * {
-  @apply fill-current;
-  stroke: none;
+svg.icon * {
+  @apply stroke-current;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 a {
   @apply inline-block;
