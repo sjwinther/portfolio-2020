@@ -26,6 +26,7 @@ export default class ToggleWrapper extends React.Component {
 }
 
 const Toggle = ({ localDark, prefersDark }) => {
+  const [hover, setHover] = useState(false);
   const [dark, setDark] = useState(
     localDark === null ? prefersDark : localDark
   );
@@ -48,6 +49,8 @@ const Toggle = ({ localDark, prefersDark }) => {
       <div className="flex-auto">
         <button
           className="relative flex items-center w-12 h-8 bg-gray-800 dark:bg-gray-300 rounded-full"
+          onMouseOver={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
           onClick={() => setDark(!dark)}
         >
           <motion.div
@@ -63,8 +66,7 @@ const Toggle = ({ localDark, prefersDark }) => {
           </motion.div>
         </button>
       </div>
-
-      {dark ? <Bulb {...bulbProps} /> : <BulbLight {...bulbProps} />}
+      {hover ? <BulbLight {...bulbProps} /> : <Bulb {...bulbProps} />}
     </div>
   );
 };
