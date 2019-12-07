@@ -70,7 +70,7 @@ export default () => {
                 <div className="absolute inset-y-0 right-0 flex items-end justify-start">
                   <SayHi
                     style={{ strokeWidth: "2" }}
-                    className="absolute left-0 icon text-5xl text-blue-600 ml-2"
+                    className="absolute left-0 icon text-5xl text-teal-600 ml-2"
                   />
                 </div>
               </dd>
@@ -103,7 +103,7 @@ export default () => {
               <h3 className="font-black text-2xl">That's me!</h3>
               <ArrowSmall
                 style={{ strokeWidth: "2.5" }}
-                className="icon text-5xl text-green-600 ml-2"
+                className="icon text-5xl text-pink-600 ml-2"
               />
             </div>
             <img

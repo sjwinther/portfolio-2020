@@ -1,7 +1,10 @@
+import { useState } from "react";
+import Airplane from "../icons/airplane.svg";
+import AirplaneFly from "../icons/airplane-fly.svg";
 import ExternalLink from "../icons/external-link.svg";
-import Airplane from "../icons/Airplane.svg";
 
 export default ({ href, target, size, type, color, children }) => {
+  const [hover, setHover] = useState(false);
   const iconProps = {
     style: { strokeWidth: "3" },
     className:
@@ -13,17 +16,17 @@ export default ({ href, target, size, type, color, children }) => {
     <a
       href={href}
       target={
-        target && typeof target === "string"
-          ? target
-          : target
-          ? "_blank"
-          : undefined
+        typeof target === "string" ? target : target ? "_blank" : undefined
       }
       rel={target ? "noopener" : undefined}
+      onMouseOver={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
       className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black"
     >
       {children}
-      {type === "send" ? (
+      {type === "send" && hover ? (
+        <AirplaneFly {...iconProps} />
+      ) : type === "send" ? (
         <Airplane {...iconProps} />
       ) : (
         <ExternalLink {...iconProps} />

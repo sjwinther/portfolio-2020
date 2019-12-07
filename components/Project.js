@@ -11,7 +11,9 @@ export default ({ id, children }) => {
     <Layout>
       <main className="px-4 py-16 md:pb-24">
         <article className="max-w-5xl mx-auto">
-          <h1 className="font-black text-3xl md:text-4xl mb-4">{title}</h1>
+          <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4">
+            {title}
+          </h1>
           <dl className="-mx-2 mb-4">
             <Data content={year} />
             <Data content={publicUrl} href={publicUrl} />

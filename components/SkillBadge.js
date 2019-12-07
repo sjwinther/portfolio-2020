@@ -12,11 +12,11 @@ export default ({ skill, size }) => {
       : skill === "app"
       ? "text-green-600"
       : skill === "code"
-      ? "text-yellow-600"
+      ? "text-orange-600"
       : null;
   const iconProps = {
     style: { strokeWidth: "2.5" },
-    className: color + " icon text-2xl sm:text-3xl"
+    className: color + " icon text-3xl"
   };
   const title =
     skill === "ux"
@@ -40,8 +40,8 @@ export default ({ skill, size }) => {
     ) : null;
   if (size === "lg")
     return (
-      <div className="inline-flex items-center text-lg sm:text-xl m-2">
-        <div className="mr-1 sm:mr-2">{icon}</div>
+      <div className="inline-flex items-center text-base sm:text-lg md:text-xl m-1 md:m-2">
+        <div className="mr-2">{icon}</div>
         <div className="font-medium">{title}</div>
       </div>
     );

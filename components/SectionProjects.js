@@ -14,10 +14,10 @@ export default () => {
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
-            <h2 className="font-black text-4xl">My projects</h2>
+            <h2 className="font-black text-3xl md:text-4xl">My projects</h2>
             <ArrowBig
               style={{ strokeWidth: "2" }}
-              className="icon text-6xl text-pink-600 ml-4"
+              className="icon text-5xl md:text-6xl text-pink-600 ml-4"
             />
           </div>
           <ul className="-mx-4">

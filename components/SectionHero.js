@@ -9,7 +9,7 @@ export default () => (
     <div className="max-w-5xl mx-auto">
       <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-8">
         <span className="inline-flex items-baseline">
-          Hey there, I'm Sebastian.
+          Hey, I'm Sebastian.
           <Peace
             style={{ strokeWidth: "2" }}
             className="icon text-3xl sm:text-4xl md:text-5xl text-yellow-600"
@@ -29,13 +29,15 @@ export default () => (
         <InlineLink
           href="mailto:sebastianwinther@gmail.com?subject=Hey there!"
           type="send"
-          color="text-indigo-600"
+          color="text-teal-600"
         >
           Let's talk
         </InlineLink>
       </p>
-      <div className="flex flex-wrap items-center -m-2">
-        <div className="text-lg sm:text-xl m-2">I work with</div>
+      <div className="flex flex-wrap items-center -m-1 md:-m-2">
+        <div className="text-base sm:text-lg md:text-xl m-1 md:m-2">
+          I work with
+        </div>
         <SkillBadge skill="ux" size="lg" />
         <SkillBadge skill="web" size="lg" />
         <SkillBadge skill="app" size="lg" />
