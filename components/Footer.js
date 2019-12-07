@@ -5,74 +5,76 @@ import Check from "../icons/check.svg";
 import ArrowSmall from "../icons/arrow-small.svg";
 import SayHi from "../icons/say-hi.svg";
 
+import DarkToggle from "./DarkToggle";
 import LoadingSpinner from "./LoadingSpinner";
 import InlineLink from "./InlineLink";
 
 export default () => {
   return (
     <footer className="px-4">
-      <div className="max-w-5xl flex flex-wrap md:flex-no-wrap py-8 md:py-16 mx-auto">
-        <div className="w-full flex flex-col md:pr-8">
-          <div className="flex-auto max-w-md text-lg mb-10">
-            <p className="mb-8">
-              I design and code. I have previously worked with companies like{" "}
-              <InlineLink
-                href="https://www.pelion.app"
-                target="_pelion"
-                size="sm"
-              >
-                Pelion
-              </InlineLink>
-              ,{" "}
-              <InlineLink
-                href="https://www.initiativet.dk"
-                target="_initiativet"
-                size="sm"
-              >
-                Initiativet
-              </InlineLink>
-              ,{" "}
-              <InlineLink
-                href="https://www.readwise.io"
-                target="_readwise"
-                size="sm"
-              >
-                Readwise
-              </InlineLink>
-              , &{" "}
-              <InlineLink
-                href="https://www.nord.investments"
-                target="_nord"
-                size="sm"
-              >
-                NORD.investments
-              </InlineLink>
-              .
-            </p>
-            <p className="mb-4">
-              I'm available for work.{" "}
-              <span className="inline-block">Leave your email:</span>
-            </p>
-            <Form />
-          </div>
-          <dl>
-            <dd className="mb-1">Sebastian Winther</dd>
-            <dd className="mb-1">Copenhagen, Denmark</dd>
-            <dd className="relative inline-block">
-              <a
-                href="mailto:sebastianwinther@gmail.com"
-                className="hover:bg-gray-200 dark-hover:bg-black"
-              >
-                sebastianwinther@gmail.com
-              </a>
-              <div className="absolute inset-y-0 right-0 flex items-end justify-start">
-                <SayHi
-                  style={{ strokeWidth: "2" }}
-                  className="absolute left-0 icon text-5xl text-blue-600 ml-2"
-                />
-              </div>
-            </dd>
-            {/* <div className="-m-1">
+      <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl flex flex-wrap md:flex-no-wrap py-8 md:py-16">
+          <div className="w-full flex flex-col md:pr-8">
+            <div className="flex-auto max-w-md text-lg mb-10">
+              <p className="mb-8">
+                I design and code. I have previously worked with companies like{" "}
+                <InlineLink
+                  href="https://www.pelion.app"
+                  target="_pelion"
+                  size="sm"
+                >
+                  Pelion
+                </InlineLink>
+                ,{" "}
+                <InlineLink
+                  href="https://www.initiativet.dk"
+                  target="_initiativet"
+                  size="sm"
+                >
+                  Initiativet
+                </InlineLink>
+                ,{" "}
+                <InlineLink
+                  href="https://www.readwise.io"
+                  target="_readwise"
+                  size="sm"
+                >
+                  Readwise
+                </InlineLink>
+                , &{" "}
+                <InlineLink
+                  href="https://www.nord.investments"
+                  target="_nord"
+                  size="sm"
+                >
+                  NORD.investments
+                </InlineLink>
+                .
+              </p>
+              <p className="mb-4">
+                I'm available for work.{" "}
+                <span className="inline-block">Leave your email:</span>
+              </p>
+              <Form />
+            </div>
+            <dl>
+              <dd className="mb-1">Sebastian Winther</dd>
+              <dd className="mb-1">Copenhagen, Denmark</dd>
+              <dd className="relative inline-block">
+                <a
+                  href="mailto:sebastianwinther@gmail.com"
+                  className="hover:bg-gray-200 dark-hover:bg-black"
+                >
+                  sebastianwinther@gmail.com
+                </a>
+                <div className="absolute inset-y-0 right-0 flex items-end justify-start">
+                  <SayHi
+                    style={{ strokeWidth: "2" }}
+                    className="absolute left-0 icon text-5xl text-blue-600 ml-2"
+                  />
+                </div>
+              </dd>
+              {/* <div className="-m-1">
               <dd className="inline-block m-1">
                 <a
                   href="https://github.com/sjwinther"
@@ -94,22 +96,24 @@ export default () => {
                 </a>
               </dd>
             </div> */}
-          </dl>
-        </div>
-        <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
-          <div className="flex items-center mb-4">
-            <h3 className="font-black text-2xl">That's me!</h3>
-            <ArrowSmall
-              style={{ strokeWidth: "2.5" }}
-              className="icon text-5xl text-green-600 ml-2"
+            </dl>
+          </div>
+          <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
+            <div className="flex items-center mb-4">
+              <h3 className="font-black text-2xl">That's me!</h3>
+              <ArrowSmall
+                style={{ strokeWidth: "2.5" }}
+                className="icon text-5xl text-green-600 ml-2"
+              />
+            </div>
+            <img
+              src="/sebastian.jpg"
+              alt="That's me!"
+              className="w-40 md:w-64 h-40 md:h-64 rounded"
             />
           </div>
-          <img
-            src="/sebastian.jpg"
-            alt="That's me!"
-            className="w-40 md:w-64 h-40 md:h-64 rounded"
-          />
         </div>
+        <DarkToggle />
       </div>
     </footer>
   );

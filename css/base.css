@@ -31,7 +31,10 @@ svg.icon * {
   @apply stroke-current;
   stroke-linecap: round;
   stroke-linejoin: round;
-  fill: none;
+}
+svg.icon-fill * {
+  @apply fill-current;
+  stroke: none;
 }
 a {
   @apply inline-block;
