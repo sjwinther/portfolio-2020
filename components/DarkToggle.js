@@ -48,7 +48,7 @@ const Toggle = ({ localDark, prefersDark }) => {
     <div className="xl:fixed xl:right-0 xl:bottom-0 z-10 flex xl:flex-col-reverse items-end xl:items-center pb-6 xl:p-6">
       <div className="flex-auto">
         <button
-          className="relative flex items-center w-12 h-8 bg-gray-800 dark:bg-gray-300 rounded-full"
+          className="relative flex items-center w-12 h-8 bg-gray-900 dark:bg-gray-300 rounded-full"
           onMouseOver={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onClick={() => setDark(!dark)}
