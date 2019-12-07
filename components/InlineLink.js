@@ -6,7 +6,10 @@ import ExternalLink from "../icons/external-link.svg";
 export default ({ href, target, size, type, color, children }) => {
   const [hover, setHover] = useState(false);
   const iconProps = {
-    style: { strokeWidth: "3" },
+    style: {
+      strokeWidth: "3",
+      transform: type === "send" && hover ? "scale(1.1)" : "scale(1)"
+    },
     className:
       (size === "sm" ? "text-2xl ml-1 " : "text-3xl ml-2 ") +
       (color ? color + " " : "text-gray-600 ") +

@@ -130,7 +130,7 @@ const Form = () => {
     succeeded && setEmail("");
   }, [succeeded]);
   return (
-    <form onSubmit={submit} className="flex -m-2">
+    <form onSubmit={submit} className="flex text-base -m-2">
       <input
         value={email}
         onChange={e => setEmail(e.target.value)}
@@ -142,7 +142,7 @@ const Form = () => {
       />
       <button
         type="submit"
-        className="flex-shrink-0 btn btn-primary relative w-32 m-2"
+        className="flex-shrink-0 btn btn-primary relative w-28 m-2"
       >
         <span className={succeeded || submitting ? "text-transparent" : ""}>
           {errors && !!errors.length ? "Try again" : "Send along"}

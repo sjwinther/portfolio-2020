@@ -14,6 +14,7 @@ module.exports = {
         black: "#12161E"
       },
       width: {
+        "28": "7rem",
         "80": "20rem"
       }
     }

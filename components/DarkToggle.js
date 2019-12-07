@@ -41,7 +41,7 @@ const Toggle = ({ localDark, prefersDark }) => {
     }
   }, [dark]);
   const bulbProps = {
-    style: { strokeWidth: "2" },
+    style: { strokeWidth: "1.5" },
     className: "icon text-6xl text-yellow-600 xl:mb-4"
   };
   return (
