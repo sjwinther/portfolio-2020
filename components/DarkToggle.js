@@ -4,40 +4,23 @@ import Circle from "../icons/circle.svg";
 import Bulb from "../icons/bulb.svg";
 import BulbLight from "../icons/bulb-light.svg";
 
-export default class ToggleWrapper extends React.Component {
-  state = {
-    localDark: undefined,
-    prefersDark: undefined
-  };
-  componentDidMount() {
-    this.setState({
-      localDark: JSON.parse(sessionStorage.getItem("dark")),
-      prefersDark:
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-    });
-  }
-  render() {
-    const { localDark, prefersDark } = this.state;
-    if (localDark !== undefined && prefersDark !== undefined)
-      return <Toggle localDark={localDark} prefersDark={prefersDark} />;
-    return null;
-  }
-}
-
-const Toggle = ({ localDark, prefersDark }) => {
+export default () => {
+  const localDark = localStorage.getItem("dark");
+  const prefersDark =
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [hover, setHover] = useState(false);
   const [dark, setDark] = useState(
-    localDark === null ? prefersDark : localDark
+    (localDark && JSON.parse(localDark)) || prefersDark
   );
   useEffect(() => {
     if (dark) {
       document.documentElement.classList.add("mode-dark");
-      sessionStorage.setItem("dark", true);
+      localStorage.setItem("dark", true);
     }
     if (!dark) {
       document.documentElement.classList.remove("mode-dark");
-      sessionStorage.setItem("dark", false);
+      localStorage.setItem("dark", false);
     }
   }, [dark]);
   const bulbProps = {
@@ -66,7 +49,15 @@ const Toggle = ({ localDark, prefersDark }) => {
           </motion.div>
         </button>
       </div>
-      {hover ? <BulbLight {...bulbProps} /> : <Bulb {...bulbProps} />}
+      {hover && dark ? (
+        <BulbLight {...bulbProps} />
+      ) : hover ? (
+        <Bulb {...bulbProps} />
+      ) : dark ? (
+        <Bulb {...bulbProps} />
+      ) : (
+        <BulbLight {...bulbProps} />
+      )}
     </div>
   );
 };
