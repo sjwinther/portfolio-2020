@@ -1,7 +1,7 @@
 import Edit from "../icons/edit.svg";
-import Layout from "../icons/layout.svg";
+import Web from "../icons/web.svg";
+import Product from "../icons/product.svg";
 import Code from "../icons/code.svg";
-import Phone from "../icons/phone.svg";
 
 export default ({ skill, size }) => {
   const color =
@@ -32,9 +32,9 @@ export default ({ skill, size }) => {
     skill === "ux" ? (
       <Edit {...iconProps} />
     ) : skill === "web" ? (
-      <Layout {...iconProps} />
+      <Web {...iconProps} />
     ) : skill === "product" ? (
-      <Phone {...iconProps} />
+      <Product {...iconProps} />
     ) : skill === "code" ? (
       <Code {...iconProps} />
     ) : null;

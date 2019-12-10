@@ -40,7 +40,7 @@ export default () => (
         </div>
         <SkillBadge skill="ux" size="lg" />
         <SkillBadge skill="web" size="lg" />
-        <SkillBadge skill="app" size="lg" />
+        <SkillBadge skill="product" size="lg" />
         <SkillBadge skill="code" size="lg" />
       </div>
     </div>
