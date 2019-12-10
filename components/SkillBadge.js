@@ -9,7 +9,7 @@ export default ({ skill, size }) => {
       ? "text-indigo-600"
       : skill === "web"
       ? "text-blue-600"
-      : skill === "app"
+      : skill === "product"
       ? "text-green-600"
       : skill === "code"
       ? "text-orange-600"
@@ -23,8 +23,8 @@ export default ({ skill, size }) => {
       ? "User research"
       : skill === "web"
       ? "Web design"
-      : skill === "app"
-      ? "App design"
+      : skill === "product"
+      ? "Product design"
       : skill === "code"
       ? "Frontend development"
       : null;
@@ -33,7 +33,7 @@ export default ({ skill, size }) => {
       <Edit {...iconProps} />
     ) : skill === "web" ? (
       <Layout {...iconProps} />
-    ) : skill === "app" ? (
+    ) : skill === "product" ? (
       <Phone {...iconProps} />
     ) : skill === "code" ? (
       <Code {...iconProps} />
