@@ -5,6 +5,14 @@ import Bulb from "../icons/bulb.svg";
 import BulbLight from "../icons/bulb-light.svg";
 
 export default () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (mounted) return <DarkToggle />;
+  return null;
+};
+const DarkToggle = () => {
   const localDark = localStorage.getItem("dark");
   const prefersDark =
     window.matchMedia &&
