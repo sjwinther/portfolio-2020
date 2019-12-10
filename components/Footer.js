@@ -39,7 +39,7 @@ export default () => {
                 >
                   Readwise
                 </InlineLink>
-                &{" "}
+                {" & "}
                 <InlineLink
                   href="https://www.nord.investments"
                   target="_nord"
