@@ -11,7 +11,7 @@ export default () => {
     window.matchMedia("(prefers-color-scheme: dark)").matches;
   const [hover, setHover] = useState(false);
   const [dark, setDark] = useState(
-    (localDark && JSON.parse(localDark)) || prefersDark
+    localDark ? JSON.parse(localDark) : prefersDark
   );
   useEffect(() => {
     if (dark) {
