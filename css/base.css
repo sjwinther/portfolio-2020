@@ -14,7 +14,7 @@ html {
   }
 }
 body {
-  @apply text-gray-900 bg-white m-0;
+  @apply text-gray-900 bg-gray-100 m-0;
 }
 .mode-dark body {
   @apply text-gray-300 bg-gray-900;
