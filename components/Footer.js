@@ -24,16 +24,14 @@ export default () => {
                   size="sm"
                 >
                   Pelion
-                </InlineLink>
-                ,{" "}
+                </InlineLink>{" "}
                 <InlineLink
                   href="https://www.initiativet.dk"
                   target="_initiativet"
                   size="sm"
                 >
                   Initiativet
-                </InlineLink>
-                ,{" "}
+                </InlineLink>{" "}
                 <InlineLink
                   href="https://www.readwise.io"
                   target="_readwise"
@@ -41,7 +39,7 @@ export default () => {
                 >
                   Readwise
                 </InlineLink>
-                , &{" "}
+                &{" "}
                 <InlineLink
                   href="https://www.nord.investments"
                   target="_nord"
@@ -49,7 +47,6 @@ export default () => {
                 >
                   NORD.investments
                 </InlineLink>
-                .
               </p>
               <p className="mb-4">
                 I'm available for work.{" "}
@@ -100,7 +97,9 @@ export default () => {
           </div>
           <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
             <div className="flex items-center mb-4">
-              <h3 className="font-black text-2xl">That's me!</h3>
+              <h3 className="whitespace-no-wrap font-black text-2xl">
+                That's me!
+              </h3>
               <ArrowSmall
                 style={{ strokeWidth: "2.5" }}
                 className="icon text-5xl text-pink-600 ml-2"
