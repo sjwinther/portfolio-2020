@@ -5,7 +5,7 @@ import InlineLink from "./InlineLink";
 import SkillBadge from "./SkillBadge";
 
 export default () => (
-  <section className="px-4 py-8 md:py-16">
+  <section className="px-4 mb-16">
     <div className="max-w-5xl mx-auto">
       <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-8">
         <span className="inline-flex items-baseline">

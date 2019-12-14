@@ -17,7 +17,7 @@ class MyApp extends App {
         <>
           <Head />
           <Nav />
-          <main className="py-8">
+          <main>
             <Component {...pageProps} />
           </main>
           <Footer />
