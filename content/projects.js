@@ -1,6 +1,8 @@
 const projects = {
   pelion: {
-    title: "Pelion",
+    title:
+      "I worked as a designer and developer at Pelion, creating a marketplace for mentorships",
+    short: "Pelion",
     url: "/project/pelion",
     year: "2018-2019",
     publicUrl: "www.pelion.app",
@@ -8,7 +10,8 @@ const projects = {
     bgColor: "bg-indigo-700"
   },
   readwise: {
-    title: "Readwise",
+    title: "I helped Readwise create a more focused product experience",
+    short: "Readwise",
     url: "/project/readwise",
     year: "2019",
     publicUrl: "www.readwise.io",
@@ -16,7 +19,8 @@ const projects = {
     bgColor: "bg-green-700"
   },
   initiativet: {
-    title: "Initiativet",
+    title: "I designed a digital platform for engaging in politics",
+    short: "Initiativet",
     url: "/project/initiativet",
     year: "2017",
     publicUrl: "www.initiativet.dk",
@@ -24,7 +28,9 @@ const projects = {
     bgColor: "bg-teal-700"
   },
   odysia: {
-    title: "Tales from Odysïa",
+    title:
+      "I helped Rasmus Kolbe engage his readers in co-creating a fantasy book",
+    short: "Tales from Odysïa",
     url: "/project/odysia",
     year: "2019",
     publicUrl: "www.odysia.dk",

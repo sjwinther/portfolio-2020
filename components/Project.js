@@ -7,9 +7,9 @@ export default ({ id, children }) => {
   const project = projects[id];
   const { title, year, publicUrl, skills, bgColor } = project;
   return (
-    <main className="px-4 mb-16">
+    <main className="px-4 pt-8 md:pt-16 mb-16">
       <article className="max-w-5xl mx-auto">
-        <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4">
+        <h1 className="max-w-4xl font-black text-2xl sm:text-3xl md:text-4xl mb-4">
           {title}
         </h1>
         <dl className="-mx-2 mb-4">

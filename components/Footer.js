@@ -15,8 +15,8 @@ export default () => {
       <div className="max-w-5xl mx-auto">
         <div className="max-w-5xl flex flex-wrap md:flex-no-wrap py-8 md:py-16">
           <div className="w-full flex flex-col md:pr-8">
-            <div className="flex-auto max-w-md text-lg mb-10">
-              <p className="mb-8">
+            <div className="flex-auto max-w-md mb-8">
+              <p className="mb-4">
                 I design and code. I have previously worked with companies like{" "}
                 <InlineLink
                   href="https://www.pelion.app"

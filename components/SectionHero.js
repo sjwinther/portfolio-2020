@@ -5,14 +5,14 @@ import InlineLink from "./InlineLink";
 import SkillBadge from "./SkillBadge";
 
 export default () => (
-  <section className="px-4 mb-16">
+  <section className="px-4 pt-8 md:pt-16 mb-16">
     <div className="max-w-5xl mx-auto">
       <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-8">
-        <span className="inline-flex items-baseline">
+        <span className="relative">
           Hey, I'm Sebastian.
           <Peace
             style={{ strokeWidth: "2" }}
-            className="icon text-3xl sm:text-4xl md:text-5xl text-yellow-600"
+            className="absolute right-0 bottom-0 icon text-3xl sm:text-4xl md:text-5xl text-yellow-600 -mr-8 sm:-mr-10 md:-mr-12 mb-1 sm:mb-2"
           />
         </span>
         <span className="block">

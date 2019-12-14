@@ -10,7 +10,7 @@ import SkillBadge from "./SkillBadge";
 export default () => {
   const [project, setProject] = useState(Object.keys(projects)[0]);
   return (
-    <section className="px-4 mb-16">
+    <section className="px-4 pt-8 md:pt-16 mb-16">
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
@@ -48,7 +48,7 @@ export default () => {
   );
 };
 
-const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
+const ListItem = ({ id, short, type, url, skills, project, setProject }) => {
   const { md } = useBreakpoint();
   const isActive = project === id;
   return (
@@ -63,7 +63,7 @@ const ListItem = ({ id, title, type, url, skills, project, setProject }) => {
           }
         >
           <div className="flex-auto flex items-center font-medium text-lg">
-            {title}
+            {short}
             {skills.map(skill => {
               return (
                 <div key={skill} className="ml-4">
