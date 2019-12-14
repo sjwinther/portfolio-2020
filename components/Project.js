@@ -5,7 +5,7 @@ import SkillBadge from "./SkillBadge";
 
 export default ({ id, children }) => {
   const project = work[id];
-  const { title, year, publicUrl, skills, bgColor } = project;
+  const { title, year, publicUrls, skills, bgColor } = project;
   return (
     <main className="px-4 pt-8 md:pt-16">
       <article>
@@ -15,7 +15,9 @@ export default ({ id, children }) => {
           </h1>
           <dl className="-mx-2 mb-8">
             <Definition content={year} />
-            <Definition content={publicUrl} href={publicUrl} />
+            {publicUrls.map(url => (
+              <Definition content={url} href={url} />
+            ))}
           </dl>
           <div className="flex flex-wrap items-center -mx-2">
             {skills.map(skill => (
@@ -30,7 +32,7 @@ export default ({ id, children }) => {
 };
 
 const Definition = ({ content, href }) => (
-  <dd className="inline-block font-medium uppercase m-2">
+  <dd className="inline-block font-medium uppercase mx-2 my-1">
     {href ? (
       <a
         href={"https://" + href}

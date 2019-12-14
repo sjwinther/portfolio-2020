@@ -5,7 +5,7 @@ const projects = {
     short: "Pelion",
     url: "pelion",
     year: "2018-2019",
-    publicUrl: "www.pelion.app",
+    publicUrls: ["www.pelion.app"],
     skills: ["ux", "web", "product", "code"],
     bgColor: "bg-indigo-700"
   },
@@ -14,17 +14,18 @@ const projects = {
     short: "Readwise",
     url: "readwise",
     year: "2019",
-    publicUrl: "www.readwise.io",
+    publicUrls: ["www.readwise.io"],
     skills: ["product"],
     bgColor: "bg-green-700"
   },
-  initiativet: {
-    title: "I designed a digital platform for engaging in politics",
-    short: "Initiativet",
-    url: "initiativet",
+  "digital-debate": {
+    title:
+      "I designed a platform for engaging in politics, and having better digital debates",
+    short: "Thesis on digital debate",
+    url: "digital-debate",
     year: "2017",
-    publicUrl: "www.initiativet.dk",
-    skills: ["ux", "web", "product"],
+    publicUrls: ["www.initiativet.dk", "digital-debate.netlify.com"],
+    skills: ["ux", "product"],
     bgColor: "bg-teal-700"
   },
   odysia: {
@@ -33,7 +34,7 @@ const projects = {
     short: "Tales from Odysïa",
     url: "odysia",
     year: "2019",
-    publicUrl: "www.odysia.dk",
+    publicUrls: ["www.odysia.dk"],
     skills: ["web", "code"],
     bgColor: "bg-orange-700"
   }

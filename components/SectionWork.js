@@ -35,12 +35,15 @@ export default () => {
           </ul>
         </div>
         <Link href={"/work/" + work[project].url}>
-          <a
-            className={
-              work[project].bgColor +
-              " hidden md:block w-1/2 lg:w-3/5 rounded transition"
-            }
-          />
+          <a className="hidden md:block w-1/2 lg:w-3/5">
+            <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
+              <div
+                className={
+                  work[project].bgColor + " absolute inset-0 rounded transition"
+                }
+              />
+            </div>
+          </a>
         </Link>
       </div>
       <div className="hidden bg-indigo-700 bg-orange-700 bg-green-700 bg-teal-700 bg-purple-700" />
