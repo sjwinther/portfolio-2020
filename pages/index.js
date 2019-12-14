@@ -1,9 +1,9 @@
 import SectionHero from "../components/SectionHero";
-import SectionProjects from "../components/SectionProjects";
+import SectionWork from "../components/SectionWork";
 
 export default () => (
   <>
     <SectionHero />
-    <SectionProjects />
+    <SectionWork />
   </>
 );

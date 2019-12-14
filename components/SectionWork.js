@@ -3,19 +3,19 @@ import ArrowBig from "../icons/arrow-big.svg";
 import ArrowRight from "../icons/arrow-right.svg";
 import Link from "next/link";
 import useBreakpoint from "../hooks/useBreakpoint";
-import projects from "../content/projects";
+import work from "../content/work";
 
 import SkillBadge from "./SkillBadge";
 
 export default () => {
-  const [project, setProject] = useState(Object.keys(projects)[0]);
+  const [project, setProject] = useState(Object.keys(work)[0]);
   return (
     <section className="px-4 pt-8 md:pt-16 mb-16">
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
             <h2 className="whitespace-no-wrap font-black text-3xl md:text-4xl">
-              My projects
+              My work
             </h2>
             <ArrowBig
               style={{ strokeWidth: "2" }}
@@ -23,21 +23,21 @@ export default () => {
             />
           </div>
           <ul className="-mx-4">
-            {Object.keys(projects).map(id => (
+            {Object.keys(work).map(id => (
               <ListItem
                 key={id}
                 id={id}
-                {...projects[id]}
+                {...work[id]}
                 project={project}
                 setProject={setProject}
               />
             ))}
           </ul>
         </div>
-        <Link href={projects[project].url}>
+        <Link href={"/work/" + work[project].url}>
           <a
             className={
-              projects[project].bgColor +
+              work[project].bgColor +
               " hidden md:block w-1/2 lg:w-3/5 rounded transition"
             }
           />
@@ -53,7 +53,7 @@ const ListItem = ({ id, short, type, url, skills, project, setProject }) => {
   const isActive = project === id;
   return (
     <li className="m-2 last:mb-0">
-      <Link href={url}>
+      <Link href={"/work/" + url}>
         <a
           onMouseOver={() => setProject(id)}
           onFocus={() => setProject(id)}
