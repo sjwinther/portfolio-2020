@@ -5,7 +5,7 @@ import InlineLink from "./InlineLink";
 import SkillBadge from "./SkillBadge";
 
 export default () => (
-  <section className="px-4 pt-8 md:pt-16 mb-16">
+  <section className="px-4 pt-8 md:pt-16 mb-16 md:mb-24">
     <div className="max-w-5xl mx-auto">
       <h1 className="font-black text-2xl sm:text-3xl md:text-4xl mb-4 md:mb-8">
         <span className="relative">

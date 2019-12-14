@@ -25,7 +25,7 @@ export default () => {
   }, [dark]);
   return (
     <button
-      className="relative xl:fixed xl:right-0 xl:bottom-0 z-10 flex items-center w-12 h-8 bg-gray-200 dark:bg-black rounded-full mb-8 xl:m-4"
+      className="relative xl:fixed xl:right-0 xl:bottom-0 flex items-center w-12 h-8 bg-gray-200 dark:bg-black rounded-full mb-8 xl:m-4"
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => setDark(!dark)}

@@ -10,7 +10,7 @@ import SkillBadge from "./SkillBadge";
 export default () => {
   const [project, setProject] = useState(Object.keys(work)[0]);
   return (
-    <section className="px-4 pt-8 md:pt-16 mb-16">
+    <section className="px-4 pt-8 md:pt-16 mb-16 md:mb-24">
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">

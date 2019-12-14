@@ -1,7 +1,7 @@
 const projects = {
   pelion: {
     title:
-      "I worked as a designer and developer at Pelion to create a marketplace for mentorships",
+      "I worked as a designer and developer at Pelion to create a marketplace for mentorships in tech",
     short: "Pelion",
     url: "pelion",
     year: "2018-2019",
