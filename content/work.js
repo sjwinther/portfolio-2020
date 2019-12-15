@@ -36,7 +36,7 @@ const projects = {
     year: "2019",
     publicUrls: ["www.odysia.dk"],
     skills: ["web", "code"],
-    bgColor: "bg-orange-700"
+    preview: "/odysia/preview.png"
   }
 };
 export default projects;
