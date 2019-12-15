@@ -10,10 +10,6 @@ import InlineLink from "../../components/InlineLink";
 
 export default () => (
   <Project id="pelion">
-    <ImageFullWidth
-      alt="Grid of product + marketing images"
-      bgColor="bg-indigo-700"
-    />
     <TextWithHeading
       title="Role"
       paragraphs={[
@@ -23,13 +19,13 @@ export default () => (
     <TextWithHeading
       title="Opportunity"
       paragraphs={[
-        "Pelion started as a recruitment agency focused on those whose merits exceed their credentials, and evolved to using mentors in the recruitment process. The team quickly discovered the power of great mentorship, and as I joined, Pelion was transitioning to becoming a platform for discovering and engaging with mentors."
+        "There's great value in mentorships. Many mentorships are formed because mentees are luck to have someone in their network who's happy to help them. However, many young professionals don't necessarily have networks in their respective fields."
       ]}
     />
     <TextWithHeading
       title="Solution"
       paragraphs={[
-        "Through recruiting we noticed the great value created by mentors in early careers of talented young professionals. We created a marketplace for them to explore, discover, reach out and engange in mentorships with senior professionals in tech.",
+        "We created a marketplace for them to explore, discover, reach out and engange in mentorships with senior professionals in tech.",
         "Pelion utilizes an income sharing payment model. Mentees pay a small percentage of their salary to their mentor each month, incentivizing mentors to help mentees advance their career. Mentees have the option to defer payments until reaching a target income, enabling mentors to bet on the talent of tomorrow.",
         <>
           Pelion recently had a sucessful launch on{" "}
@@ -46,15 +42,15 @@ export default () => (
     />
     <ImagesScrollable
       sources={[
-        { src: "/pelion/ph-conversation.png", alt: "Conversation" },
         { src: "/pelion/ph-explore.png", alt: "Explore" },
-        { src: "/pelion/ph-search.png", alt: "Search" }
+        { src: "/pelion/ph-search.png", alt: "Search" },
+        { src: "/pelion/ph-conversation.png", alt: "Conversation" }
       ]}
     />
     <TextWithHeading
       title="Process"
       paragraphs={[
-        "Starting from recruiting—where we had manually paired applicants with companies—we initially paired mentors and mentees manually as well. For the pairs we made, we created a set of tools for mentorships; e.g. collaborative goal setting, to-do's, and meeting notes.",
+        "We initially tackled pairing mentors and mentees as a manual process. For the pairs we made, we created a set of tools for mentorships; e.g. collaborative goal setting, to-do's, and meeting notes.",
         "While the process of creating manual pairs ensured high quality, from a product standpoint it also meant for new mentors and mentees signing up that there was no way of gaining immediate value from the product. Many sign-ups only saw one session. Further, our focus on tools for active mentorships superfluous: many already used other tools for the tasks we addressed, and weren't in the market of changing their habits.",
         "We used these learnings as an opportunity for product development, asking:",
         <ListDisc

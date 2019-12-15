@@ -5,7 +5,7 @@ import "../css/base.css";
 export default () => {
   const title = "Sebastian Winther";
   const description =
-    "Portfolio of Sebastian Winther. I think, sketch, design, prototype, and build digital products. I'm formally educated in UX research and UI design, and self taught in frontend development. I'm available for freelance work.";
+    "Portfolio of Sebastian Winther, digital designer and frontend developer. I think, sketch, design, prototype, and build digital products. I'm formally educated in UX research and UI design, and self taught in frontend development. I'm available for freelance work.";
   return (
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />

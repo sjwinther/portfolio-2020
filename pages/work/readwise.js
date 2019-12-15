@@ -1,15 +1,11 @@
 import Project, {
-  ImageFullWidth,
-  ImageMaxWidth,
+  ImagesFullWidth,
+  ImagesScrollable,
   TextWithHeading
 } from "../../components/Project";
 
 export default () => (
   <Project id="readwise">
-    <ImageFullWidth
-      alt="Single screenshot of Readwise experience"
-      bgColor="bg-green-700"
-    />
     <TextWithHeading
       title="Role"
       paragraphs={["Product design in collaboration with the Readwise team."]}
@@ -20,7 +16,12 @@ export default () => (
         "For people who read a lot, in can be hard to retain every insight. Readwise helps you stay engaged with your books and articles, by feeding back to you the best highlights, you've read. Because of their laser-sharp focus on helping users get the most out of what you read, Readwise asked me to help them optimize their design to best acommodate that vision."
       ]}
     />
-    <ImageMaxWidth alt="Old v new Readwise" bgColor="bg-green-700" />
+    <ImagesFullWidth
+      sources={[
+        { src: "/readwise/readwise-old.png", alt: "Former Readwise design" },
+        { src: "/readwise/readwise-new.png", alt: "New Readwise design" }
+      ]}
+    />
     <TextWithHeading
       title="Solution"
       paragraphs={[
@@ -28,9 +29,15 @@ export default () => (
         "We created a product experience where the platform was secondary to the highlight. Bookmarking, note taking and sharing were all there when needed, but as small distractions as possible when not—rendering the user with complete silence to engage with their highlight."
       ]}
     />
-    <ImageFullWidth
-      alt="Grid of screenshots of Readwise experience"
-      bgColor="bg-green-700"
+    <ImagesScrollable
+      sources={[
+        { src: "/readwise/highlight.png", alt: "Highlight, desktop" },
+        { src: "/readwise/highlight-mobile.png", alt: "Highlight, mobile" },
+        { src: "/readwise/preferences.png", alt: "Preferences, desktop" },
+        { src: "/readwise/preferences-mobile.png", alt: "Preferences, mobile" },
+        { src: "/readwise/library.png", alt: "Library, desktop" },
+        { src: "/readwise/library-mobile.png", alt: "Library, mobile" }
+      ]}
     />
   </Project>
 );

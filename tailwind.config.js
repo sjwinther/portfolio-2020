@@ -13,6 +13,10 @@ module.exports = {
       colors: {
         black: "#12161E"
       },
+      height: {
+        "80": "20rem",
+        "120": "30rem"
+      },
       width: {
         "28": "7rem",
         "80": "20rem"

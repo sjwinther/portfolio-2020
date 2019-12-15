@@ -88,33 +88,29 @@ export const VideosInline = ({ sources }) => (
   </div>
 );
 
-export const ImageFullWidth = ({ src, alt, bgColor }) =>
-  src ? (
-    <img
-      src={src}
-      alt={alt}
-      className="relative z-10 rounded-lg shadow mb-16 md:mb-24"
-    />
-  ) : (
-    <div
-      style={{ paddingBottom: "56.25%" }}
-      className="relative z-10 mb-16 md:mb-24"
-    >
-      <div
-        className={
-          bgColor +
-          " absolute inset-0 flex items-center justify-center text-white rounded"
-        }
-      >
-        {alt}
+export const ImageFullWidth = ({ src, alt }) => (
+  <img
+    src={src}
+    alt={alt}
+    className="relative z-10 rounded shadow mb-16 md:mb-24"
+  />
+);
+
+export const ImagesFullWidth = ({ sources }) => (
+  <div className="relative z-10 flex flex-col md:flex-row -mx-2 mb-16 md:mb-24">
+    {sources.map(({ src, alt }) => (
+      <div className="flex-auto m-2">
+        <img src={src} alt={alt} className="rounded shadow mb-2" />
+        <p className="text-center text-gray-700 dark:text-gray-500">{alt}</p>
       </div>
-    </div>
-  );
+    ))}
+  </div>
+);
 
 export const ImageMaxWidth = ({ src, alt, bgColor }) => (
   <div className="max-w-5xl mx-auto mb-16 md:mb-24">
     {src ? (
-      <img src={src} alt={alt} className="relative z-10 rounded-lg shadow" />
+      <img src={src} alt={alt} className="relative z-10 rounded shadow" />
     ) : (
       <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
         <div
@@ -132,13 +128,13 @@ export const ImageMaxWidth = ({ src, alt, bgColor }) => (
 
 export const ImagesScrollable = ({ sources }) => (
   <div className="-mx-4 px-4 overflow-x-auto mb-12 md:mb-20">
-    <ul className="max-w-5xl flex flex-col md:flex-row mx-auto">
+    <ul className="max-w-5xl h-80 md:h-120 flex mx-auto">
       {sources.map(({ src, alt }) => (
-        <li key={alt} className="flex-shrink-0 w-full pb-4 md:pr-4">
+        <li key={alt} className="flex-shrink-0 h-full pb-4 pr-4">
           <img
             src={src}
             alt={alt}
-            className="relative z-10 rounded-lg shadow"
+            className="relative z-10 h-full rounded shadow"
           />
         </li>
       ))}

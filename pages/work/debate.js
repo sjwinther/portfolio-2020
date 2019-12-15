@@ -9,7 +9,10 @@ import InlineLink from "../../components/InlineLink";
 
 export default () => (
   <Project id="debate">
-    <ImageFullWidth alt="Main suggestions, illustrated" bgColor="bg-teal-700" />
+    <ImageFullWidth
+      src="/debate/prototype-grid.png"
+      alt="Digital debate prototype"
+    />
     <TextWithHeading
       title="Role"
       paragraphs={[
@@ -35,7 +38,7 @@ export default () => (
             "a system for moderation and securing civility throughout the tool."
           ]}
         />,
-        <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
+        // <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
         "The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings.",
         <>
           You can download the thesis{" "}
@@ -57,6 +60,7 @@ export default () => (
           </InlineLink>
           .
         </>
+        // <ImageInline alt="Suggestions, illustrated" bgColor="bg-gray-700" />
       ]}
     />
     <ImageMaxWidth src="/debate/page.png" alt="Digital debate prototype" />
