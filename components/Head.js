@@ -9,18 +9,26 @@ export default () => {
   return (
     <Head>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="icon" href="/favicon.png" />
+      <link rel="icon" href="https://www.sebastianwinther.com/favicon.png" />
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="og:title" content={title} />
       <meta name="og:site_name" content={title} />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content="/og-image.png" />
+      <meta property="og:type" content="website" />
+      <meta name="og:url" content="https://www.sebastianwinther.com" />
+      <meta
+        name="og:image"
+        content="https://www.sebastianwinther.com/og-image.png"
+      />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@sebjwinther" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content="/og-image.png" />
+      <meta
+        name="twitter:image"
+        content="https://www.sebastianwinther.com/og-image.png"
+      />
     </Head>
   );
 };

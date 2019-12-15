@@ -1,4 +1,14 @@
 const projects = {
+  odysia: {
+    title:
+      "I created a website to help Rasmus Kolbe engage his readers in co-creating a fantasy book",
+    short: "Tales from Odysïa",
+    url: "odysia",
+    year: "2019",
+    publicUrls: ["www.odysia.dk"],
+    skills: ["web", "code"],
+    preview: "/odysia/preview.png"
+  },
   pelion: {
     title:
       "I worked as a designer and developer at Pelion to create a marketplace for mentorships in tech",
@@ -17,16 +27,6 @@ const projects = {
     publicUrls: ["www.readwise.io"],
     skills: ["product"],
     preview: "/readwise/preview.png"
-  },
-  odysia: {
-    title:
-      "I created a website to help Rasmus Kolbe engage his readers in co-creating a fantasy book",
-    short: "Tales from Odysïa",
-    url: "odysia",
-    year: "2019",
-    publicUrls: ["www.odysia.dk"],
-    skills: ["web", "code"],
-    preview: "/odysia/preview.png"
   },
   debate: {
     title:

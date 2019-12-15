@@ -42,6 +42,15 @@ export default () => {
                 alt={work[project].short}
                 className="absolute h-full w-full object-cover rounded shadow"
               />
+              {Object.keys(work).map(id => (
+                <img
+                  key={id}
+                  src={work[id].preview}
+                  alt={work[id].short}
+                  aria-hidden="true"
+                  style={{ display: "none" }}
+                />
+              ))}
             </div>
           </a>
         </Link>

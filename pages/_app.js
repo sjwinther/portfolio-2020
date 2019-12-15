@@ -12,18 +12,20 @@ class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
     const { mounted } = this.state;
-    if (mounted)
-      return (
-        <>
-          <Head />
-          <Nav />
-          <main>
-            <Component {...pageProps} />
-          </main>
-          <Footer />
-        </>
-      );
-    return null;
+    return (
+      <>
+        <Head />
+        {mounted && (
+          <>
+            <Nav />
+            <main>
+              <Component {...pageProps} />
+            </main>
+            <Footer />
+          </>
+        )}
+      </>
+    );
   }
 }
 
