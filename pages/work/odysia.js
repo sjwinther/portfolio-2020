@@ -2,7 +2,7 @@ import Project, {
   ImageFullWidth,
   ImageInline,
   ImageMaxWidth,
-  List,
+  ListDisc,
   TextWithHeading
 } from "../../components/Project";
 
@@ -31,7 +31,7 @@ export default () => (
           bgColor="bg-gray-700"
         />,
         "We  worked a lot on how to do that, ultimately coming up with a concept of an interactive marketing website. The website is primarily focused on the mobile experience—with the audience of the book using mobile phones as their primary internet device—and features:",
-        <List
+        <ListDisc
           items={[
             "Selected chapters pre-released before the book, so the audience can read and get a feel for the universe,",
             "Drawing tasks assigned to each chapter, making the universe interactive. Selected drawings are recreated by a professional illustrator and included in the book.",

@@ -1,3 +1,47 @@
-import Project from "../../components/Project";
+import Project, {
+  ImageFullWidth,
+  ImageInline,
+  ListDecimal,
+  TextWithHeading
+} from "../../components/Project";
 
-export default () => <Project id="digital-debate"></Project>;
+export default () => (
+  <Project id="digital-debate">
+    <ImageFullWidth alt="Screenshots of proposed tool" bgColor="bg-teal-700" />
+    <TextWithHeading
+      title="Role"
+      paragraphs={[
+        "Researcher and designer. I wrote my thesis on digital debate. I interviewed Danish citizens, facilitated workshops and focus groups, and ultimately designed a prototype for a better digital debate."
+      ]}
+    />
+    <TextWithHeading
+      title="Opportunity"
+      paragraphs={[
+        "Modern political debate is faced with a number of challenges. Parties are losing members, and newspaper sales are steadily declining, while most Danish people are now active on social media. The political debate is moving from traditional, physical arenas to new, online arenas. This poses a challenge: How does society uphold a healthy political debate, as it moves to digital arenas? How does one design a constructive online debate?"
+      ]}
+    />
+    <TextWithHeading
+      title="Solution"
+      paragraphs={[
+        "By first examining thee different digital debate tools through qualitative studies, I designed a digital debate prototype for use within Danish political party, Initiativet. Initiativet has as its goal to create an online space for democratic deliberation, wherefrom the party will draw its policies.",
+        "The thesis presents four main findings that are important for creating a tool for digital deliberation:",
+        <ListDecimal
+          items={[
+            "securing correct information and use of external knowledge sources,",
+            "accommodating different types of contribution types,",
+            "a structure that is understandable as well as flexible,",
+            "a system for moderation and securing civility throughout the tool."
+          ]}
+        />,
+        <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
+        "The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings.",
+        "The suggestions center around ... Download the thesis here.",
+        <ImageInline alt="Suggestions, illustrated" bgColor="bg-gray-700" />
+      ]}
+    />
+    <ImageFullWidth
+      alt="Grid of platform + sketches + prototype + marketing screenshots"
+      bgColor="bg-teal-700"
+    />
+  </Project>
+);

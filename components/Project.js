@@ -120,7 +120,17 @@ export const ImagesScrollable = ({ alt, bgColor }) => (
   </div>
 );
 
-export const List = ({ items }) => (
+export const ListDecimal = ({ items }) => (
+  <ol className="mb-8">
+    {items.map((item, i) => (
+      <li key={item} className="mb-4">
+        {i + 1 + ") " + item}
+      </li>
+    ))}
+  </ol>
+);
+
+export const ListDisc = ({ items }) => (
   <ul className="list-disc pl-6 mb-8">
     {items.map(item => (
       <li key={item} className="mb-4">
