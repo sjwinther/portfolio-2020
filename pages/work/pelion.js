@@ -19,13 +19,13 @@ export default () => (
     <TextWithHeading
       title="Opportunity"
       paragraphs={[
-        "There's great value in mentorships. Many mentorships are formed because mentees are luck to have someone in their network who's happy to help them. However, many young professionals don't necessarily have networks in their respective fields."
+        "There's great value in mentorships. Many mentorships are formed because mentees are luck to have someone in their network who's happy to help them. However, many young professionals don't necessarily have any prospective mentors in their network. Pelion is working to change that."
       ]}
     />
     <TextWithHeading
       title="Solution"
       paragraphs={[
-        "We created a marketplace for them to explore, discover, reach out and engange in mentorships with senior professionals in tech.",
+        "We created a marketplace for young professionals to explore, discover, reach out and engange in mentorships with senior professionals in tech.",
         "Pelion utilizes an income sharing payment model. Mentees pay a small percentage of their salary to their mentor each month, incentivizing mentors to help mentees advance their career. Mentees have the option to defer payments until reaching a target income, enabling mentors to bet on the talent of tomorrow.",
         <>
           Pelion recently had a sucessful launch on{" "}
@@ -59,8 +59,8 @@ export default () => (
             "How might we create a product that makes it even to collaborate on active mentorships, even when utilizing external tools?"
           ]}
         />,
-        "The first challenge we addressed by creating the public marketplace that Pelion currently is. Mentees are now free to browse mentors within their professions (or vice versa) on the platform from their first signup. This gives them the opportunity to get take the first step to working on their career challenges as soon as possible.",
-        "The second challenge we addressed by putting a stronger focus on messaging. While digital tools for goal-setting, to-do's and meeting notes are undoubtedly part of many mentorships, users already have personal preferences in these categories. By focusing on messaging, Pelion becomes the core channel for communicating and gaining an overview, and lets users work in the way they most prefer."
+        "We addressed the first challenge by creating the public marketplace that Pelion currently is. Mentees are now free to browse mentors within their professions (or vice versa) on the platform from their first signup. This gives them the opportunity to take the first step to working on their career challenges as soon as possible.",
+        "We addressed the second challenge by putting a stronger focus on messaging. While digital tools for goal-setting, to-do's and meeting notes are undoubtedly part of many mentorships, users already have personal preferences in these categories. By focusing on messaging, Pelion becomes the core channel for communicating and gaining an overview, and lets users work in the way they most prefer."
       ]}
     />
     <ImageMaxWidth src="/pelion/page.png" alt="Pelion website" />

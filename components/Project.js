@@ -101,7 +101,7 @@ export const ImagesFullWidth = ({ sources }) => (
     {sources.map(({ src, alt }) => (
       <div key={src} className="flex-auto m-2">
         <img src={src} alt={alt} className="rounded shadow mb-2" />
-        <p className="text-center text-gray-700 dark:text-gray-500">{alt}</p>
+        <p className="text-center text-gray-600 dark:text-gray-600">{alt}</p>
       </div>
     ))}
   </div>
