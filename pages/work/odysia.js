@@ -3,12 +3,13 @@ import Project, {
   ImageInline,
   ImageMaxWidth,
   ListDisc,
+  VideosInline,
   TextWithHeading
 } from "../../components/Project";
 
 export default () => (
   <Project id="odysia">
-    <ImageFullWidth alt="Odysia landing animation" bgColor="bg-orange-700" />
+    <ImageFullWidth src="/odysia/hero.png" alt="Odysia landing animation" />
     <TextWithHeading
       title="Role"
       paragraphs={[
@@ -26,9 +27,8 @@ export default () => (
       paragraphs={[
         "Given that this is a fantasy book, the website was a chance to go all-out on making an immersive website. We focused on lots of animations, from being drawn into the universe by the header, or having the chapters bounce open. Heavy on illustrations as well, as the book will be.",
         "Much of the audience are young, and aren't the best at reading, so we added read aloud players for all text. When user testing this, we were surprised to see how widely they were used, and even in conjunction with text: many younger users loved to hear Rasmus read the chapters out loud while reading themselves.",
-        <ImageInline
-          alt="Two-three Mobile screenshots, animated with audio players"
-          bgColor="bg-gray-700"
+        <VideosInline
+          sources={["/odysia/character-loop.mp4", "/odysia/chapter-loop.mp4"]}
         />,
         "We  worked a lot on how to do that, ultimately coming up with a concept of an interactive marketing website. The website is primarily focused on the mobile experience—with the audience of the book using mobile phones as their primary internet device—and features:",
         <ListDisc
@@ -41,9 +41,6 @@ export default () => (
         />
       ]}
     />
-    <ImageMaxWidth
-      alt="Whole page, as is, long screenshot"
-      bgColor="bg-orange-700"
-    />
+    <ImageMaxWidth src="/odysia/page.png" alt="Odysia website" />
   </Project>
 );

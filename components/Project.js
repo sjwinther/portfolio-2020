@@ -68,25 +68,38 @@ export const ImageInline = ({ alt, bgColor }) => (
   </div>
 );
 
-export const ImageFullWidth = ({ alt, bgColor }) => (
-  <div
-    style={{ paddingBottom: "56.25%" }}
-    className="relative z-10 mb-16 md:mb-24"
-  >
-    <div
-      className={
-        bgColor +
-        " absolute inset-0 flex items-center justify-center text-white rounded"
-      }
-    >
-      {alt}
-    </div>
+export const VideosInline = ({ sources }) => (
+  <div className="relative z-10 flex -mx-4 mb-8 last:mb-0">
+    {sources.map(src => (
+      <div className="w-1/2 px-4">
+        <video
+          width="100%"
+          preload="auto"
+          playsinline="true"
+          loop="true"
+          autoplay="true"
+          muted="true"
+          className="rounded"
+        >
+          <source src={src} type="video/mp4" />
+        </video>
+      </div>
+    ))}
   </div>
 );
 
-export const ImageMaxWidth = ({ alt, bgColor }) => (
-  <div className="max-w-5xl mx-auto mb-16 md:mb-24">
-    <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
+export const ImageFullWidth = ({ src, alt, bgColor }) =>
+  src ? (
+    <img
+      src={src}
+      alt={alt}
+      className="relative z-10 rounded-lg mb-16 md:mb-24"
+    />
+  ) : (
+    <div
+      style={{ paddingBottom: "56.25%" }}
+      className="relative z-10 mb-16 md:mb-24"
+    >
       <div
         className={
           bgColor +
@@ -96,6 +109,24 @@ export const ImageMaxWidth = ({ alt, bgColor }) => (
         {alt}
       </div>
     </div>
+  );
+
+export const ImageMaxWidth = ({ src, alt, bgColor }) => (
+  <div className="max-w-5xl mx-auto mb-16 md:mb-24">
+    {src ? (
+      <img src={src} alt={alt} className="relative z-10 rounded-lg" />
+    ) : (
+      <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
+        <div
+          className={
+            bgColor +
+            " absolute inset-0 flex items-center justify-center text-white rounded"
+          }
+        >
+          {alt}
+        </div>
+      </div>
+    )}
   </div>
 );
 
