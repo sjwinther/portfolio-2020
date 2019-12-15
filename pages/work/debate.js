@@ -8,7 +8,7 @@ import Project, {
 import InlineLink from "../../components/InlineLink";
 
 export default () => (
-  <Project id="digital-debate">
+  <Project id="debate">
     <ImageFullWidth alt="Main suggestions, illustrated" bgColor="bg-teal-700" />
     <TextWithHeading
       title="Role"

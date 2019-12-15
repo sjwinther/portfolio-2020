@@ -16,17 +16,7 @@ const projects = {
     year: "2019",
     publicUrls: ["www.readwise.io"],
     skills: ["product"],
-    bgColor: "bg-green-700"
-  },
-  "digital-debate": {
-    title:
-      "I designed a platform for engaging in politics, and having better digital debates",
-    short: "Thesis on digital debate",
-    url: "digital-debate",
-    year: "2017",
-    publicUrls: ["www.initiativet.dk", "digital-debate.netlify.com"],
-    skills: ["ux", "product"],
-    bgColor: "bg-teal-700"
+    preview: "/readwise/preview.png"
   },
   odysia: {
     title:
@@ -37,6 +27,16 @@ const projects = {
     publicUrls: ["www.odysia.dk"],
     skills: ["web", "code"],
     preview: "/odysia/preview.png"
+  },
+  debate: {
+    title:
+      "I designed a platform for engaging in politics, and having better digital debates",
+    short: "Thesis on digital debate",
+    url: "debate",
+    year: "2017",
+    publicUrls: ["www.initiativet.dk", "digital-debate.netlify.com"],
+    skills: ["ux", "product"],
+    preview: "/debate/preview.png"
   }
 };
 export default projects;
