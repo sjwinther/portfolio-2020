@@ -10,7 +10,7 @@ export default ({ id, children }) => {
     <main className="px-4 pt-8 md:pt-16">
       <article>
         <div className="max-w-5xl mx-auto mb-16">
-          <h1 className="max-w-3xl font-black text-2xl sm:text-3xl md:text-4xl mb-8">
+          <h1 className="max-w-4xl font-black text-2xl sm:text-3xl md:text-4xl mb-8">
             {title}
           </h1>
           <dl className="-mx-2 mb-8">
@@ -50,6 +50,22 @@ const Definition = ({ content, href }) => (
       <div className="py-1">{content}</div>
     )}
   </dd>
+);
+
+export const Image = ({ alt, bgColor }) => (
+  <div
+    style={{ paddingBottom: "56.25%" }}
+    className="relative z-10 mb-8 last:mb-0"
+  >
+    <div
+      className={
+        bgColor +
+        " absolute inset-0 flex items-center justify-center text-white rounded"
+      }
+    >
+      {alt}
+    </div>
+  </div>
 );
 
 export const ImageFullWidth = ({ alt, bgColor }) => (

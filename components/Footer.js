@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useForm } from "@statickit/react";
 import { motion, AnimatePresence } from "framer-motion";
+import SquigglyLine from "../icons/footer.svg";
 import Check from "../icons/check.svg";
 import ArrowSmall from "../icons/arrow-small.svg";
 import SayHi from "../icons/say-hi.svg";
@@ -13,7 +14,11 @@ export default () => {
   return (
     <footer className="px-4">
       <div className="max-w-5xl mx-auto">
-        <div className="max-w-5xl flex flex-wrap md:flex-no-wrap py-8 md:py-16">
+        {/* <SquigglyLine
+          style={{ strokeWidth: "4" }}
+          className="icon text-5xl text-gray-300 dark:text-gray-800 mb-16"
+        /> */}
+        <div className="flex flex-wrap md:flex-no-wrap py-8 md:py-16">
           <div className="w-full flex flex-col md:pr-8">
             <div className="flex-auto max-w-md mb-8">
               <p className="mb-4">
