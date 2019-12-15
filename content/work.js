@@ -20,7 +20,7 @@ const projects = {
   },
   odysia: {
     title:
-      "I helped Rasmus Kolbe engage his readers in co-creating a fantasy book",
+      "I created a website to help Rasmus Kolbe engage his readers in co-creating a fantasy book",
     short: "Tales from Odysïa",
     url: "odysia",
     year: "2019",
