@@ -33,13 +33,13 @@ export default () => (
         <ListDecimal
           items={[
             "securing correct information and use of external knowledge sources,",
-            "accommodating different types of contribution types,",
-            "a structure that is understandable as well as flexible,",
+            "accommodating different types of contribution types (inspired by argument/deliberation mapping),",
+            "a platform structure that is understandable as well as flexible,",
             "a system for moderation and securing civility throughout the tool."
           ]}
         />,
         // <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
-        "The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings.",
+        "The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings (see prototype below).",
         <>
           You can download the thesis{" "}
           <InlineLink

@@ -204,7 +204,7 @@ const Toast = ({ show, close }) => (
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 32 }}
           onClick={close}
-          className="absolute bottom-0 flex items-center text-white dark:text-black bg-black dark:bg-white rounded px-8 py-4 mb-8"
+          className="absolute bottom-0 cursor-pointer flex items-center text-white dark:text-black bg-black dark:bg-white rounded px-8 py-4 mb-8"
         >
           You got it! I'll be in touch
           <Check style={{ strokeWidth: "3" }} className="icon text-2xl ml-2" />

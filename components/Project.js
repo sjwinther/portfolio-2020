@@ -99,7 +99,7 @@ export const ImageFullWidth = ({ src, alt }) => (
 export const ImagesFullWidth = ({ sources }) => (
   <div className="relative z-10 flex flex-col md:flex-row -mx-2 mb-16 md:mb-24">
     {sources.map(({ src, alt }) => (
-      <div className="flex-auto m-2">
+      <div key={src} className="flex-auto m-2">
         <img src={src} alt={alt} className="rounded shadow mb-2" />
         <p className="text-center text-gray-700 dark:text-gray-500">{alt}</p>
       </div>
@@ -109,20 +109,7 @@ export const ImagesFullWidth = ({ sources }) => (
 
 export const ImageMaxWidth = ({ src, alt, bgColor }) => (
   <div className="max-w-5xl mx-auto mb-16 md:mb-24">
-    {src ? (
-      <img src={src} alt={alt} className="relative z-10 rounded shadow" />
-    ) : (
-      <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
-        <div
-          className={
-            bgColor +
-            " absolute inset-0 flex items-center justify-center text-white rounded"
-          }
-        >
-          {alt}
-        </div>
-      </div>
-    )}
+    <img src={src} alt={alt} className="relative z-10 rounded shadow" />
   </div>
 );
 

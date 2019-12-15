@@ -34,7 +34,7 @@ const projects = {
     short: "Thesis on digital debate",
     url: "debate",
     year: "2017",
-    publicUrls: ["www.initiativet.dk", "digital-debate.netlify.com"],
+    publicUrls: ["digital-debate.netlify.com", "www.initiativet.dk"],
     skills: ["ux", "product"],
     preview: "/debate/preview.png"
   }
