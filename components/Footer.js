@@ -125,64 +125,91 @@ export default () => {
 
 const Form = () => {
   const [email, setEmail] = useState("");
+  const [toast, setToast] = useState(false);
   const [state, submit] = useForm({
     site: "2b52df695624",
     form: "contact-form"
   });
   const { submitting, succeeded, errors } = state;
   useEffect(() => {
-    succeeded && setEmail("");
+    if (succeeded) {
+      setToast(true);
+      setEmail("");
+    }
   }, [succeeded]);
   return (
-    <form onSubmit={submit} className="flex text-base -m-2">
-      <input
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        type="email"
-        name="email"
-        placeholder="tim@apple.com"
-        required
-        className="input w-full max-w-xs m-2"
-      />
-      <button
-        type="submit"
-        className="flex-shrink-0 btn btn-primary relative w-28 m-2"
-      >
-        <span className={succeeded || submitting ? "text-transparent" : ""}>
-          {errors && !!errors.length ? "Try again" : "Send along"}
-        </span>
-        {(succeeded || submitting) && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            <AnimatePresence exitBeforeEnter>
-              {succeeded ? (
-                <motion.div
-                  key="succeeded"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <Check
-                    style={{ strokeWidth: "4" }}
-                    className="icon text-2xl"
-                  />
-                </motion.div>
-              ) : submitting ? (
-                <motion.div
-                  key="submitting"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                >
-                  <LoadingSpinner
-                    style={{ strokeWidth: "3" }}
-                    className="icon text-3xl"
-                  />
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
-          </div>
-        )}
-      </button>
-    </form>
+    <>
+      <form onSubmit={submit} className="flex text-base -m-2">
+        <input
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+          type="email"
+          name="email"
+          placeholder="tim@apple.com"
+          required
+          className="input w-full max-w-xs m-2"
+        />
+        <button
+          type="submit"
+          className="flex-shrink-0 btn btn-primary relative w-28 m-2"
+        >
+          <span className={succeeded || submitting ? "text-transparent" : ""}>
+            {errors && !!errors.length ? "Try again" : "Send along"}
+          </span>
+          {(succeeded || submitting) && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <AnimatePresence exitBeforeEnter>
+                {succeeded ? (
+                  <motion.div
+                    key="succeeded"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <Check
+                      style={{ strokeWidth: "4" }}
+                      className="icon text-2xl"
+                    />
+                  </motion.div>
+                ) : submitting ? (
+                  <motion.div
+                    key="submitting"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <LoadingSpinner
+                      style={{ strokeWidth: "3" }}
+                      className="icon text-3xl"
+                    />
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
+            </div>
+          )}
+        </button>
+      </form>
+      <Toast show={toast} close={() => setToast(false)} />
+    </>
   );
 };
+
+const Toast = ({ show, close }) => (
+  <div className="fixed inset-x-0 bottom-0 z-20 flex justify-center">
+    <AnimatePresence>
+      {show && (
+        <motion.div
+          key="toast"
+          initial={{ opacity: 0, y: 32 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 32 }}
+          onClick={close}
+          className="absolute bottom-0 flex items-center text-white dark:text-black bg-black dark:bg-white rounded-lg px-8 py-4 mb-8"
+        >
+          You got it! I'll be in touch
+          <Check style={{ strokeWidth: "3" }} className="icon text-2xl ml-2" />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  </div>
+);

@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from "framer-motion";
 import Peace from "../icons/peace.svg";
 
 import InlineLink from "./InlineLink";
