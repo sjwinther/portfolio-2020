@@ -44,8 +44,11 @@ export default () => (
       ]}
     />
     <ImagesScrollable
-      alt="Product Hunt screenshots, scrollable"
-      bgColor="bg-indigo-700"
+      sources={[
+        { src: "/pelion/ph-conversation.png", alt: "Conversation" },
+        { src: "/pelion/ph-explore.png", alt: "Explore" },
+        { src: "/pelion/ph-search.png", alt: "Search" }
+      ]}
     />
     <TextWithHeading
       title="Process"

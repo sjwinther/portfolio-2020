@@ -130,25 +130,14 @@ export const ImageMaxWidth = ({ src, alt, bgColor }) => (
   </div>
 );
 
-export const ImagesScrollable = ({ alt, bgColor }) => (
-  <div className="overflow-x-auto -mx-4 pb-4 mb-12 md:mb-20">
-    <ul className="max-w-5xl flex mx-auto">
-      {[1, 2, 3].map((image, i) => (
-        <li key={i} className="flex-shrink-0 w-full pr-8">
-          <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
-            <div
-              className={
-                bgColor +
-                " absolute inset-0 flex items-center justify-center text-white rounded"
-              }
-            >
-              {alt}
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </div>
+export const ImagesScrollable = ({ sources }) => (
+  <ul className="flex overflow-x-auto px-4 pb-4 -mx-4 mb-12 md:mb-20">
+    {sources.map(({ src, alt }) => (
+      <li key={alt} className="flex-shrink-0 w-2/3 pr-4">
+        <img src={src} alt={alt} className="relative z-10 rounded-lg" />
+      </li>
+    ))}
+  </ul>
 );
 
 export const ListDecimal = ({ items }) => (
