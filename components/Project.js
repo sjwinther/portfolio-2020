@@ -79,7 +79,7 @@ export const VideosInline = ({ sources }) => (
           loop="true"
           autoplay="true"
           muted="true"
-          className="rounded"
+          className="rounded shadow"
         >
           <source src={src} type="video/mp4" />
         </video>
@@ -93,7 +93,7 @@ export const ImageFullWidth = ({ src, alt, bgColor }) =>
     <img
       src={src}
       alt={alt}
-      className="relative z-10 rounded-lg mb-16 md:mb-24"
+      className="relative z-10 rounded-lg shadow mb-16 md:mb-24"
     />
   ) : (
     <div
@@ -114,7 +114,7 @@ export const ImageFullWidth = ({ src, alt, bgColor }) =>
 export const ImageMaxWidth = ({ src, alt, bgColor }) => (
   <div className="max-w-5xl mx-auto mb-16 md:mb-24">
     {src ? (
-      <img src={src} alt={alt} className="relative z-10 rounded-lg" />
+      <img src={src} alt={alt} className="relative z-10 rounded-lg shadow" />
     ) : (
       <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
         <div
@@ -131,10 +131,10 @@ export const ImageMaxWidth = ({ src, alt, bgColor }) => (
 );
 
 export const ImagesScrollable = ({ sources }) => (
-  <ul className="flex overflow-x-auto px-4 pb-4 -mx-4 mb-12 md:mb-20">
+  <ul className="flex flex-col md:flex-row overflow-x-auto px-4 -mx-4 mb-12 md:mb-20">
     {sources.map(({ src, alt }) => (
-      <li key={alt} className="flex-shrink-0 w-2/3 pr-4">
-        <img src={src} alt={alt} className="relative z-10 rounded-lg" />
+      <li key={alt} className="flex-shrink-0 w-full md:w-2/3 pb-4 md:pr-4">
+        <img src={src} alt={alt} className="relative z-10 rounded-lg shadow" />
       </li>
     ))}
   </ul>
@@ -166,11 +166,15 @@ export const TextWithHeading = ({ title, paragraphs }) => (
       {title}
     </h3>
     <div className="w-full md:w-3/4">
-      {paragraphs.map(paragraph => (
-        <p key={paragraph} className="text-lg md:text-xl mb-8 last:mb-0">
-          {paragraph}
-        </p>
-      ))}
+      {paragraphs.map((paragraph, i) => {
+        if (typeof paragraph === "string")
+          return (
+            <p key={i} className="text-lg md:text-xl mb-8 last:mb-0">
+              {paragraph}
+            </p>
+          );
+        return <React.Fragment key={i}>{paragraph}</React.Fragment>;
+      })}
     </div>
   </section>
 );

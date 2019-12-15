@@ -7,7 +7,7 @@ const projects = {
     year: "2018-2019",
     publicUrls: ["www.pelion.app"],
     skills: ["ux", "web", "product", "code"],
-    bgColor: "bg-indigo-700"
+    preview: "/pelion/preview.png"
   },
   readwise: {
     title: "I helped Readwise create a more focused product experience",

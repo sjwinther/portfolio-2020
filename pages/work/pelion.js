@@ -62,17 +62,10 @@ export default () => (
             "How might we create a product that makes it even to collaborate on active mentorships, even when utilizing external tools?"
           ]}
         />,
-        <ImageInline
-          alt="Sketch: former v new matching"
-          bgColor="bg-gray-700"
-        />,
         "The first challenge we addressed by creating the public marketplace that Pelion currently is. Mentees are now free to browse mentors within their professions (or vice versa) on the platform from their first signup. This gives them the opportunity to get take the first step to working on their career challenges as soon as possible.",
         "The second challenge we addressed by putting a stronger focus on messaging. While digital tools for goal-setting, to-do's and meeting notes are undoubtedly part of many mentorships, users already have personal preferences in these categories. By focusing on messaging, Pelion becomes the core channel for communicating and gaining an overview, and lets users work in the way they most prefer."
       ]}
     />
-    <ImageFullWidth
-      alt="Grid of product + marketing images"
-      bgColor="bg-indigo-700"
-    />
+    <ImageMaxWidth src="/pelion/page.png" alt="Pelion website" />
   </Project>
 );

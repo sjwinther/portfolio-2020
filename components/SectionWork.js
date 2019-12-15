@@ -37,19 +37,16 @@ export default () => {
         <Link href={"/work/" + work[project].url}>
           <a className="hidden md:block w-1/2 lg:w-3/5">
             {work[project].preview ? (
-              <div
-                style={{ paddingBottom: "56.25%" }}
-                className="relative z-10"
-              >
+              <div style={{ paddingBottom: "60%" }} className="relative z-10">
                 <img
                   src={work[project].preview}
                   alt={work[project].short}
-                  className="absolute h-full w-full object-cover rounded"
+                  className="absolute h-full w-full object-cover rounded shadow"
                 />
               </div>
             ) : (
               <div
-                style={{ paddingBottom: "56.25%" }}
+                style={{ paddingBottom: "60%" }}
                 className={
                   work[project].bgColor + " relative z-10 rounded transition"
                 }
