@@ -141,7 +141,7 @@ export const ImagesScrollable = ({ sources }) => (
 );
 
 export const ListDecimal = ({ items }) => (
-  <ol className="mb-8">
+  <ol>
     {items.map((item, i) => (
       <li key={item} className="mb-4">
         {i + 1 + ") " + item}
@@ -151,7 +151,7 @@ export const ListDecimal = ({ items }) => (
 );
 
 export const ListDisc = ({ items }) => (
-  <ul className="list-disc pl-6 mb-8">
+  <ul className="list-disc pl-6">
     {items.map(item => (
       <li key={item} className="mb-4">
         {item}
@@ -165,15 +165,19 @@ export const TextWithHeading = ({ title, paragraphs }) => (
     <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-8">
       {title}
     </h3>
-    <div className="w-full md:w-3/4">
+    <div className="w-full md:w-3/4 leading-normal text-lg md:text-xl">
       {paragraphs.map((paragraph, i) => {
         if (typeof paragraph === "string")
           return (
-            <p key={i} className="text-lg md:text-xl mb-8 last:mb-0">
+            <p key={i} className="mb-8">
               {paragraph}
             </p>
           );
-        return <React.Fragment key={i}>{paragraph}</React.Fragment>;
+        return (
+          <div key={i} className="mb-8">
+            {paragraph}
+          </div>
+        );
       })}
     </div>
   </section>

@@ -36,6 +36,7 @@ export default () => (
           <InlineLink
             href="https://www.producthunt.com/posts/pelion"
             target="_producthunt"
+            size="sm"
           >
             Product Hunt
           </InlineLink>

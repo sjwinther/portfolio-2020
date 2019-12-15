@@ -3,7 +3,7 @@ import Airplane from "../icons/airplane.svg";
 import AirplaneFly from "../icons/airplane-fly.svg";
 import ExternalLink from "../icons/external-link.svg";
 
-export default ({ href, target, size, type, color, children }) => {
+export default ({ href, target, download, size, type, color, children }) => {
   const [hover, setHover] = useState(false);
   const iconProps = {
     style: {
@@ -22,6 +22,7 @@ export default ({ href, target, size, type, color, children }) => {
         typeof target === "string" ? target : target ? "_blank" : undefined
       }
       rel={target ? "noopener" : undefined}
+      download={download || undefined}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black"

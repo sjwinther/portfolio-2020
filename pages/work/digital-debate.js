@@ -1,13 +1,15 @@
 import Project, {
   ImageFullWidth,
+  ImageMaxWidth,
   ImageInline,
   ListDecimal,
   TextWithHeading
 } from "../../components/Project";
+import InlineLink from "../../components/InlineLink";
 
 export default () => (
   <Project id="digital-debate">
-    <ImageFullWidth alt="Screenshots of proposed tool" bgColor="bg-teal-700" />
+    <ImageFullWidth alt="Main suggestions, illustrated" bgColor="bg-teal-700" />
     <TextWithHeading
       title="Role"
       paragraphs={[
@@ -35,13 +37,28 @@ export default () => (
         />,
         <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
         "The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings.",
-        "The suggestions center around ... Download the thesis here.",
-        <ImageInline alt="Suggestions, illustrated" bgColor="bg-gray-700" />
+        <>
+          You can download the thesis{" "}
+          <InlineLink
+            href="/debate/thesis.pdf"
+            target="_thesis"
+            size="sm"
+            download="Digital Debate Thesis"
+          >
+            here
+          </InlineLink>{" "}
+          (it's in Danish), and visit the (still very static) prototype{" "}
+          <InlineLink
+            href="https://digital-debate.netlify.com"
+            target="_prototype"
+            size="sm"
+          >
+            here
+          </InlineLink>
+          .
+        </>
       ]}
     />
-    <ImageFullWidth
-      alt="Grid of platform + sketches + prototype + marketing screenshots"
-      bgColor="bg-teal-700"
-    />
+    <ImageMaxWidth src="/debate/page.png" alt="Digital debate prototype" />
   </Project>
 );
