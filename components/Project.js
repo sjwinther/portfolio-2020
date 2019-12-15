@@ -16,12 +16,12 @@ export default ({ id, children }) => {
           <dl className="-mx-2 mb-8">
             <Definition content={year} />
             {publicUrls.map(url => (
-              <Definition content={url} href={url} />
+              <Definition key={url} content={url} href={url} />
             ))}
           </dl>
           <div className="flex flex-wrap items-center -mx-2">
             {skills.map(skill => (
-              <SkillBadge skill={skill} size="lg" />
+              <SkillBadge key={skill} skill={skill} size="lg" />
             ))}
           </div>
         </div>
@@ -52,7 +52,7 @@ const Definition = ({ content, href }) => (
   </dd>
 );
 
-export const Image = ({ alt, bgColor }) => (
+export const ImageInline = ({ alt, bgColor }) => (
   <div
     style={{ paddingBottom: "56.25%" }}
     className="relative z-10 mb-8 last:mb-0"
@@ -102,8 +102,8 @@ export const ImageMaxWidth = ({ alt, bgColor }) => (
 export const ImagesScrollable = ({ alt, bgColor }) => (
   <div className="overflow-x-auto -mx-4 pb-4 mb-12 md:mb-20">
     <ul className="max-w-5xl flex mx-auto">
-      {[1, 2, 3].map(image => (
-        <li className="flex-shrink-0 w-full pr-8">
+      {[1, 2, 3].map((image, i) => (
+        <li key={i} className="flex-shrink-0 w-full pr-8">
           <div style={{ paddingBottom: "56.25%" }} className="relative z-10">
             <div
               className={
@@ -120,6 +120,16 @@ export const ImagesScrollable = ({ alt, bgColor }) => (
   </div>
 );
 
+export const List = ({ items }) => (
+  <ul className="list-disc pl-6 mb-8">
+    {items.map(item => (
+      <li key={item} className="mb-4">
+        {item}
+      </li>
+    ))}
+  </ul>
+);
+
 export const TextWithHeading = ({ title, paragraphs }) => (
   <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-16 md:mb-24">
     <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-8">
@@ -127,7 +137,9 @@ export const TextWithHeading = ({ title, paragraphs }) => (
     </h3>
     <div className="w-full md:w-3/4">
       {paragraphs.map(paragraph => (
-        <p className="text-lg md:text-xl mb-8 last:mb-0">{paragraph}</p>
+        <p key={paragraph} className="text-lg md:text-xl mb-8 last:mb-0">
+          {paragraph}
+        </p>
       ))}
     </div>
   </section>
