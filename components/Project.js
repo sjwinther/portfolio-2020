@@ -71,14 +71,14 @@ export const ImageInline = ({ alt, bgColor }) => (
 export const VideosInline = ({ sources }) => (
   <div className="relative z-10 flex -mx-4 mb-8 last:mb-0">
     {sources.map(src => (
-      <div className="w-1/2 px-4">
+      <div key={src} className="w-1/2 px-4">
         <video
           width="100%"
           preload="auto"
-          playsinline="true"
-          loop="true"
-          autoplay="true"
-          muted="true"
+          playsInline={true}
+          loop={true}
+          autoPlay={true}
+          muted={true}
           className="rounded shadow"
         >
           <source src={src} type="video/mp4" />
@@ -131,13 +131,19 @@ export const ImageMaxWidth = ({ src, alt, bgColor }) => (
 );
 
 export const ImagesScrollable = ({ sources }) => (
-  <ul className="flex flex-col md:flex-row overflow-x-auto px-4 -mx-4 mb-12 md:mb-20">
-    {sources.map(({ src, alt }) => (
-      <li key={alt} className="flex-shrink-0 w-full md:w-2/3 pb-4 md:pr-4">
-        <img src={src} alt={alt} className="relative z-10 rounded-lg shadow" />
-      </li>
-    ))}
-  </ul>
+  <div className="-mx-4 px-4 overflow-x-auto mb-12 md:mb-20">
+    <ul className="max-w-5xl flex flex-col md:flex-row mx-auto">
+      {sources.map(({ src, alt }) => (
+        <li key={alt} className="flex-shrink-0 w-full pb-4 md:pr-4">
+          <img
+            src={src}
+            alt={alt}
+            className="relative z-10 rounded-lg shadow"
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
 );
 
 export const ListDecimal = ({ items }) => (
@@ -161,7 +167,7 @@ export const ListDisc = ({ items }) => (
 );
 
 export const TextWithHeading = ({ title, paragraphs }) => (
-  <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-16 md:mb-24">
+  <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-8 md:mb-16">
     <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-8">
       {title}
     </h3>
