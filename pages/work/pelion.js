@@ -29,7 +29,7 @@ export default () => (
       title="Solution"
       paragraphs={[
         "Through recruiting we noticed the great value created by mentors in early careers of talented young professionals. We created a marketplace for them to explore, discover, reach out and engange in mentorships with senior professionals in tech.",
-        "Pelion utilizes an income sharing payment model. Mentees pay a small percentage of their salary to their mentor each month, incentivizing mentors to help mentees evolve their career. Mentees who cannot afford to pay immediately have the option to defer payments until reaching a target income. This enables mentors can bet on the talent of tomorrow.",
+        "Pelion utilizes an income sharing payment model. Mentees pay a small percentage of their salary to their mentor each month, incentivizing mentors to help mentees advance their career. Mentees have the option to defer payments until reaching a target income, enabling mentors to bet on the talent of tomorrow.",
         <>
           Pelion recently had a sucessful launch on{" "}
           <InlineLink
@@ -51,7 +51,7 @@ export default () => (
       paragraphs={[
         "Starting from recruiting—where we had manually paired applicants with companies—we initially paired mentors and mentees manually as well. For the pairs we made, we created a set of tools for mentorships; e.g. collaborative goal setting, to-do's, and meeting notes.",
         "While the process of creating manual pairs ensured high quality, from a product standpoint it also meant for new mentors and mentees signing up that there was no way of gaining immediate value from the product. Many sign-ups only saw one session. Further, our focus on tools for active mentorships superfluous: many already used other tools for the tasks we addressed, and weren't in the market of changing their habits.",
-        "We used these learnings as an opportunity for product development:",
+        "We used these learnings as an opportunity for product development, asking:",
         <ul className="list-disc pl-6">
           <li className="mb-4">
             How might we create a product that creates value for the user as
