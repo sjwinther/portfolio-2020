@@ -18,12 +18,11 @@ export default () => (
           I'm a digital designer and frontend developer.
         </span>
       </h1>
-      <p className="max-w-4xl text-lg md:text-2xl mb-4">
-        I think, sketch, design, prototype, and build digital products. I'm
-        formally educated in UX research and UI design, and self taught in
+      <p className="max-w-3xl text-lg md:text-2xl mb-4">
+        I'm formally educated in UX research and UI design, and self taught in
         frontend development. I'm available for freelance work.
       </p>
-      <p className="max-w-4xl text-lg md:text-2xl mb-8 md:mb-12">
+      <p className="max-w-3xl text-lg md:text-2xl mb-8 md:mb-12">
         Think I’d be a good fit for your team?{" "}
         <InlineLink
           href="mailto:sebastianwinther@gmail.com?subject=Hey there!"
