@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "next start",
-    "deploy": "now switch sebastianwinther && now --prod"
+    "start": "next start"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
