@@ -24,7 +24,7 @@ const projects = {
     short: "Readwise",
     url: "readwise",
     year: "2019",
-    publicUrls: ["www.readwise.io"],
+    publicUrls: ["readwise.io"],
     skills: ["product"],
     preview: "/readwise/preview.png"
   },
@@ -34,7 +34,7 @@ const projects = {
     short: "Thesis on digital debate",
     url: "debate",
     year: "2017",
-    publicUrls: ["digital-debate.netlify.com", "www.initiativet.dk"],
+    publicUrls: ["digital-debate.netlify.com", "initiativet.dk"],
     skills: ["ux", "product"],
     preview: "/debate/preview.png"
   }
