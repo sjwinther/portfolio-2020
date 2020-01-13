@@ -19,46 +19,43 @@ export default () => {
           className="icon text-5xl text-gray-300 dark:text-gray-800 mb-16"
         /> */}
         <div className="flex flex-wrap md:flex-no-wrap py-8 md:py-16">
-          <div className="w-full flex flex-col md:pr-8">
-            <div className="flex-auto max-w-md mb-8">
-              <p className="mb-4">
-                I design and code. I have previously worked with companies like{" "}
-                <InlineLink
-                  href="https://www.pelion.app"
-                  target="_pelion"
-                  size="sm"
-                >
-                  Pelion
-                </InlineLink>{" "}
-                <InlineLink
-                  href="https://www.initiativet.dk"
-                  target="_initiativet"
-                  size="sm"
-                >
-                  Initiativet
-                </InlineLink>{" "}
-                <InlineLink
-                  href="https://www.readwise.io"
-                  target="_readwise"
-                  size="sm"
-                >
-                  Readwise
-                </InlineLink>
-                {" & "}
-                <InlineLink
-                  href="https://www.nord.investments"
-                  target="_nord"
-                  size="sm"
-                >
-                  NORD.investments
-                </InlineLink>
-              </p>
-              <p className="mb-4">
-                I'm available for work.{" "}
-                <span className="inline-block">Leave your email:</span>
-              </p>
-              <Form />
-            </div>
+          <div className="w-full flex flex-col justify-end md:pr-8">
+            <p className="max-w-md mb-6">
+              I design and code. I have previously worked with companies like{" "}
+              <InlineLink
+                href="https://www.pelion.app"
+                target="_pelion"
+                size="sm"
+              >
+                Pelion
+              </InlineLink>
+              {", "}
+              <InlineLink
+                href="https://www.initiativet.dk"
+                target="_initiativet"
+                size="sm"
+              >
+                Initiativet
+              </InlineLink>
+              {", "}
+              <InlineLink
+                href="https://www.readwise.io"
+                target="_readwise"
+                size="sm"
+              >
+                Readwise
+              </InlineLink>
+              {", & "}
+              <InlineLink
+                href="https://www.nord.investments"
+                target="_nord"
+                size="sm"
+              >
+                NORD.investments
+              </InlineLink>
+              . I'm available for work.
+              {"."}
+            </p>
             <dl>
               <dd className="mb-1">Sebastian Winther</dd>
               <dd className="mb-1">Copenhagen, Denmark</dd>
@@ -113,7 +110,7 @@ export default () => {
             <img
               src="/sebastian.jpg"
               alt="That's me!"
-              className="w-40 md:w-64 h-40 md:h-64 rounded"
+              className="w-40 h-40 rounded"
             />
           </div>
         </div>
