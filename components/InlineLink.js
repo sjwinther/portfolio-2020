@@ -25,7 +25,7 @@ export default ({ href, target, download, size, type, color, children }) => {
       download={download || undefined}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black"
+      className="inline-flex items-center underline hover:bg-gray-200 dark-hover:bg-black"
     >
       {children}
       {type === "send" && hover ? (

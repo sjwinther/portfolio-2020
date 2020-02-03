@@ -38,7 +38,7 @@ const Definition = ({ content, href }) => (
         href={"https://" + href}
         target="_blank"
         rel="noopener"
-        className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black py-1"
+        className="inline-flex items-center underline hover:bg-gray-200 dark-hover:bg-black py-1"
       >
         {content}
         <ExternalLink

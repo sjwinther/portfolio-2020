@@ -53,8 +53,7 @@ export default () => {
               >
                 NORD.investments
               </InlineLink>
-              . I'm available for work.
-              {"."}
+              .
             </p>
             <dl>
               <dd className="mb-1">Sebastian Winther</dd>
