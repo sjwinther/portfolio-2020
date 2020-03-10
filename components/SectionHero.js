@@ -22,6 +22,7 @@ export default () => (
         I'm formally educated in UX research and UI design, and self taught in
         frontend development. I currently work at the Danish digital newspaper <InlineLink
           href="https://www.zetland.dk/"
+          target="_zetland"
           color="text-red-600"
         >
           Zetland

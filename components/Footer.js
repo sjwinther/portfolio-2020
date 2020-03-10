@@ -14,14 +14,18 @@ export default () => {
   return (
     <footer className="px-4">
       <div className="max-w-5xl mx-auto">
-        {/* <SquigglyLine
-          style={{ strokeWidth: "4" }}
-          className="icon text-5xl text-gray-300 dark:text-gray-800 mb-16"
-        /> */}
         <div className="flex flex-wrap md:flex-no-wrap py-8 md:py-16">
           <div className="w-full flex flex-col justify-end md:pr-8">
             <p className="max-w-md mb-6">
-              I design and code. I have previously worked with companies like{" "}
+              I design and code at{' '}
+              <InlineLink
+                href="https://www.zetland.dk/"
+                target="_zetland"
+                size="sm"
+              >
+                Zetland
+              </InlineLink>.<br />
+              I have previously worked with companies like{" "}
               <InlineLink
                 href="https://www.pelion.app"
                 target="_pelion"
