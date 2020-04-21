@@ -17,15 +17,15 @@ export default () => {
         <div className="flex flex-wrap md:flex-no-wrap py-8 md:py-16">
           <div className="w-full flex flex-col justify-end md:pr-8">
             <p className="max-w-md mb-6">
-              I design and code at{' '}
+              I design and code at{" "}
               <InlineLink
                 href="https://www.zetland.dk/"
                 target="_zetland"
                 size="sm"
               >
                 Zetland
-              </InlineLink>.<br />
-              I have previously worked with companies like{" "}
+              </InlineLink>
+              .<br />I have previously worked with companies like{" "}
               <InlineLink
                 href="https://www.pelion.app"
                 target="_pelion"
@@ -102,7 +102,7 @@ export default () => {
           </div>
           <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
             <div className="flex items-center mb-4">
-              <h3 className="whitespace-no-wrap font-black text-2xl">
+              <h3 className="whitespace-no-wrap font-black text-3xl">
                 That's me!
               </h3>
               <ArrowSmall

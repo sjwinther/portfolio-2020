@@ -14,7 +14,7 @@ export default () => {
       <div className="max-w-5xl flex mx-auto">
         <div className="flex-auto sm:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
-            <h2 className="whitespace-no-wrap font-black text-3xl md:text-4xl">
+            <h2 className="whitespace-no-wrap font-black text-4xl md:text-5xl">
               My work
             </h2>
             <ArrowBig

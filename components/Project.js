@@ -10,7 +10,7 @@ export default ({ id, children }) => {
     <main className="px-4 pt-8 md:pt-16">
       <article>
         <div className="max-w-5xl mx-auto mb-16">
-          <h1 className="max-w-4xl font-black text-2xl sm:text-3xl md:text-4xl mb-8">
+          <h1 className="max-w-4xl font-black text-3xl sm:text-4xl md:text-5xl mb-8">
             {title}
           </h1>
           <dl className="-mx-2 mb-8">
@@ -151,7 +151,7 @@ export const ListDisc = ({ items }) => (
 
 export const TextWithHeading = ({ title, paragraphs }) => (
   <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-8 md:mb-16">
-    <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-8">
+    <h3 className="w-full md:w-1/4 font-semibold text-xl md:text-2xl mb-8">
       {title}
     </h3>
     <div className="w-full md:w-3/4 leading-normal text-lg md:text-xl">
