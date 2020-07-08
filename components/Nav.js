@@ -12,19 +12,10 @@ export default () => (
       </div>
       <div className="-m-2">
         <a
-          href="/resume.pdf"
-          target="_resume"
-          download="Sebastian Winther Resume"
-          className="btn btn-tertiary inline-flex items-center m-2"
-        >
-          <span className="hidden sm:inline">Download my resume</span>
-          <span className="inline sm:hidden">Resume</span>
-        </a>
-        <a
           href="mailto:sebastianwinther@gmail.com?subject=Hey there!"
           className="btn btn-primary inline-flex items-center m-2"
         >
-          <span className="hidden sm:inline">Get in touch</span>
+          <span className="hidden sm:inline">Write me an email</span>
           <span className="inline sm:hidden">Email</span>
         </a>
       </div>
