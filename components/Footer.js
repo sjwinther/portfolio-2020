@@ -65,7 +65,7 @@ export default () => {
               <dd className="relative inline-block">
                 <a
                   href="mailto:sebastianwinther@gmail.com"
-                  className="hover:bg-gray-200 dark-hover:bg-black"
+                  className="hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
                 >
                   sebastianwinther@gmail.com
                 </a>
@@ -102,7 +102,7 @@ export default () => {
           </div>
           <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
             <div className="flex items-center mb-4">
-              <h3 className="whitespace-no-wrap font-black text-2xl">
+              <h3 className="whitespace-no-wrap font-bold text-2xl">
                 That's me!
               </h3>
               <ArrowSmall

@@ -1,4 +1,5 @@
 @import url("https://rsms.me/inter/inter.css");
+@import url("/fonts/gt-flexa.css");
 
 @tailwind base;
 
@@ -47,6 +48,12 @@ a:focus,
 button:focus,
 .input:focus {
   @apply outline-none shadow-outline;
+}
+h1,
+h2,
+h3,
+h4 {
+  @apply font-flexa;
 }
 p {
   @apply leading-normal;

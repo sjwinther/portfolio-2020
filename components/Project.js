@@ -10,10 +10,10 @@ export default ({ id, children }) => {
     <main className="px-4 pt-8 md:pt-16">
       <article>
         <div className="max-w-5xl mx-auto mb-16">
-          <h1 className="max-w-4xl font-black text-2xl sm:text-3xl md:text-4xl mb-8">
+          <h1 className="max-w-4xl font-bold text-2xl sm:text-3xl md:text-4xl mb-8">
             {title}
           </h1>
-          <dl className="-mx-2 mb-8">
+          <dl className="-mx-1 sm:-mx-2 mb-8">
             <Definition content={year} />
             {publicUrls.map(url => (
               <Definition key={url} content={url} href={url} />
@@ -32,13 +32,13 @@ export default ({ id, children }) => {
 };
 
 const Definition = ({ content, href }) => (
-  <dd className="inline-block font-medium uppercase mx-2 my-1">
+  <dd className="inline-block font-medium uppercase text-sm sm:text-base mx-1 sm:mx-2">
     {href ? (
       <a
         href={"https://" + href}
         target="_blank"
         rel="noopener"
-        className="inline-flex items-center underline hover:bg-gray-200 dark-hover:bg-black py-1"
+        className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
       >
         {content}
         <ExternalLink
@@ -151,7 +151,7 @@ export const ListDisc = ({ items }) => (
 
 export const TextWithHeading = ({ title, paragraphs }) => (
   <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-8 md:mb-16">
-    <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl mb-8">
+    <h3 className="w-full md:w-1/4 font-medium text-lg md:text-xl text-gray-700 dark:text-gray-500 mb-8">
       {title}
     </h3>
     <div className="w-full md:w-3/4 leading-normal text-lg md:text-xl">

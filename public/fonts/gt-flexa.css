@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "GT Flexa";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("GT-Flexa-Standard-Medium.woff2") format("woff2"),
+    url("GT-Flexa-Standard-Medium.woff") format("woff"),
+    url("GT-Flexa-Standard-Medium.eot") format("eot"),
+    url("GT-Flexa-Standard-Medium.ttf") format("ttf");
+}
+@font-face {
+  font-family: "GT Flexa";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("GT-Flexa-Standard-Bold.woff2") format("woff2"),
+    url("GT-Flexa-Standard-Bold.woff") format("woff"),
+    url("GT-Flexa-Standard-Bold.eot") format("eot"),
+    url("GT-Flexa-Standard-Bold.ttf") format("ttf");
+}

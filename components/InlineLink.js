@@ -11,7 +11,7 @@ export default ({ href, target, download, size, type, color, children }) => {
       transform: type === "send" && hover ? "scale(1.1)" : "scale(1)"
     },
     className:
-      (size === "sm" ? "text-2xl ml-1 " : "text-3xl ml-2 ") +
+      (size === "sm" ? "text-2xl ml-1 " : size === "lg" ? "text-4xl ml-1 " : "text-3xl ml-2 ") +
       (color ? color + " " : "text-gray-600 ") +
       "icon"
   };
@@ -25,7 +25,7 @@ export default ({ href, target, download, size, type, color, children }) => {
       download={download || undefined}
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      className="inline-flex items-center underline hover:bg-gray-200 dark-hover:bg-black"
+      className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
     >
       {children}
       {type === "send" && hover ? (
