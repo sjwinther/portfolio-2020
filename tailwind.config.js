@@ -1,5 +1,11 @@
 module.exports = {
   theme: {
+    borderRadius: {
+      none: '0',
+      sm: '0.25rem',
+      default: '0.75rem',
+      full: '9999px',
+    },
     fontFamily: {
       flexa:
         '"GT Flexa", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

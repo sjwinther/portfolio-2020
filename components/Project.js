@@ -1,11 +1,13 @@
-import ExternalLink from "../icons/external-link.svg";
-import work from "../content/work";
+import Link from 'next/link'
 
-import SkillBadge from "./SkillBadge";
+import ExternalLink from '../icons/external-link.svg'
+import work from '../content/work'
+
+import SkillBadge from './SkillBadge'
 
 export default ({ id, children }) => {
-  const project = work[id];
-  const { title, year, publicUrls, skills, bgColor } = project;
+  const project = work[id]
+  const { title, year, publicUrls, skills, bgColor, nextProject } = project
   return (
     <main className="px-4 pt-8 md:pt-16">
       <article>
@@ -26,23 +28,41 @@ export default ({ id, children }) => {
           </div>
         </div>
         {children}
+        <div className="max-w-5xl flex items center justify-between mx-auto">
+          <Link>
+            <a
+              href="/"
+              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700"
+            >
+              {'← Go home'}
+            </a>
+          </Link>
+          <Link>
+            <a
+              href={nextProject}
+              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700"
+            >
+              {'Next project →'}
+            </a>
+          </Link>
+        </div>
       </article>
     </main>
-  );
-};
+  )
+}
 
 const Definition = ({ content, href }) => (
   <dd className="inline-block font-medium uppercase text-sm sm:text-base mx-1 sm:mx-2">
     {href ? (
       <a
-        href={"https://" + href}
+        href={'https://' + href}
         target="_blank"
         rel="noopener"
         className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
       >
         {content}
         <ExternalLink
-          style={{ strokeWidth: "3" }}
+          style={{ strokeWidth: '3' }}
           className="icon text-2xl text-gray-600 ml-1"
         />
       </a>
@@ -50,23 +70,23 @@ const Definition = ({ content, href }) => (
       <div className="py-1">{content}</div>
     )}
   </dd>
-);
+)
 
 export const ImageInline = ({ alt, bgColor }) => (
   <div
-    style={{ paddingBottom: "56.25%" }}
+    style={{ paddingBottom: '56.25%' }}
     className="relative z-10 mb-8 last:mb-0"
   >
     <div
       className={
         bgColor +
-        " absolute inset-0 flex items-center justify-center text-white rounded"
+        ' absolute inset-0 flex items-center justify-center text-white rounded'
       }
     >
       {alt}
     </div>
   </div>
-);
+)
 
 export const VideosInline = ({ sources }) => (
   <div className="relative z-10 flex -mx-4 mb-8 last:mb-0">
@@ -86,7 +106,7 @@ export const VideosInline = ({ sources }) => (
       </div>
     ))}
   </div>
-);
+)
 
 export const ImageFullWidth = ({ src, alt }) => (
   <img
@@ -94,7 +114,7 @@ export const ImageFullWidth = ({ src, alt }) => (
     alt={alt}
     className="relative z-10 rounded shadow mb-16 md:mb-24"
   />
-);
+)
 
 export const ImagesFullWidth = ({ sources }) => (
   <div className="relative z-10 flex flex-col md:flex-row -mx-2 mb-16 md:mb-24">
@@ -105,13 +125,13 @@ export const ImagesFullWidth = ({ sources }) => (
       </div>
     ))}
   </div>
-);
+)
 
 export const ImageMaxWidth = ({ src, alt, bgColor }) => (
   <div className="max-w-5xl mx-auto mb-16 md:mb-24">
     <img src={src} alt={alt} className="relative z-10 rounded shadow" />
   </div>
-);
+)
 
 export const ImagesScrollable = ({ sources }) => (
   <div className="-mx-4 px-4 overflow-x-auto mb-12 md:mb-20">
@@ -127,17 +147,17 @@ export const ImagesScrollable = ({ sources }) => (
       ))}
     </ul>
   </div>
-);
+)
 
 export const ListDecimal = ({ items }) => (
   <ol>
     {items.map((item, i) => (
       <li key={item} className="mb-4">
-        {i + 1 + ") " + item}
+        {i + 1 + ') ' + item}
       </li>
     ))}
   </ol>
-);
+)
 
 export const ListDisc = ({ items }) => (
   <ul className="list-disc pl-6">
@@ -147,7 +167,7 @@ export const ListDisc = ({ items }) => (
       </li>
     ))}
   </ul>
-);
+)
 
 export const TextWithHeading = ({ title, paragraphs }) => (
   <section className="max-w-5xl flex flex-wrap items-baseline mx-auto mb-8 md:mb-16">
@@ -156,18 +176,18 @@ export const TextWithHeading = ({ title, paragraphs }) => (
     </h3>
     <div className="w-full md:w-3/4 leading-normal text-lg md:text-xl">
       {paragraphs.map((paragraph, i) => {
-        if (typeof paragraph === "string")
+        if (typeof paragraph === 'string')
           return (
             <p key={i} className="mb-8">
               {paragraph}
             </p>
-          );
+          )
         return (
           <div key={i} className="mb-8">
             {paragraph}
           </div>
-        );
+        )
       })}
     </div>
   </section>
-);
+)

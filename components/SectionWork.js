@@ -1,24 +1,24 @@
-import { useState } from "react";
-import ArrowBig from "../icons/arrow-big.svg";
-import ArrowRight from "../icons/arrow-right.svg";
-import Link from "next/link";
-import useBreakpoint from "../hooks/useBreakpoint";
-import work from "../content/work";
+import { useState } from 'react'
+import ArrowBig from '../icons/arrow-big.svg'
+import ArrowRight from '../icons/arrow-right.svg'
+import Link from 'next/link'
+import useBreakpoint from '../hooks/useBreakpoint'
+import work from '../content/work'
 
-import SkillBadge from "./SkillBadge";
+import SkillBadge from './SkillBadge'
 
 export default () => {
-  const [project, setProject] = useState(Object.keys(work)[0]);
+  const [project, setProject] = useState(Object.keys(work)[0])
   return (
     <section className="px-4 pt-8 md:pt-16 mb-16 md:mb-24">
       <div className="max-w-5xl flex mx-auto">
-        <div className="flex-auto sm:pr-8 sm:pb-4">
+        <div className="flex-auto lg:pr-8 sm:pb-4">
           <div className="flex items-end mb-8">
             <h2 className="whitespace-no-wrap font-bold text-3xl md:text-4xl">
               My work
             </h2>
             <ArrowBig
-              style={{ strokeWidth: "2" }}
+              style={{ strokeWidth: '2' }}
               className="icon text-5xl md:text-6xl text-pink-600 ml-4"
             />
           </div>
@@ -34,9 +34,9 @@ export default () => {
             ))}
           </ul>
         </div>
-        <Link href={"/work/" + work[project].url}>
-          <a className="hidden md:block w-1/2 lg:w-3/5">
-            <div style={{ paddingBottom: "60%" }} className="relative z-10">
+        <Link href={'/work/' + work[project].url}>
+          <a className="hidden lg:block w-3/5 rounded">
+            <div style={{ paddingBottom: '60%' }} className="relative z-10">
               <img
                 src={work[project].preview}
                 alt={work[project].short}
@@ -48,7 +48,7 @@ export default () => {
                   src={work[id].preview}
                   alt={work[id].short}
                   aria-hidden="true"
-                  style={{ display: "none" }}
+                  style={{ display: 'none' }}
                 />
               ))}
             </div>
@@ -57,21 +57,21 @@ export default () => {
       </div>
       <div className="hidden bg-indigo-700 bg-orange-700 bg-green-700 bg-teal-700 bg-purple-700" />
     </section>
-  );
-};
+  )
+}
 
 const ListItem = ({ id, short, type, url, skills, project, setProject }) => {
-  const { md } = useBreakpoint();
-  const isActive = project === id;
+  const { md } = useBreakpoint()
+  const isActive = project === id
   return (
     <li className="m-2 last:mb-0">
-      <Link href={"/work/" + url}>
+      <Link href={'/work/' + url}>
         <a
           onMouseOver={() => setProject(id)}
           onFocus={() => setProject(id)}
           className={
-            (isActive ? "opacity-100 " : "opacity-100 md:opacity-50 ") +
-            "flex items-center p-3"
+            (isActive ? 'opacity-100 ' : 'opacity-100 lg:opacity-50 ') +
+            'flex items-center p-3'
           }
         >
           <div className="flex-auto flex items-center font-medium text-xl">
@@ -81,20 +81,21 @@ const ListItem = ({ id, short, type, url, skills, project, setProject }) => {
                 <div key={skill} className="ml-4">
                   <SkillBadge skill={skill} size="sm" />
                 </div>
-              );
+              )
             })}
           </div>
-          <ArrowRight
-            style={{ strokeWidth: "4" }}
+          <span
             className={
               (isActive
-                ? " opacity-25 md:opacity-100"
-                : " opacity-25 md:opacity-0") +
-              " icon text-2xl text-gray-600 transition"
+                ? ' opacity-50 lg:opacity-100'
+                : ' opacity-50 lg:opacity-0') +
+              ' font-flexa font-medium text-2xl text-gray-600 transition'
             }
-          />
+          >
+            →
+          </span>
         </a>
       </Link>
     </li>
-  );
-};
+  )
+}

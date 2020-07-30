@@ -4,7 +4,7 @@ import Circle from "../icons/circle.svg";
 import Bulb from "../icons/bulb.svg";
 import BulbLight from "../icons/bulb-light.svg";
 
-export default () => {
+export default ({ showToggle }) => {
   const sessionDark = sessionStorage.getItem("dark");
   const prefersDark =
     window.matchMedia &&
@@ -23,9 +23,9 @@ export default () => {
       sessionStorage.setItem("dark", false);
     }
   }, [dark]);
-  return (
+  return showToggle ? (
     <button
-      className="relative xl:fixed xl:right-0 xl:bottom-0 flex items-center w-12 h-8 bg-gray-200 dark:bg-black rounded-full mb-8 xl:m-4"
+      className="relative xl:fixed xl:right-0 xl:bottom-0 flex items-center w-12 h-8 bg-gray-400 dark:bg-gray-700 rounded-full mb-8 xl:m-4"
       onMouseOver={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={() => setDark(!dark)}
@@ -42,5 +42,5 @@ export default () => {
         />
       </motion.div>
     </button>
-  );
+  ) : null;
 };
