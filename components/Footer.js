@@ -107,7 +107,7 @@ export default () => {
               </h3>
               <ArrowSmall
                 style={{ strokeWidth: "2.5" }}
-                className="icon text-5xl text-pink-600 ml-2"
+                className="icon text-5xl text-pink-600 -mr-4"
               />
             </div>
             <img
