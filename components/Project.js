@@ -32,17 +32,17 @@ export default ({ id, children }) => {
           <Link>
             <a
               href="/"
-              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700"
+              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500"
             >
-              {'← Go home'}
+              ← Go home
             </a>
           </Link>
           <Link>
             <a
               href={nextProject}
-              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700"
+              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500"
             >
-              {'Next project →'}
+              Next project →
             </a>
           </Link>
         </div>
