@@ -29,6 +29,14 @@ export default () => {
         name="twitter:image"
         content="https://www.sebastianwinther.com/og-image.png"
       />
+      {process.env.NODE_ENV === 'production' && (
+        <script
+          async
+          defer
+          data-website-id="67db2105-52c2-44db-9240-059a8572eb75"
+          src="https://sebastian-umami.vercel.app/umami.js">
+        </script>
+      )}
     </Head>
   );
 };

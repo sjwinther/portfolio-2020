@@ -15,11 +15,10 @@
     "cssnano": "^4.1.10",
     "framer-motion": "^1.6.17",
     "gray-matter": "^4.0.2",
-    "next": "9.1.4",
+    "next": "^9.5.2",
     "raw-loader": "^4.0.0",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "react-ga": "^2.7.0",
     "react-markdown": "^4.2.2",
     "tailwindcss": "^1.1.4",
     "tailwindcss-dark-mode": "ChanceArthur/tailwindcss-dark-mode#26d925d074ba11899ec7d91c1f55a274c7425968"
