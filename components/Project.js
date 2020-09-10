@@ -5,7 +5,7 @@ import work from '../content/work'
 
 import SkillBadge from './SkillBadge'
 
-export default ({ id, children }) => {
+const Project = ({ id, children }) => {
   const project = work[id]
   const { title, year, publicUrls, skills, bgColor, nextProject } = project
   return (
@@ -29,19 +29,13 @@ export default ({ id, children }) => {
         </div>
         {children}
         <div className="max-w-5xl flex items center justify-between mx-auto">
-          <Link>
-            <a
-              href="/"
-              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500"
-            >
+          <Link href="/">
+            <a className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500">
               ← Go home
             </a>
           </Link>
-          <Link>
-            <a
-              href={nextProject}
-              className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500"
-            >
+          <Link href={nextProject}>
+            <a className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500">
               Next project →
             </a>
           </Link>
@@ -50,6 +44,7 @@ export default ({ id, children }) => {
     </main>
   )
 }
+export default Project
 
 const Definition = ({ content, href }) => (
   <dd className="inline-block font-medium uppercase text-sm sm:text-base mx-1 sm:mx-2">

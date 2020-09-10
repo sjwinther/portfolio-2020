@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
-import { useForm } from "@statickit/react";
-import { motion, AnimatePresence } from "framer-motion";
-import SquigglyLine from "../icons/footer.svg";
-import Check from "../icons/check.svg";
-import ArrowSmall from "../icons/arrow-small.svg";
-import SayHi from "../icons/say-hi.svg";
+import { useEffect, useState } from 'react'
+import { useForm } from '@statickit/react'
+import { motion, AnimatePresence } from 'framer-motion'
+import SquigglyLine from '../icons/footer.svg'
+import Check from '../icons/check.svg'
+import ArrowSmall from '../icons/arrow-small.svg'
+import SayHi from '../icons/say-hi.svg'
 
-import DarkToggle from "./DarkToggle";
-import LoadingSpinner from "./LoadingSpinner";
-import InlineLink from "./InlineLink";
+import DarkToggle from './DarkToggle'
+import LoadingSpinner from './LoadingSpinner'
+import InlineLink from './InlineLink'
 
-export default () => {
+const Footer = () => {
   return (
     <footer className="px-4">
       <div className="max-w-5xl mx-auto">
@@ -24,8 +24,8 @@ export default () => {
                 size="sm"
               >
                 Zetland
-              </InlineLink>.<br />
-              I have previously worked with companies like{" "}
+              </InlineLink>
+              .<br />I have previously worked with companies like{' '}
               <InlineLink
                 href="https://www.pelion.app"
                 target="_pelion"
@@ -33,7 +33,7 @@ export default () => {
               >
                 Pelion
               </InlineLink>
-              {", "}
+              {', '}
               <InlineLink
                 href="https://www.initiativet.dk"
                 target="_initiativet"
@@ -41,7 +41,7 @@ export default () => {
               >
                 Initiativet
               </InlineLink>
-              {", "}
+              {', '}
               <InlineLink
                 href="https://www.readwise.io"
                 target="_readwise"
@@ -49,7 +49,7 @@ export default () => {
               >
                 Readwise
               </InlineLink>
-              {", & "}
+              {', & '}
               <InlineLink
                 href="https://www.nord.investments"
                 target="_nord"
@@ -71,7 +71,7 @@ export default () => {
                 </a>
                 <div className="absolute inset-y-0 right-0 flex items-end justify-start">
                   <SayHi
-                    style={{ strokeWidth: "2" }}
+                    style={{ strokeWidth: '2' }}
                     className="absolute left-0 icon text-5xl text-teal-600 ml-2"
                   />
                 </div>
@@ -106,7 +106,7 @@ export default () => {
                 That's me!
               </h3>
               <ArrowSmall
-                style={{ strokeWidth: "2.5" }}
+                style={{ strokeWidth: '2.5' }}
                 className="icon text-5xl text-pink-600 -mr-4"
               />
             </div>
@@ -120,23 +120,24 @@ export default () => {
         <DarkToggle />
       </div>
     </footer>
-  );
-};
+  )
+}
+export default Footer
 
 const Form = () => {
-  const [email, setEmail] = useState("");
-  const [toast, setToast] = useState(false);
+  const [email, setEmail] = useState('')
+  const [toast, setToast] = useState(false)
   const [state, submit] = useForm({
-    site: "2b52df695624",
-    form: "contact-form"
-  });
-  const { submitting, succeeded, errors } = state;
+    site: '2b52df695624',
+    form: 'contact-form',
+  })
+  const { submitting, succeeded, errors } = state
   useEffect(() => {
     if (succeeded) {
-      setToast(true);
-      setEmail("");
+      setToast(true)
+      setEmail('')
     }
-  }, [succeeded]);
+  }, [succeeded])
   return (
     <>
       <form onSubmit={submit} className="flex text-base -m-2">
@@ -153,8 +154,8 @@ const Form = () => {
           type="submit"
           className="flex-shrink-0 btn btn-primary relative w-28 m-2"
         >
-          <span className={succeeded || submitting ? "text-transparent" : ""}>
-            {errors && !!errors.length ? "Try again" : "Send along"}
+          <span className={succeeded || submitting ? 'text-transparent' : ''}>
+            {errors && !!errors.length ? 'Try again' : 'Send along'}
           </span>
           {(succeeded || submitting) && (
             <div className="absolute inset-0 flex items-center justify-center">
@@ -167,7 +168,7 @@ const Form = () => {
                     exit={{ opacity: 0 }}
                   >
                     <Check
-                      style={{ strokeWidth: "4" }}
+                      style={{ strokeWidth: '4' }}
                       className="icon text-2xl"
                     />
                   </motion.div>
@@ -179,7 +180,7 @@ const Form = () => {
                     exit={{ opacity: 0 }}
                   >
                     <LoadingSpinner
-                      style={{ strokeWidth: "3" }}
+                      style={{ strokeWidth: '3' }}
                       className="icon text-3xl"
                     />
                   </motion.div>
@@ -191,8 +192,8 @@ const Form = () => {
       </form>
       <Toast show={toast} close={() => setToast(false)} />
     </>
-  );
-};
+  )
+}
 
 const Toast = ({ show, close }) => (
   <div className="fixed inset-x-0 bottom-0 z-20 flex justify-center">
@@ -207,9 +208,9 @@ const Toast = ({ show, close }) => (
           className="absolute bottom-0 cursor-pointer flex items-center text-white dark:text-black bg-black dark:bg-white rounded px-8 py-4 mb-8"
         >
           You got it! I'll be in touch
-          <Check style={{ strokeWidth: "3" }} className="icon text-2xl ml-2" />
+          <Check style={{ strokeWidth: '3' }} className="icon text-2xl ml-2" />
         </motion.div>
       )}
     </AnimatePresence>
   </div>
-);
+)

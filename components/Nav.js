@@ -1,6 +1,6 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-export default () => (
+const Nav = () => (
   <nav className="px-4">
     <div className="max-w-5xl flex items-center py-4 md:py-8 mx-auto">
       <Link href="/">
@@ -10,4 +10,5 @@ export default () => (
       </Link>
     </div>
   </nav>
-);
+)
+export default Nav

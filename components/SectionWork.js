@@ -7,7 +7,7 @@ import work from '../content/work'
 
 import SkillBadge from './SkillBadge'
 
-export default () => {
+const SectionWork = () => {
   const [project, setProject] = useState(Object.keys(work)[0])
   return (
     <section className="px-4 pt-8 md:pt-16 mb-16 md:mb-24">
@@ -99,3 +99,4 @@ const ListItem = ({ id, short, type, url, skills, project, setProject }) => {
     </li>
   )
 }
+export default SectionWork

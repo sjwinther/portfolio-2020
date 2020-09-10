@@ -1,9 +1,10 @@
-import SectionHero from "../components/SectionHero";
-import SectionWork from "../components/SectionWork";
+import SectionHero from '../components/SectionHero'
+import SectionWork from '../components/SectionWork'
 
-export default () => (
+const Home = () => (
   <>
     <SectionHero />
     <SectionWork />
   </>
-);
+)
+export default Home

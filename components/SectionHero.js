@@ -1,31 +1,32 @@
-import Peace from "../icons/peace.svg";
+import Peace from '../icons/peace.svg'
 
-import InlineLink from "./InlineLink";
-import SkillBadge from "./SkillBadge";
+import InlineLink from './InlineLink'
+import SkillBadge from './SkillBadge'
 
-export default () => (
+const SectionHero = () => (
   <section className="px-4 pt-8 md:pt-16 mb-16 md:mb-24">
     <div className="max-w-5xl mx-auto">
       <div className="font-bold text-2xl sm:text-3xl md:text-4xl mb-8 md:mb-12">
         <h1 className="inline">
           Hey, I'm Sebastian.
           <Peace
-            style={{ strokeWidth: "2", transform: 'translateY(-8px)' }}
+            style={{ strokeWidth: '2', transform: 'translateY(-8px)' }}
             className="inline-block icon text-3xl sm:text-4xl md:text-5xl text-yellow-600"
           />
           I'm a digital product person.
-        </h1>
-        {' '}
+        </h1>{' '}
         <p className="inline font-flexa">
           I'm formally educated in UX research and UI design, and self taught in
-          frontend development. I currently work at the Danish digital newspaper <InlineLink
+          frontend development. I currently work at the Danish digital newspaper{' '}
+          <InlineLink
             href="https://www.zetland.dk/"
             target="_zetland"
             color="text-red-600"
             size="lg"
           >
             Zetland
-          </InlineLink>.
+          </InlineLink>
+          .
         </p>
       </div>
       <div className="font-flexa flex flex-wrap items-center -m-1 md:-m-2">
@@ -39,4 +40,5 @@ export default () => (
       </div>
     </div>
   </section>
-);
+)
+export default SectionHero
