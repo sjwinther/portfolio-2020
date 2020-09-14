@@ -1,6 +1,5 @@
 import Link from 'next/link'
 
-import ExternalLink from '../icons/external-link.svg'
 import work from '../content/work'
 
 import SkillBadge from './SkillBadge'
@@ -56,10 +55,6 @@ const Definition = ({ content, href }) => (
         className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
       >
         {content}
-        <ExternalLink
-          style={{ strokeWidth: '3' }}
-          className="icon text-2xl text-gray-600 ml-1"
-        />
       </a>
     ) : (
       <div className="py-1">{content}</div>

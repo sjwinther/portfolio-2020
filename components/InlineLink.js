@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Airplane from '../icons/airplane.svg'
 import AirplaneFly from '../icons/airplane-fly.svg'
-import ExternalLink from '../icons/external-link.svg'
 
 const InlineLink = ({
   href,
@@ -44,9 +43,7 @@ const InlineLink = ({
         <AirplaneFly {...iconProps} />
       ) : type === 'send' ? (
         <Airplane {...iconProps} />
-      ) : (
-        <ExternalLink {...iconProps} />
-      )}
+      ) : null}
     </a>
   )
 }
