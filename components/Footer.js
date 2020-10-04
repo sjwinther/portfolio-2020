@@ -1,13 +1,8 @@
 import { useEffect, useState } from 'react'
-import { useForm } from '@statickit/react'
-import { motion, AnimatePresence } from 'framer-motion'
-import SquigglyLine from '../icons/footer.svg'
-import Check from '../icons/check.svg'
 import ArrowSmall from '../icons/arrow-small.svg'
 import SayHi from '../icons/say-hi.svg'
 
 import DarkToggle from './DarkToggle'
-import LoadingSpinner from './LoadingSpinner'
 import InlineLink from './InlineLink'
 
 const Footer = () => {
