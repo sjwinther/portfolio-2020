@@ -4,6 +4,7 @@ import SayHi from '../icons/say-hi.svg'
 
 import DarkToggle from './DarkToggle'
 import InlineLink from './InlineLink'
+import LinkWrapper from './LinkWrapper'
 
 const Footer = () => {
   return (
@@ -13,54 +14,69 @@ const Footer = () => {
           <div className="w-full flex flex-col justify-end md:pr-8">
             <p className="max-w-md mb-6">
               I design and code at{' '}
-              <InlineLink
-                href="https://www.zetland.dk/"
-                target="_zetland"
-                size="sm"
-              >
-                Zetland
-              </InlineLink>
+              <LinkWrapper type="inline-block">
+                <InlineLink
+                  href="https://www.zetland.dk/"
+                  target="_zetland"
+                  size="sm"
+                >
+                  Zetland
+                </InlineLink>
+              </LinkWrapper>
               .<br />I have previously worked with companies like{' '}
-              <InlineLink
-                href="https://www.pelion.app"
-                target="_pelion"
-                size="sm"
-              >
-                Pelion
-              </InlineLink>
+              <LinkWrapper type="inline-block">
+                <InlineLink
+                  href="https://www.pelion.app"
+                  target="_pelion"
+                  size="sm"
+                >
+                  Pelion
+                </InlineLink>
+              </LinkWrapper>
               {', '}
-              <InlineLink
-                href="https://www.initiativet.dk"
-                target="_initiativet"
-                size="sm"
-              >
-                Initiativet
-              </InlineLink>
+              <LinkWrapper type="inline-block">
+                <InlineLink
+                  href="https://www.initiativet.dk"
+                  target="_initiativet"
+                  size="sm"
+                >
+                  Initiativet
+                </InlineLink>
+              </LinkWrapper>
               {', '}
-              <InlineLink
-                href="https://www.readwise.io"
-                target="_readwise"
-                size="sm"
-              >
-                Readwise
-              </InlineLink>
+              <LinkWrapper type="inline-block">
+                <InlineLink
+                  href="https://www.readwise.io"
+                  target="_readwise"
+                  size="sm"
+                >
+                  Readwise
+                </InlineLink>
+              </LinkWrapper>
               {', & '}
-              <InlineLink
-                href="https://www.nord.investments"
-                target="_nord"
-                size="sm"
-              >
-                NORD.investments
-              </InlineLink>
+              <LinkWrapper type="inline-block">
+                <InlineLink
+                  href="https://www.nord.investments"
+                  target="_nord"
+                  size="sm"
+                >
+                  NORD.investments
+                </InlineLink>
+              </LinkWrapper>
               .
             </p>
             <dl>
               <dd className="mb-1">Sebastian Winther</dd>
               <dd className="mb-1">Copenhagen, Denmark</dd>
               <dd className="relative inline-block">
-                <InlineLink href="mailto:sebastianwinther@gmail.com" size="sm">
-                  sebastianwinther@gmail.com
-                </InlineLink>
+                <LinkWrapper type="inline-block">
+                  <InlineLink
+                    href="mailto:sebastianwinther@gmail.com"
+                    size="sm"
+                  >
+                    sebastianwinther@gmail.com
+                  </InlineLink>
+                </LinkWrapper>
                 <div className="absolute inset-y-0 right-0 flex items-end justify-start">
                   <SayHi
                     style={{ strokeWidth: '2' }}

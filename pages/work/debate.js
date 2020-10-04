@@ -6,6 +6,7 @@ import Project, {
   TextWithHeading,
 } from '../../components/Project'
 import InlineLink from '../../components/InlineLink'
+import LinkWrapper from '../../components/LinkWrapper'
 
 const Debate = () => (
   <Project id="debate">
@@ -42,22 +43,26 @@ const Debate = () => (
         'The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings (see prototype below).',
         <>
           You can download the thesis{' '}
-          <InlineLink
-            href="/debate/thesis.pdf"
-            target="_thesis"
-            size="sm"
-            download="Digital Debate Thesis"
-          >
-            here
-          </InlineLink>{' '}
+          <LinkWrapper type="inline-block">
+            <InlineLink
+              href="/debate/thesis.pdf"
+              target="_thesis"
+              size="sm"
+              download="Digital Debate Thesis"
+            >
+              here
+            </InlineLink>
+          </LinkWrapper>{' '}
           (it's in Danish), and visit the (still very static) prototype{' '}
-          <InlineLink
-            href="https://digital-debate.netlify.com"
-            target="_prototype"
-            size="sm"
-          >
-            here
-          </InlineLink>
+          <LinkWrapper type="inline-block">
+            <InlineLink
+              href="https://digital-debate.netlify.com"
+              target="_prototype"
+              size="sm"
+            >
+              here
+            </InlineLink>
+          </LinkWrapper>
           .
         </>,
         // <ImageInline alt="Suggestions, illustrated" bgColor="bg-gray-700" />

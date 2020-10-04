@@ -1,6 +1,7 @@
 import Peace from '../icons/peace.svg'
 
 import InlineLink from './InlineLink'
+import LinkWrapper from './LinkWrapper'
 import SkillBadge from './SkillBadge'
 
 const SectionHero = () => (
@@ -18,14 +19,15 @@ const SectionHero = () => (
         <p className="inline font-flexa">
           I'm formally educated in UX research and UI design, and self taught in
           frontend development. I currently work at the Danish digital newspaper{' '}
-          <InlineLink
-            href="https://www.zetland.dk/"
-            target="_zetland"
-            color="text-red-600"
-            size="lg"
-          >
-            Zetland
-          </InlineLink>
+          <LinkWrapper type="inline-block">
+            <InlineLink
+              href="https://www.zetland.dk/"
+              target="_zetland"
+              size="lg"
+            >
+              Zetland
+            </InlineLink>
+          </LinkWrapper>
           .
         </p>
       </div>

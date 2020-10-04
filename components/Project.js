@@ -2,6 +2,7 @@ import Link from 'next/link'
 
 import work from '../content/work'
 
+import LinkWrapper from './LinkWrapper'
 import SkillBadge from './SkillBadge'
 
 const Project = ({ id, children }) => {
@@ -48,14 +49,16 @@ export default Project
 const Definition = ({ content, href }) => (
   <dd className="inline-block font-medium uppercase text-sm sm:text-base mx-1 sm:mx-2">
     {href ? (
-      <a
-        href={'https://' + href}
-        target="_blank"
-        rel="noopener"
-        className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
-      >
-        {content}
-      </a>
+      <LinkWrapper type="inline-block">
+        <a
+          href={'https://' + href}
+          target="_blank"
+          rel="noopener"
+          className="inline-flex items-center border-b-2 border-gray-400 dark:border-gray-800 hover:border-transparent rounded-b-none"
+        >
+          {content}
+        </a>
+      </LinkWrapper>
     ) : (
       <div className="py-1">{content}</div>
     )}
