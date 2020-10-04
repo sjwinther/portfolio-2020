@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useContext, useState, useRef } from 'react'
+import { Context } from '../store'
+
 import Airplane from '../icons/airplane.svg'
 import AirplaneFly from '../icons/airplane-fly.svg'
 
@@ -12,6 +14,32 @@ const InlineLink = ({
   children,
 }) => {
   const [hover, setHover] = useState(false)
+  const [style, setStyle] = useState({ zIndex: 0 })
+
+  const [state, dispatch] = useContext(Context)
+  const { showOverlay } = state
+
+  const overlayTimer = useRef(null)
+  const linkTimer = useRef(null)
+
+  const handleMouseOver = () => {
+    clearTimeout(linkTimer.current)
+    overlayTimer.current = setTimeout(() => {
+      setHover(true)
+      dispatch({ type: 'SET_OVERLAY', payload: true })
+    }, 150)
+    setStyle({ zIndex: 40 })
+  }
+
+  const handleMouseLeave = () => {
+    clearTimeout(overlayTimer.current)
+    setHover(false)
+    dispatch({ type: 'SET_OVERLAY', payload: false })
+    linkTimer.current = setTimeout(() => {
+      setStyle({ zIndex: 0 })
+    }, 150)
+  }
+
   const iconProps = {
     style: {
       strokeWidth: '3',
@@ -34,16 +62,12 @@ const InlineLink = ({
       }
       rel={target ? 'noopener' : undefined}
       download={download || undefined}
-      onMouseOver={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-      className="inline-flex items-center hover:bg-gray-200 dark-hover:bg-black border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
+      onMouseOver={handleMouseOver}
+      onMouseLeave={handleMouseLeave}
+      className="relative inline-flex items-center border-b-2 border-gray-400 hover:border-transparent dark:border-gray-800 rounded-b-none"
+      style={style}
     >
       {children}
-      {type === 'send' && hover ? (
-        <AirplaneFly {...iconProps} />
-      ) : type === 'send' ? (
-        <Airplane {...iconProps} />
-      ) : null}
     </a>
   )
 }

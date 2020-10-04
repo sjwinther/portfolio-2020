@@ -1,5 +1,5 @@
-@import url("https://rsms.me/inter/inter.css");
-@import url("/fonts/gt-flexa.css");
+@import url('https://rsms.me/inter/inter.css');
+@import url('/fonts/gt-flexa.css');
 
 @tailwind base;
 
@@ -7,7 +7,7 @@
 
 html {
   @apply font-sans antialiased leading-tight;
-  font-feature-settings: "liga" 1, "ss01" 1, "ss03" 1;
+  font-feature-settings: 'liga' 1, 'ss01' 1, 'ss03' 1;
 }
 @supports (font-variation-settings: normal) {
   html {
@@ -47,7 +47,7 @@ button {
 a:focus,
 button:focus,
 .input:focus {
-  @apply outline-none shadow-outline;
+  @apply rounded-sm outline-none shadow-outline;
 }
 h1,
 h2,

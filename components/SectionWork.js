@@ -35,7 +35,7 @@ const SectionWork = () => {
           </ul>
         </div>
         <Link href={'/work/' + work[project].url}>
-          <a className="hidden lg:block w-3/5 rounded">
+          <a className="hidden lg:block w-3/5 rounded focus:rounded">
             <div style={{ paddingBottom: '60%' }} className="relative z-10">
               <img
                 src={work[project].preview}
