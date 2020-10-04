@@ -1,37 +1,32 @@
-import App from "next/app";
-import ReactGA from "react-ga";
+import App from 'next/app'
+import ReactGA from 'react-ga'
+import Store from '../store'
 
-import Head from "../components/Head";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import Head from '../components/Head'
+import Wrapper from '../components/Wrapper'
 
 class MyApp extends App {
-  state = {};
+  state = {}
   componentDidMount() {
-    this.setState({ mounted: true });
-    process.env.NODE_ENV === "production" &&
-      ReactGA.initialize("UA-55167950-1");
-    process.env.NODE_ENV === "production" &&
-      ReactGA.pageview(window.location.pathname + window.location.search);
+    this.setState({ mounted: true })
+    process.env.NODE_ENV === 'production' && ReactGA.initialize('UA-55167950-1')
+    process.env.NODE_ENV === 'production' &&
+      ReactGA.pageview(window.location.pathname + window.location.search)
   }
   render() {
-    const { Component, pageProps } = this.props;
-    const { mounted } = this.state;
+    const { Component, pageProps } = this.props
+    const { mounted } = this.state
     return (
-      <>
+      <Store>
         <Head />
         {mounted && (
-          <>
-            <Nav />
-            <main>
-              <Component {...pageProps} />
-            </main>
-            <Footer />
-          </>
+          <Wrapper>
+            <Component {...pageProps} />
+          </Wrapper>
         )}
-      </>
-    );
+      </Store>
+    )
   }
 }
 
-export default MyApp;
+export default MyApp
