@@ -29,16 +29,16 @@ const Project = ({ id, children }) => {
         </div>
         {children}
         <div className="max-w-5xl flex items center justify-between mx-auto">
-          <Link href="/">
-            <a className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500">
-              ← Go home
-            </a>
-          </Link>
-          <Link href={nextProject}>
-            <a className="font-flexa font-medium text-lg text-gray-600 hover:text-gray-700 dark-hover:text-gray-500">
-              Next project →
-            </a>
-          </Link>
+          <LinkWrapper type="inline-block">
+            <Link href="/">
+              <a className="font-flexa font-medium text-lg">← Go home</a>
+            </Link>
+          </LinkWrapper>
+          <LinkWrapper type="inline-block">
+            <Link href={nextProject}>
+              <a className="font-flexa font-medium text-lg">Next project →</a>
+            </Link>
+          </LinkWrapper>
         </div>
       </article>
     </main>

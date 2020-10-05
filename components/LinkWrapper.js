@@ -1,9 +1,9 @@
 import { useContext, useState, useRef } from 'react'
+import { isMobile } from 'react-device-detect'
 import { Context } from '../store'
 
 const LinkWrapper = ({ type, children }) => {
   const [style, setStyle] = useState({ position: 'relative', zIndex: 0 })
-
   const [state, dispatch] = useContext(Context)
   const { showOverlay } = state
 
@@ -27,14 +27,14 @@ const LinkWrapper = ({ type, children }) => {
   }
 
   return (
-    <div
-      onMouseOver={handleMouseOver}
-      onMouseLeave={handleMouseLeave}
+    <span
+      onMouseOver={!isMobile ? handleMouseOver : undefined}
+      onMouseLeave={!isMobile ? handleMouseLeave : undefined}
       className={type}
       style={style}
     >
       {children}
-    </div>
+    </span>
   )
 }
 

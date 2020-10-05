@@ -1,4 +1,6 @@
 import { useEffect, useContext } from 'react'
+import { withRouter } from 'next/router'
+import { isMobile } from 'react-device-detect'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Context } from '../store'
 
@@ -6,9 +8,14 @@ import Head from '../components/Head'
 import Nav from '../components/Nav'
 import Footer from '../components/Footer'
 
-const Wrapper = ({ children }) => {
+const Wrapper = ({ children, router }) => {
   const [state, dispatch] = useContext(Context)
   const { showOverlay } = state
+  const { pathname } = router
+
+  useEffect(() => {
+    dispatch({ type: 'SET_OVERLAY', payload: false })
+  }, [pathname])
 
   return (
     <>
@@ -16,7 +23,7 @@ const Wrapper = ({ children }) => {
       <main>{children}</main>
       <Footer />
       <AnimatePresence>
-        {showOverlay && (
+        {!isMobile && showOverlay && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.75 }}
@@ -30,4 +37,4 @@ const Wrapper = ({ children }) => {
   )
 }
 
-export default Wrapper
+export default withRouter(Wrapper)

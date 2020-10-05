@@ -68,22 +68,22 @@ const Footer = () => {
             <dl>
               <dd className="mb-1">Sebastian Winther</dd>
               <dd className="mb-1">Copenhagen, Denmark</dd>
-              <dd className="relative inline-block">
-                <LinkWrapper type="inline-block">
+              <LinkWrapper type="inline-block">
+                <dd className="relative inline-block">
                   <InlineLink
                     href="mailto:sebastianwinther@gmail.com"
                     size="sm"
                   >
                     sebastianwinther@gmail.com
                   </InlineLink>
-                </LinkWrapper>
-                <div className="absolute inset-y-0 right-0 flex items-end justify-start">
-                  <SayHi
-                    style={{ strokeWidth: '2' }}
-                    className="absolute left-0 icon text-5xl text-teal-600 ml-2"
-                  />
-                </div>
-              </dd>
+                  <div className="absolute inset-y-0 right-0 flex items-end justify-start pointer-events-none">
+                    <SayHi
+                      style={{ strokeWidth: '2' }}
+                      className="absolute left-0 icon text-5xl text-teal-600 ml-2"
+                    />
+                  </div>
+                </dd>
+              </LinkWrapper>
             </dl>
           </div>
           <div className="flex-shrink-0 self-end order-first md:order-last mb-8 md:mb-0">
