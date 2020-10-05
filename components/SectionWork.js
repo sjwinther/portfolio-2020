@@ -53,7 +53,7 @@ const SectionWork = () => {
         <div className="flex-auto lg:pr-8 sm:pb-4">
           <div
             className={
-              (!isMobile && showOverlay ? 'opacity-25 ' : '') +
+              (!isMobile && showOverlay && style.zIndex ? 'opacity-25 ' : '') +
               'flex items-end transition mb-8'
             }
           >
