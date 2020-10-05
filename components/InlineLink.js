@@ -7,7 +7,7 @@ const InlineLink = ({ href, target, download, children }) => (
     target={typeof target === 'string' ? target : target ? '_blank' : undefined}
     rel={target ? 'noopener' : undefined}
     download={download || undefined}
-    className="relative inline-flex items-center border-b-2 border-gray-400 hover:border-transparent dark:border-gray-800 rounded-b-none"
+    className="relative inline-flex items-center border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
   >
     {children}
   </a>

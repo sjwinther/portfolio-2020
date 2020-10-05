@@ -54,7 +54,7 @@ const Definition = ({ content, href }) => (
           href={'https://' + href}
           target="_blank"
           rel="noopener"
-          className="inline-flex items-center border-b-2 border-gray-400 dark:border-gray-800 hover:border-transparent rounded-b-none"
+          className="inline-flex items-center border-b-2 border-gray-400 dark:border-gray-800 rounded-b-none"
         >
           {content}
         </a>
