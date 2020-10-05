@@ -7,6 +7,7 @@ import Project, {
   TextWithHeading,
 } from '../../components/Project'
 import InlineLink from '../../components/InlineLink'
+import LinkWrapper from '../../components/LinkWrapper'
 
 const Pelion = () => (
   <Project id="pelion">
@@ -29,13 +30,15 @@ const Pelion = () => (
         'Pelion utilizes an income sharing payment model. Mentees pay a small percentage of their salary to their mentor each month, incentivizing mentors to help mentees advance their career. Mentees have the option to defer payments until reaching a target income, enabling mentors to bet on the talent of tomorrow.',
         <>
           Pelion recently had a sucessful launch on{' '}
-          <InlineLink
-            href="https://www.producthunt.com/posts/pelion"
-            target="_producthunt"
-            size="sm"
-          >
-            Product Hunt
-          </InlineLink>
+          <LinkWrapper type="inline-block">
+            <InlineLink
+              href="https://www.producthunt.com/posts/pelion"
+              target="_producthunt"
+              size="sm"
+            >
+              Product Hunt
+            </InlineLink>
+          </LinkWrapper>
           .
         </>,
       ]}
