@@ -65,22 +65,6 @@ const Definition = ({ content, href }) => (
   </dd>
 )
 
-export const ImageInline = ({ alt, bgColor }) => (
-  <div
-    style={{ paddingBottom: '56.25%' }}
-    className="relative z-10 mb-8 last:mb-0"
-  >
-    <div
-      className={
-        bgColor +
-        ' absolute inset-0 flex items-center justify-center text-white rounded'
-      }
-    >
-      {alt}
-    </div>
-  </div>
-)
-
 export const VideosInline = ({ sources }) => (
   <div className="relative z-10 flex -mx-4 mb-8 last:mb-0">
     {sources.map(src => (

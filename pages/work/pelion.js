@@ -2,7 +2,6 @@ import Project, {
   ImageFullWidth,
   ImageMaxWidth,
   ImagesScrollable,
-  ImageInline,
   ListDisc,
   TextWithHeading,
 } from '../../components/Project'

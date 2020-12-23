@@ -1,6 +1,5 @@
 import Project, {
   ImageFullWidth,
-  ImageInline,
   ImageMaxWidth,
   ListDisc,
   VideosInline,

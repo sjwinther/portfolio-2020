@@ -1,7 +1,6 @@
 import Project, {
   ImageFullWidth,
   ImageMaxWidth,
-  ImageInline,
   ListDecimal,
   TextWithHeading,
 } from '../../components/Project'
@@ -39,7 +38,6 @@ const Debate = () => (
             'a system for moderation and securing civility throughout the tool.',
           ]}
         />,
-        // <ImageInline alt="Main findings, illustrated" bgColor="bg-gray-700" />,
         'The four main findings were used as the starting point of a design proces, and the thesis concludes with a prototype incorporating 11 suggested design proposals addressing the the aforementioned findings (see prototype below).',
         <>
           You can download the thesis{' '}
@@ -65,7 +63,6 @@ const Debate = () => (
           </LinkWrapper>
           .
         </>,
-        // <ImageInline alt="Suggestions, illustrated" bgColor="bg-gray-700" />
       ]}
     />
     <ImageMaxWidth src="/debate/page.png" alt="Digital debate prototype" />
