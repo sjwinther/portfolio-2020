@@ -14,11 +14,10 @@ const SectionHero = () => (
             style={{ strokeWidth: '2', transform: 'translateY(-8px)' }}
             className="inline-block icon text-3xl sm:text-4xl md:text-5xl text-yellow-600"
           />
-          I'm a digital product person.
+          I'm a digital designer and developer.
         </h1>{' '}
         <p className="inline font-flexa">
-          I'm formally educated in UX research and UI design, and self taught in
-          frontend development. I currently work at the Danish digital newspaper{' '}
+          I currently lead product development at Danish media company{' '}
           <LinkWrapper type="inline-block">
             <InlineLink
               href="https://www.zetland.dk/"
