@@ -14,6 +14,7 @@
     "cssnano": "^4.1.10",
     "framer-motion": "^1.6.17",
     "next": "^11.0.1",
+    "postcss": "^8.3.5",
     "raw-loader": "^4.0.0",
     "react": "^17.0.2",
     "react-device-detect": "^1.14.0",
