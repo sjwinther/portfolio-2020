@@ -1,19 +1,18 @@
-const withCSS = require("@zeit/next-css");
-module.exports = withCSS({
+module.exports = {
   devIndicators: {
-    autoPrerender: false
+    autoPrerender: false,
   },
   webpack(config, options) {
     config.module.rules.push(
       {
         test: /\.md$/,
-        use: "raw-loader"
+        use: 'raw-loader',
       },
       {
         test: /\.svg$/,
-        use: ["@svgr/webpack"]
+        use: ['@svgr/webpack'],
       }
-    );
-    return config;
-  }
-});
+    )
+    return config
+  },
+}

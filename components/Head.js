@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import Head from 'next/head'
-import '../css/base.css'
 
 const DefaultHead = () => {
   const title = 'Sebastian Winther'

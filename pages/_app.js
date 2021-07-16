@@ -1,5 +1,7 @@
 import App from 'next/app'
 import splitbee from '@splitbee/web'
+
+import '../css/base.css'
 import Store from '../store'
 
 import Head from '../components/Head'
