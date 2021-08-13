@@ -13,7 +13,7 @@
     "@svgr/webpack": "^4.3.3",
     "cssnano": "^4.1.10",
     "framer-motion": "^1.6.17",
-    "next": "^11.0.1",
+    "next": "^11.1.0",
     "postcss": "^8.3.5",
     "raw-loader": "^4.0.0",
     "react": "^17.0.2",
